@@ -1,0 +1,899 @@
+ID MÛdulo Base,Expediente / Paciente - Expediente Paciente - N˙mero de Expediente,Expediente / Paciente - Expediente Paciente - Nombre del Paciente (Nombre),Expediente / Paciente - Expediente Paciente - Nombre del Paciente (Primer Apellido),Expediente / Paciente - Expediente Paciente - Nombre del Paciente (Segundo Apellido),Fecha y Hora Registro,Fecha y Hora de Egreso,Fecha y hora de elaboraciÛn,Tipo de Ingreso,Hospitalizado en,Procedimiento realizado - CIE 9 Tratamientos - Clave,Procedimiento realizado - CIE 9 Tratamientos - DescripciÛn,Clave,DescripciÛn
+1,247800,JOSE,JUAREZ,RAMIREZ,20.Dic.22 08:04:34,20.Dic.22 17:20:14,20.Dic.22 12:05:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+3,167293,CYNTHIA PAMELA,LOVERA,OLVERA,02.Feb.23 08:02:32,02.Feb.23 15:54:18,02.Feb.23 10:02:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+4,240491,MOISES,RODRIGUEZ,NAVARRETE,02.Feb.23 07:51:01,02.Feb.23 15:53:54,02.Feb.23 11:35:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+7,246336,PAULINA,MENDEZ,MATEO,02.Feb.23 06:46:43,02.Feb.23 15:54:52,02.Feb.23 08:55:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+8,242564,JOSE HECTOR,AYALA,MONTOYA,07.Ene.23 14:25:46,08.Feb.23 14:45:52,02.Feb.23 13:00:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+9,244836,ROCIO,COYOTL,FRAGOSO,03.Feb.23 07:53:43,03.Feb.23 18:33:28,03.Feb.23 10:10:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+10,248583,MARIA ROMANA,ROSARIO,MATIAS,19.Ene.23 19:22:59,08.Mar.23 00:09:27,03.Feb.23 10:37:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+11,242620,ALFREDO,HERNANDEZ,RIVAS,02.Feb.23 11:21:17,15.Feb.23 13:18:15,03.Feb.23 11:04:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+12,246452,CONSTANTINO,SANCHEZ,GARCIA,03.Feb.23 12:04:29,03.Feb.23 18:33:16,03.Feb.23 12:24:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+13,245889,MARTINA,ROSAS,SUAREZ, , ,03.Feb.23 12:48:00, , ,,,,
+14,217186,LUIS FERNANDO,ZU—IGA,SILVESTRE,19.Dic.22 13:42:41,15.Mar.23 16:14:51,03.Feb.23 14:04:00,INGRESO A TERAPIA ,Unidad de Terapia Intermedia ,,,,
+37,201335,ANTONIO DE JESUS,RANGEL,RODRIGUEZ,09.Feb.23 08:41:14,09.Feb.23 15:30:32,09.Feb.23 09:43:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+35,205462,JESUS,HERNANDEZ,CALDERON,09.Feb.23 07:42:22,09.Feb.23 16:28:00,09.Feb.23 09:32:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+36,231734,JOAQUIN MISSAEL,MARTINEZ,HERNANDEZ,09.Feb.23 07:55:05,09.Feb.23 16:22:17,09.Feb.23 09:39:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+17,248868,ANDREA,PEREA,PALACIOS,03.Feb.23 13:58:02,18.Feb.23 11:36:44,07.Feb.23 10:39:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+18,242749,JUAN PABLO,QUIRASCO,LOPEZ,07.Feb.23 07:56:43,07.Feb.23 14:32:39,07.Feb.23 10:01:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+19,245889,MARTINA,ROSAS,SUAREZ, , ,07.Feb.23 10:53:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+20,246963,SARA,PADILLA,MALDONADO,07.Feb.23 08:15:01,07.Feb.23 19:19:10,07.Feb.23 11:33:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+21,248738,HIPOLITO,NERI,PATLAN,31.Ene.23 13:24:19,16.Feb.23 12:19:42,07.Feb.23 12:17:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,,,,
+22,247039,ADRIANA,JIMENEZ,ZAMORA,07.Feb.23 06:50:55,07.Feb.23 14:36:20,07.Feb.23 12:45:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+23,246495,GUADALUPE,MENDOZA,NU—EZ,07.Feb.23 12:07:32,07.Feb.23 14:40:02,07.Feb.23 13:11:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+24,248181,MARIANA,ESCAMILLA,RUELAS,28.Ene.23 18:11:08,19.Feb.23 10:18:39,07.Feb.23 14:21:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+25,248428,JENNIFER,CONTRERAS,HERNANDEZ,08.Feb.23 07:02:56,08.Feb.23 15:46:49,08.Feb.23 08:28:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+26,248535,MARIA,FABELA,FLORES, , ,08.Feb.23 09:13:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+27,245191,DIANA LISETT,ISLAS,DELGADO,08.Feb.23 08:26:03,08.Feb.23 15:02:50,08.Feb.23 09:24:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+28,247608,OMERO,MIRANDA,GARCIA,08.Feb.23 10:07:05,08.Feb.23 15:44:33,08.Feb.23 10:27:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+29,243843,YOLANDA,RAMON,ALVARADO,08.Feb.23 06:46:56,08.Feb.23 14:18:52,08.Feb.23 12:12:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+42,246452,CONSTANTINO,SANCHEZ,GARCIA, , ,10.Feb.23 08:46:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+32,233732,MARGARITA,MARTINEZ,MARTINEZ,08.Feb.23 08:28:03,08.Feb.23 15:54:28,08.Feb.23 13:52:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+33,248755,JOEL,REYES,ROSAS,27.Ene.23 23:09:32,11.Feb.23 13:44:53,08.Feb.23 14:07:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+34,241510,PATRICIA,GARCIA,CARDOSO,08.Feb.23 07:45:19,08.Feb.23 20:09:34,08.Feb.23 14:07:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+38,167293,CYNTHIA PAMELA,LOVERA,OLVERA, , ,09.Feb.23 10:01:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+39,245724,MARIA LUISA,CASTILLO,GARCIA,09.Feb.23 06:30:21,09.Feb.23 14:29:52,09.Feb.23 10:54:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+40,248761,LUIS GERARDO,OLVERA,NAVA,09.Feb.23 07:58:19,09.Feb.23 15:08:32,09.Feb.23 11:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+41,248644,LEONARDO,MENDEZ,FERNANDEZ,09.Feb.23 07:29:56,09.Feb.23 16:04:58,09.Feb.23 13:59:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+43,248317,JOSE FRANCISCO,AGUILAR,MARTINEZ,06.Ene.23 22:56:14,01.Mar.23 00:28:57,10.Feb.23 11:02:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+44,245889,MARTINA,ROSAS,SUAREZ,08.Feb.23 10:23:22,08.Mar.23 16:02:24,10.Feb.23 11:31:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+45,203377,MARIA GUADALUPE,ESCUTIA,MU—OZ,10.Feb.23 07:43:16,10.Feb.23 14:04:56,10.Feb.23 12:58:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+46,248583,MARIA ROMANA,ROSARIO,MATIAS,19.Ene.23 19:22:59,08.Mar.23 00:09:27,10.Feb.23 13:55:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+47,200334,ISABEL,TEMPLOS,HERNANDEZ,13.Feb.23 08:12:00,13.Feb.23 14:13:28,13.Feb.23 09:34:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+48,244321,JOSE ADRIAN,ELECHIGUERRA,VALDIVIA,13.Feb.23 07:26:14,13.Feb.23 15:29:36,13.Feb.23 09:47:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+49,247826,IRENE,CASTILLO,CRISTOBAL,13.Feb.23 07:55:07,13.Feb.23 16:56:13,13.Feb.23 09:50:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+50,242559,SILVIA,HERNANDEZ,GUTIERREZ,13.Feb.23 08:00:08,13.Feb.23 14:08:47,13.Feb.23 11:31:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+51,233732,MARGARITA,MARTINEZ,MARTINEZ,13.Feb.23 07:15:29,13.Feb.23 16:02:05,13.Feb.23 11:58:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+52,248902,ELEAZAR,MENDOZA,ROCHA,09.Feb.23 14:06:35,14.Mar.23 16:08:29,13.Feb.23 13:09:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+53,248713,JUANA,YABER,RANGEL,13.Feb.23 06:34:59,13.Feb.23 14:35:29,13.Feb.23 13:38:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+54,147337,DANTE HUGO,MOLLER,ARRIAGADA,30.Ene.23 23:57:58,17.Feb.23 15:06:08,13.Feb.23 14:12:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+55,240875,SERGIO AZAREL,MORALES,RAMOS,13.Feb.23 07:48:50,13.Feb.23 14:45:58,13.Feb.23 14:18:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+56,246340,VICTOR MANUEL,SOTO,NAJERA,14.Feb.23 08:09:46,14.Feb.23 14:33:32,14.Feb.23 09:26:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+57,248049,LILIANA MINERVA,CRUZ,AREVALO,14.Feb.23 07:25:41,14.Feb.23 15:22:30,14.Feb.23 09:31:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+58,219345,SOFIA,OLVERA,BRINDIS,14.Feb.23 07:07:51,14.Feb.23 14:09:54,14.Feb.23 09:40:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+59,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,14.Feb.23 09:36:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+60,219345,SOFIA,OLVERA,BRINDIS,14.Feb.23 07:07:51,14.Feb.23 14:09:54,14.Feb.23 10:21:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+78,247940,NINO FRANCISCO CARLOS,COZZI,Y FERRARI,13.Dic.22 14:13:43,27.Mar.23 16:34:24,15.Feb.23 13:10:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+62,248590,CARLOS,APIS,MARTÌçNEZ,19.Ene.23 23:42:53,18.Feb.23 11:15:40,14.Feb.23 10:37:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+63,246495,GUADALUPE,MENDOZA,NU—EZ, , ,14.Feb.23 11:02:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+64,248909,ERIKA,CASTRO,EDGAR,05.Feb.23 17:00:20,16.Feb.23 12:53:35,14.Feb.23 11:18:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+65,197425,BRENDA MONICA,GABINO,VENTURA,06.Feb.23 13:17:40,17.Feb.23 18:37:55,14.Feb.23 12:31:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+66,248352,JUSTO,OLVERA,SALGADO, , ,15.Feb.23 08:49:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+67,247409,NOE JORDAN,LOPEZ,ORTIZ,15.Feb.23 07:07:15,15.Feb.23 14:45:48,15.Feb.23 08:56:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+68,247608,OMERO,MIRANDA,GARCIA, , ,15.Feb.23 09:13:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+69,248535,MARIA,FABELA,FLORES, , ,15.Feb.23 09:38:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+71,160306,ELSA,PAREDES,VALENCIA,15.Feb.23 08:03:38,15.Feb.23 11:54:50,15.Feb.23 10:06:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+72,233663,RAQUEL,VELAZQUEZ,ALVAREZ,15.Feb.23 07:26:27,15.Feb.23 14:12:12,15.Feb.23 10:19:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+87,245970,LETICIA,BUENO,MONTOYA, , ,17.Feb.23 09:40:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+74,242779,EDUARDO LAURO,RODRIGUEZ,MENDEZ,15.Feb.23 08:14:19,15.Feb.23 13:46:11,15.Feb.23 11:47:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+76,244663,GLORIA HILARIA,FLORES,QUINTERO,15.Feb.23 07:52:07,15.Feb.23 14:16:52,15.Feb.23 12:52:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+77,248428,JENNIFER,CONTRERAS,HERNANDEZ,11.Feb.23 12:08:45,23.Mar.23 16:30:55,15.Feb.23 13:19:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+79,243843,YOLANDA,RAMON,ALVARADO, , ,16.Feb.23 08:16:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+80,248428,JENNIFER,CONTRERAS,HERNANDEZ,11.Feb.23 12:08:45,23.Mar.23 16:30:55,16.Feb.23 10:15:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+81,247940,NINO FRANCISCO CARLOS,COZZI,Y FERRARI,13.Dic.22 14:13:43,27.Mar.23 16:34:24,16.Feb.23 11:16:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,,,,
+82,147023,OSVALDO,.SAN GIACOMO,PARODI,16.Feb.23 07:27:57,16.Feb.23 14:20:53,16.Feb.23 12:19:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+83,249006,ANASTACIA,SALAZAR,TOLENTINO,16.Feb.23 06:45:40,16.Feb.23 15:45:00,16.Feb.23 12:43:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+84,247812,DANIEL,ORTIZ,DIAZ,16.Feb.23 10:23:49,16.Feb.23 16:16:54,16.Feb.23 12:03:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+85,247621,NELSON SANTIAGO,ROMERO,RODRIGUEZ,16.Feb.23 10:22:14,16.Feb.23 15:14:20,16.Feb.23 13:23:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,8761,DegluciÛn de la papilla,8761,DegluciÛn de la papilla
+88,240758,MA. MARTINA,MENDOZA,RUIZ,17.Feb.23 08:18:47,17.Feb.23 15:52:16,17.Feb.23 10:06:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9656,Otro lavado de bronquio y tr·quea,9656,Otro lavado de bronquio y tr·quea
+89,249095,ALEXA,MORA,NARCISO,14.Feb.23 16:24:15,20.Feb.23 15:17:45,17.Feb.23 10:03:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,,,,
+90,246452,CONSTANTINO,SANCHEZ,GARCIA, , ,17.Feb.23 10:11:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+99,248169,ALMA DELIA,ROJAS,GALINDO,20.Feb.23 08:00:00,20.Feb.23 15:06:01,20.Feb.23 12:07:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+92,237267,OLGA ALICIA,CASTELLANOS,ORNELAS,09.Feb.23 19:38:22,20.Mar.23 13:37:58,17.Feb.23 10:29:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+93,247940,NINO FRANCISCO CARLOS,COZZI,Y FERRARI,13.Dic.22 14:13:43,27.Mar.23 16:34:24,17.Feb.23 10:56:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+98,200334,ISABEL,TEMPLOS,HERNANDEZ,20.Feb.23 07:48:58,20.Feb.23 14:20:58,20.Feb.23 12:03:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+94,248466,FRANCISCA,GARCIA,CARLOS,17.Feb.23 05:26:05,20.Feb.23 17:26:49,17.Feb.23 12:11:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+95,249030,DOMINGO,CRUZ,CRUZ,10.Feb.23 19:46:15,22.Feb.23 12:22:14,17.Feb.23 12:21:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+97,233732,MARGARITA,MARTINEZ,MARTINEZ,20.Feb.23 07:04:11,20.Feb.23 13:56:50,20.Feb.23 09:58:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+96,229442,BALDEMAR,MARTINEZ,FLORES,11.Feb.23 17:54:47,08.Mar.23 16:28:18,17.Feb.23 14:21:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,4449,Otro control de hemoragia de estÛmago o duodeno,4449,Otro control de hemoragia de estÛmago o duodeno
+100,248799,BRAYAN,VERA,VILLAGRAN,01.Feb.23 13:06:02,27.Feb.23 14:48:40,20.Feb.23 13:11:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 4 ,4514,Biopsia cerrada [endoscÛpica] de intestino delgado,4514,Biopsia cerrada [endoscÛpica] de intestino delgado
+101,248988,EDGAR ALEJANDRO,CORREA,RAMIREZ,09.Feb.23 19:39:58,22.Feb.23 13:06:22,20.Feb.23 13:19:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+102,243071,JOSE ARTURO,LOPEZ,ARANDA, , ,20.Feb.23 13:34:00, , ,3327,Biopsia cerrada de pulmÛn por endocopÌ≠a,3327,Biopsia cerrada de pulmÛn por endocopÌ≠a
+104,224903,JUAN ARIEL,GARCIA,ECHAVARRIA,21.Feb.23 07:15:00,21.Feb.23 17:00:37,21.Feb.23 10:31:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+105,248443,ALEJANDRO,BERNAL,SU,21.Feb.23 07:43:51,21.Feb.23 15:12:49,21.Feb.23 10:56:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+114,248426,RICARDO,HERNANDEZ,GALAN,23.Feb.23 07:38:56,28.Feb.23 16:55:12,23.Feb.23 09:45:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+107,249048,MAGDALENO,LOPEZ,MORA,13.Feb.23 03:07:54,22.Feb.23 15:33:40,21.Feb.23 12:36:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+108,245917,MICHELLE,HERNANDEZ,KAWAS,21.Feb.23 07:31:50,21.Feb.23 14:28:21,21.Feb.23 12:17:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+109,248950,ENRIQUE,ACEVEDO,BIRTO,22.Feb.23 06:48:33,07.Mar.23 17:58:18,22.Feb.23 10:54:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,,,,
+110,248429,MARIA DE LA LUZ,CARDENAS,LOPEZ,22.Feb.23 06:37:12,22.Feb.23 11:40:12,22.Feb.23 10:29:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+111,145395,LUZ MARIA,CARDONA,AMEZCUA,22.Feb.23 08:11:58,22.Feb.23 13:24:19,22.Feb.23 12:12:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+112,249211,FERNANDO,BUSTOS,LOPEZ,19.Feb.23 18:51:06,10.Mar.23 13:55:29,22.Feb.23 11:26:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+113,248294,J. ASCENCION,ARGUETA,RAMIREZ,22.Feb.23 07:42:38,22.Feb.23 15:05:07,22.Feb.23 13:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+115,222880,GUILLERMO DE JESUS,GARCIA,RUIZ,23.Feb.23 08:10:34,23.Feb.23 14:12:01,23.Feb.23 11:25:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+116,248303,MIGUEL ANGEL,MARTINEZ,BORJA,06.Ene.23 13:56:27,25.Feb.23 14:00:33,23.Feb.23 12:36:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+117,248944,ESTEBAN,LOPEZ,GARCIA,23.Feb.23 07:50:22,23.Feb.23 19:13:37,23.Feb.23 12:53:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+118,248779,PONCIANO,HERNANDEZ,LEGORRETA,24.Feb.23 06:37:56,24.Feb.23 15:27:26,24.Feb.23 09:01:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+119,244836,ROCIO,COYOTL,FRAGOSO,24.Feb.23 07:49:47,24.Feb.23 12:46:09,24.Feb.23 10:12:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+120,249312,MARIA MARICELA,NAVARRO,CAMBRON,23.Feb.23 19:58:05,25.Feb.23 16:35:37,24.Feb.23 12:25:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 10 Postquir˙rgicos ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+121,248955,DIEGO ALEXANDER,HERNANDEZ,CALVA,16.Feb.23 16:16:59,16.Mar.23 12:44:28,24.Feb.23 09:42:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,,,,
+122,249202,MIRIAM ABRIL,CRUZ,MIRANDA,17.Feb.23 23:04:31,04.Abr.23 12:25:14,24.Feb.23 13:18:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,,,,
+123,249177,BEATRIZ,MORALES,TORAL,27.Feb.23 07:16:06,27.Feb.23 14:25:13,27.Feb.23 10:06:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+124,246040,JORGE,GONZALEZ,ARECHIGA,27.Feb.23 08:27:59,27.Feb.23 14:32:03,27.Feb.23 10:39:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+136,244663,GLORIA HILARIA,FLORES,QUINTERO,01.Mar.23 07:45:42,01.Mar.23 13:56:50,01.Mar.23 11:20:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+127,242105,LIDIA,PEREZ,XOCHITEMOL,24.Feb.23 01:36:04,09.Mar.23 15:08:07,27.Feb.23 11:46:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+128,249167,ERIK ALEJANDRO,RAMIREZ,RAMIREZ,17.Feb.23 05:26:10,04.Abr.23 18:06:24,27.Feb.23 12:30:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+129,217186,LUIS FERNANDO,ZU—IGA,SILVESTRE,19.Dic.22 13:42:41,15.Mar.23 16:14:51,27.Feb.23 13:12:00,INGRESO A TERAPIA ,Unidad de Terapia Intermedia ,,,,
+135,232897,JULIO,ESCANDON,PALOMINO,01.Mar.23 07:30:40,01.Mar.23 12:47:51,01.Mar.23 10:40:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+131,249195,ALEJANDRA,MIRELES,HERNANDEZ,17.Feb.23 22:38:59,03.Mar.23 13:22:01,28.Feb.23 10:25:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+132,248950,ENRIQUE,ACEVEDO,BIRTO,22.Feb.23 06:48:33,07.Mar.23 17:58:18,28.Feb.23 11:19:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,4414,Biopsia cerrada de estÛmago (endoscÛpica),4414,Biopsia cerrada de estÛmago (endoscÛpica)
+133,232710,MONICA,ARROYO,DELGADO,21.Feb.23 00:38:46,17.Mar.23 18:24:15,28.Feb.23 12:02:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+134,248765,JUAN CARLOS,GONZALEZ,PEREZ,22.Feb.23 22:47:34,07.Mar.23 15:33:27,28.Feb.23 13:02:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+137,233732,MARGARITA,MARTINEZ,MARTINEZ,01.Mar.23 09:17:29,01.Mar.23 17:42:05,01.Mar.23 12:23:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+138,248950,ENRIQUE,ACEVEDO,BIRTO,22.Feb.23 06:48:33,07.Mar.23 17:58:18,01.Mar.23 13:32:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+139,248560,BENITO SALVADOR,LOPEZ,ZAPIEN,01.Mar.23 08:04:05,02.Mar.23 16:09:55,01.Mar.23 14:08:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 10 Postquir˙rgicos ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+140,249212,MARIA DEL CARMEN,CASTILLO,TEPOS,19.Feb.23 16:22:47,09.Mar.23 14:18:50,02.Mar.23 10:31:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+141,249201,JAVIER,PI—A,LEYVA,18.Feb.23 00:14:06,03.Mar.23 13:48:16,02.Mar.23 10:46:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+142,246356,MARIA DE LOURDES,MARTINEZ,DIAZ,02.Mar.23 09:02:11,02.Mar.23 13:02:59,02.Mar.23 11:44:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4511,EndoscopÌ≠a transabdominal de intestino delgado,4511,EndoscopÌ≠a transabdominal de intestino delgado
+143,241824,MARIA EUGENIA,ZAMORA,CAMACHO,21.Feb.23 18:14:02,22.Mar.23 06:58:53,02.Mar.23 12:23:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+144,249302,EMMA FERNANDA,PARRA,PEREZ,23.Feb.23 13:41:03,05.Mar.23 11:26:32,03.Mar.23 10:03:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,,,,
+145,249183,ELIA LIZETH,EDUARDO,GONZALEZ,17.Feb.23 17:54:43,14.Mar.23 11:56:20,03.Mar.23 10:48:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,,,,
+146,248974,PATRICIO ENRIQUE,RUFFO,HEALY,06.Mar.23 07:37:49,06.Mar.23 15:49:58,06.Mar.23 08:26:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+180,243946,ROBERTO,MC LENDON,AGUNDIS,10.Mar.23 07:08:44,10.Mar.23 11:55:54,10.Mar.23 08:40:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+162,247608,OMERO,MIRANDA,GARCIA,08.Mar.23 07:34:31,08.Mar.23 11:16:45,08.Mar.23 09:58:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+163,160549,ROSALBA,FAVILA,VALDEZ,08.Mar.23 08:26:56,08.Mar.23 13:53:09,08.Mar.23 11:42:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+164,245930,JUAN PABLO,IGLESIAS,IGLESIAS,08.Mar.23 07:19:13,08.Mar.23 13:38:21,08.Mar.23 11:56:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+149,248486,CONSUELO ALICIA,DELGADO,Y HERNANDEZ,22.Feb.23 06:20:15,25.Mar.23 12:58:22,06.Mar.23 10:13:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+150,246210,ANTONIA MARIA,HUANCA,PEREZ,06.Mar.23 08:02:10,06.Mar.23 17:14:15,06.Mar.23 12:10:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+151,249243,ELEUTERIO,SANTIAGO,,06.Mar.23 07:16:49,06.Mar.23 16:58:29,06.Mar.23 13:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+152,248482,MERCEDES LORENZA,DELGADO,REYES,06.Mar.23 07:22:40,31.Mar.23 13:50:37,06.Mar.23 14:31:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,9605,Otra intubaciÛn del tracto respiratorio,9605,Otra intubaciÛn del tracto respiratorio
+153,157105,FILIBERTO,MALDONADO,,06.Mar.23 13:48:54,04.Abr.23 17:23:35,07.Mar.23 02:49:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 1 ,,,,
+154,167293,CYNTHIA PAMELA,LOVERA,OLVERA,07.Mar.23 07:52:58,07.Mar.23 14:57:43,07.Mar.23 10:08:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+155,248949,LEON ALEJANDRO,MAYA,SEGURA,07.Mar.23 07:26:55,07.Mar.23 14:07:08,07.Mar.23 09:03:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+156,208191,DULCE IVETH,VELAZQUEZ,LOPEZ,07.Mar.23 10:00:04,07.Mar.23 14:43:11,07.Mar.23 10:34:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+157,246290,OSCAR DAVID,SARMIENTO,DE JESUS,07.Mar.23 08:26:55,07.Mar.23 15:37:17,07.Mar.23 10:45:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+158,249359,RENEE NATALIA,HERNANDEZ,ALMANZA,27.Feb.23 14:00:39,10.Mar.23 16:09:21,07.Mar.23 11:06:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+159,245889,MARTINA,ROSAS,SUAREZ,08.Feb.23 10:23:22,08.Mar.23 16:02:24,07.Mar.23 12:36:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+160,248752,LEYVI MARLENI,GRAMAJO,VELAZQUEZ,07.Mar.23 07:49:04,07.Mar.23 14:47:50,07.Mar.23 12:57:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+165,247792,ASLAN DAVID,HERNANDEZ,COLIN,08.Mar.23 06:43:41,08.Mar.23 18:55:35,08.Mar.23 11:31:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+166,246086,RAFAEL,DIAZ,SALAZAR,08.Mar.23 12:42:26,08.Mar.23 17:57:59,08.Mar.23 13:07:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+167,248535,MARIA,FABELA,FLORES,08.Mar.23 07:38:35,08.Mar.23 14:38:43,08.Mar.23 08:00:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+168,241824,MARIA EUGENIA,ZAMORA,CAMACHO,21.Feb.23 18:14:02,22.Mar.23 06:58:53,08.Mar.23 12:33:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+169,249379,GUADALUPE YESENIA,ORTEGA,RUANOVA,01.Mar.23 14:21:56,29.Mar.23 16:13:11,08.Mar.23 13:47:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,,,,
+170,249470,GABRIELA,LOBATO,MONTERO,03.Mar.23 13:48:09,16.Mar.23 15:09:19,08.Mar.23 14:23:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+171,249438,LEOPOLDO,VASQUEZ,SEGURA,09.Mar.23 06:58:44,10.Mar.23 12:34:23,09.Mar.23 10:27:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,,,,
+173,249514,JOSE ARMANDO,ORTEGA,RODRIGUEZ,06.Mar.23 21:32:58,14.Mar.23 12:37:51,09.Mar.23 11:40:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,4414,Biopsia cerrada de estÛmago (endoscÛpica),4414,Biopsia cerrada de estÛmago (endoscÛpica)
+174,249488,FRANCISCO,COLIN,BASTIDA,04.Mar.23 00:25:20,16.Mar.23 15:01:57,09.Mar.23 11:34:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+175,211012,JOSE,HERNANDEZ,RANGEL,09.Mar.23 06:35:23,09.Mar.23 16:10:16,09.Mar.23 11:51:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+176,248535,MARIA,FABELA,FLORES, , ,09.Mar.23 12:16:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+177,249402,JOSE LUIS,SANCHEZ,JIMENEZ,28.Feb.23 15:43:42,11.Abr.23 14:58:14,09.Mar.23 12:36:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+193,244321,JOSE ADRIAN,ELECHIGUERRA,VALDIVIA,13.Mar.23 07:23:05,13.Mar.23 16:58:22,13.Mar.23 10:38:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+194,249274,CLARA,CASTILLO,CORTES,13.Mar.23 07:30:52,13.Mar.23 13:04:14,13.Mar.23 10:44:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+179,248898,ELVIRA,MOCTEZUMA,OSORIO,09.Mar.23 11:51:16,09.Mar.23 16:19:53,09.Mar.23 13:39:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+181,248535,MARIA,FABELA,FLORES, , ,10.Mar.23 08:47:00, , ,,,,
+182,248780,ROSA,HERNANDEZ,ORTEGA,10.Mar.23 07:27:53,10.Mar.23 13:59:12,10.Mar.23 09:30:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+183,249423,VIANEY,LARA,CABELLO,10.Mar.23 06:35:56,10.Mar.23 16:03:35,10.Mar.23 09:43:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+192,246953,MANUEL AGUSTIN,ORTEGA,MAYA,13.Mar.23 07:15:44,13.Mar.23 16:21:08,13.Mar.23 10:33:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+186,246370,DANYEL TRINIDAD,RODELA,BRAVO,13.Feb.23 09:17:54,15.Mar.23 13:30:17,10.Mar.23 10:24:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,,,,
+187,245343,SONIA,VILLALOBOS,DE ANDA,10.Mar.23 07:57:45,10.Mar.23 13:17:50,10.Mar.23 12:49:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+188,249514,JOSE ARMANDO,ORTEGA,RODRIGUEZ,06.Mar.23 21:32:58,14.Mar.23 12:37:51,10.Mar.23 13:19:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+189,248898,ELVIRA,MOCTEZUMA,OSORIO, , ,10.Mar.23 13:30:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+191,248861,ANTONIO,CALDERON,QUIJANO,13.Mar.23 07:03:14,13.Mar.23 15:39:38,13.Mar.23 10:28:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+195,249274,CLARA,CASTILLO,CORTES,13.Mar.23 07:30:52,13.Mar.23 13:04:14,13.Mar.23 10:44:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+196,249459,ALICIA,GODINEZ,HERRERA,13.Mar.23 06:51:40,13.Mar.23 14:24:20,13.Mar.23 11:34:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+197,249608,JESUS EUSTAQUIO,CORTES,ALAVEZ,13.Mar.23 06:47:12,13.Mar.23 12:46:35,13.Mar.23 12:27:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+198,246336,PAULINA,MENDEZ,MATEO,06.Mar.23 03:44:55,11.Abr.23 17:43:28,13.Mar.23 13:47:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,5635,EndoscopÌ≠a (cistoscopÌ≠a) del conducto ileal,5635,EndoscopÌ≠a (cistoscopÌ≠a) del conducto ileal
+199,240491,MOISES,RODRIGUEZ,NAVARRETE,14.Mar.23 07:35:59,14.Mar.23 13:39:54,14.Mar.23 09:04:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+200,233896,MARA ANAID,SORIA,AGUILAR,14.Mar.23 07:47:20,14.Mar.23 15:31:19,14.Mar.23 09:10:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+201,244663,GLORIA HILARIA,FLORES,QUINTERO,14.Mar.23 08:40:04,14.Mar.23 14:16:20,14.Mar.23 09:19:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+202,185716,JACQUELINE,SANDOVAL,CRUZ,14.Mar.23 07:49:22,14.Mar.23 13:31:51,14.Mar.23 09:22:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+203,247824,MARIA MAGDALENA,VAZQUEZ,GONZALEZ,14.Mar.23 06:47:21,14.Mar.23 14:24:52,14.Mar.23 09:57:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+204,249495,MARIO ALEXANDER,CRUZ,MEZA,14.Mar.23 06:56:05,14.Mar.23 14:24:32,14.Mar.23 11:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+205,249447,CARINA,TRUEBA,FUENTES,15.Mar.23 07:51:59,15.Mar.23 12:41:25,15.Mar.23 09:11:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+206,249324,DEBORAH,CASTRO,MENDEZ,15.Mar.23 07:52:17,15.Mar.23 14:32:57,15.Mar.23 09:32:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+207,243764,MARICARMEN,ARMENTA,MENDOZA,15.Mar.23 07:44:00,15.Mar.23 11:40:57,15.Mar.23 10:38:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+208,248605,MARIO,ROSAS,RIOS,15.Mar.23 08:01:55,15.Mar.23 14:41:09,15.Mar.23 10:52:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+209,156964,ENRIQUETA,FRIAS,CRUZ,15.Mar.23 07:49:33,15.Mar.23 13:33:38,15.Mar.23 11:16:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+210,229037,DIANA LUISA,MORENO,AGUILAR,16.Mar.23 08:04:09,16.Mar.23 13:43:06,16.Mar.23 10:43:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+211,210636,JOSE ARTURO,BAUTISTA,SALDA—A.,16.Mar.23 08:01:40,16.Mar.23 12:35:38,16.Mar.23 11:00:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+212,249131,HORACIO,FADANELLI,ABASCAL,16.Mar.23 07:53:36,16.Mar.23 14:23:40,16.Mar.23 11:19:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+213,248815,JULIETA,MURILLO,ORTEGA,02.Feb.23 11:23:24,28.Mar.23 16:28:32,16.Mar.23 11:17:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+214,249131,HORACIO,FADANELLI,ABASCAL,16.Mar.23 07:53:36,16.Mar.23 14:23:40,16.Mar.23 13:19:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+215,239173,MAYELA JAZMIN,RODRIGUES,SANCHEZ,16.Mar.23 08:00:35,16.Mar.23 14:18:52,16.Mar.23 14:02:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+216,249312,MARIA MARICELA,NAVARRO,CAMBRON,17.Mar.23 07:42:11,17.Mar.23 15:52:48,17.Mar.23 10:22:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+217,248120,MARCO ANTONIO,SANTOS,RAMIREZ,17.Mar.23 07:52:40,17.Mar.23 15:39:46,17.Mar.23 11:49:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+218,249516,MARIA DE JESUS,CHAPARRO,GONZALEZ,17.Mar.23 07:40:41,17.Mar.23 14:37:55,17.Mar.23 12:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+219,249777,AUDELIA,JOAQUIN,SANTIAGO, , ,17.Mar.23 12:34:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+220,247940,NINO FRANCISCO CARLOS,COZZI,Y FERRARI,13.Dic.22 14:13:43,27.Mar.23 16:34:24,17.Mar.23 13:23:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+221,249585,GUSTAVO,AGUILAR,FABILA,09.Mar.23 12:39:04,13.May.23 13:42:00,17.Mar.23 14:01:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+222,246340,VICTOR MANUEL,SOTO,NAJERA,21.Mar.23 07:46:53,21.Mar.23 15:55:22,21.Mar.23 09:56:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+223,243978,ELSA,GUTIERREZ,SALAZAR,21.Mar.23 07:44:09,21.Mar.23 16:13:30,21.Mar.23 10:01:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+225,249790,VICENTE RENE,CHAVEZ,ALONSO,21.Mar.23 08:13:12,21.Mar.23 16:27:00,21.Mar.23 11:46:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+224,248535,MARIA,FABELA,FLORES, , ,21.Mar.23 11:26:00, , ,,,,
+226,221075,JESUS,SOLIS,LIMA,21.Mar.23 07:55:46,21.Mar.23 14:12:04,21.Mar.23 11:32:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+227,215727,FRANCISCO JAVIER,QUEZADA,RODRIGUEZ, , ,22.Mar.23 09:49:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+228,247097,ARACELI,SALAZAR,MEDRANO, , ,22.Mar.23 09:55:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+229,247832,EUSTOLIA,ROMERO,HURTADO,22.Mar.23 08:13:24,22.Mar.23 14:55:34,22.Mar.23 10:21:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+238,249453,WENDY ADRIANA,RIVERA,ZAMORA,24.Mar.23 07:43:19,24.Mar.23 13:55:37,24.Mar.23 09:41:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+231,242458,JORGE ARMANDO,LAZOS,CHOY,22.Mar.23 07:54:24,22.Mar.23 13:18:28,22.Mar.23 11:52:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+232,243843,YOLANDA,RAMON,ALVARADO,22.Mar.23 06:42:48,22.Mar.23 12:50:42,22.Mar.23 12:16:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+233,249642,JORGE ALBERTO,VALENCIA,ANDRADE, , ,23.Mar.23 09:40:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+234,249005,RICARDO CESAR,ISLAS,MAYER,10.Feb.23 11:54:12,11.Abr.23 13:52:34,23.Mar.23 10:58:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+235,248466,FRANCISCA,GARCIA,CARLOS,23.Mar.23 07:36:50,23.Mar.23 13:49:17,23.Mar.23 11:07:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+236,248938,BERTA,TORRES,ORTEGA,23.Mar.23 08:30:13,23.Mar.23 13:16:47,23.Mar.23 12:07:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+249,246368,MARIA FERNANDA,TREJO,TAPIA,27.Mar.23 06:35:04,27.Mar.23 14:43:34,27.Mar.23 10:31:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+250,249848,AGUSTIN,GAYTAN,CERVANTES,22.Mar.23 19:10:55,20.Abr.23 22:17:19,27.Mar.23 12:21:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+247,249606,ANASTACIA GREGORIA,RUIZ,CHAPARRO,27.Mar.23 07:17:35,27.Mar.23 14:25:05,27.Mar.23 10:28:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+248,247621,NELSON SANTIAGO,ROMERO,RODRIGUEZ,18.Feb.23 18:16:49,01.Abr.23 13:25:55,27.Mar.23 10:54:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+245,247421,MA. OLIVA,ORTIZ,GARCIA, , ,27.Mar.23 08:29:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+246,244321,JOSE ADRIAN,ELECHIGUERRA,VALDIVIA,27.Mar.23 07:41:54,27.Mar.23 14:57:53,27.Mar.23 08:43:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+241,249278,MELANY DARIANA,ZARATE,MARTINEZ,21.Mar.23 09:22:20,24.Mar.23 14:48:50,24.Mar.23 11:52:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,,,,
+242,220760,ROSA MARIA,OCEGUEDA,SUAREZ,24.Mar.23 07:13:08,24.Mar.23 13:45:19,24.Mar.23 12:16:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+243,249749,AMBROSIO,SOLIS,CORRAL,23.Mar.23 08:21:07,24.Mar.23 17:18:26,23.Mar.23 12:49:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,,,,
+244,169255,EULOGIO,HERNANDEZ,HERNANDEZ,16.Mar.23 22:00:32,19.Abr.23 15:22:24,24.Mar.23 13:13:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+251,247500,EVODIO,MENDEZ,PRADO,19.Mar.23 15:41:28,30.Mar.23 23:36:11,27.Mar.23 13:57:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,,,,
+252,249840,ARMANDO,BERNAL,MARTINEZ,27.Mar.23 06:43:32,27.Mar.23 16:56:35,27.Mar.23 14:05:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+253,245917,MICHELLE,HERNANDEZ,KAWAS, , ,28.Mar.23 10:14:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+254,248049,LILIANA MINERVA,CRUZ,AREVALO,28.Mar.23 07:17:38,28.Mar.23 15:56:43,28.Mar.23 10:18:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+255,249065,ERIK ANTONIO,VILLEDA,MARTINEZ,28.Mar.23 07:32:23,28.Mar.23 14:11:31,28.Mar.23 10:22:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+256,249253,CHRISTIAN FERNANDO,CARRANCO,CASTILLO, , ,28.Mar.23 10:35:00, , ,,,,
+257,249778,ROCIO,BAZALDUA,ROJAS,18.Mar.23 17:28:54,29.Mar.23 14:55:48,28.Mar.23 11:05:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+258,246524,JOSE RAUL,SANCHEZ,AGUILAR,18.Mar.23 01:37:32,15.Abr.23 11:12:34,28.Mar.23 12:55:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+259,248482,MERCEDES LORENZA,DELGADO,REYES,06.Mar.23 07:22:40,31.Mar.23 13:50:37,28.Mar.23 14:07:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,,,,
+260,249469,LIZBETH JOSEFINA,AGUILAR,CORREA,29.Mar.23 07:43:56,29.Mar.23 13:01:56,29.Mar.23 08:19:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+261,248825,SOLEDAD,ALVARADO,TORRES,21.Mar.23 07:53:18, ,29.Mar.23 09:16:00,PROCEDIMIENTO AMBULATORIO , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+262,194821,MARIA DE LA PAZ,GIL,CONTRERAS,29.Mar.23 07:43:55,29.Mar.23 11:29:22,29.Mar.23 11:16:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,441,Procedimientos diagnÛsticos sobre estÛmago,441,Procedimientos diagnÛsticos sobre estÛmago
+263,241862,ISABEL,MORALES,AGUILAR,29.Mar.23 09:34:21,29.Mar.23 14:19:26,29.Mar.23 11:38:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+264,249422,MIGUEL ANGEL,LOPEZ,AGUILAR,03.Mar.23 02:39:14,03.May.23 12:59:18,29.Mar.23 11:50:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+265,245474,BARBARA MERCEDES,ESPARZA,LOPEZ,27.Mar.23 23:29:44,11.Abr.23 13:19:23,29.Mar.23 12:50:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+266,233732,MARGARITA,MARTINEZ,MARTINEZ,30.Mar.23 06:58:21,30.Mar.23 15:04:28,30.Mar.23 09:04:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+267,241672,ANGELICA MARIA,BARRETO,FLORES,30.Mar.23 07:40:43,30.Mar.23 14:46:38,30.Mar.23 09:12:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+268,205462,JESUS,HERNANDEZ,CALDERON,30.Mar.23 07:39:36,30.Mar.23 16:07:12,30.Mar.23 09:23:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+269,243131,IRMA,ORTIZ,PATI—O,30.Mar.23 07:34:06,30.Mar.23 14:44:02,30.Mar.23 11:14:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+270,249850,FELIX,RAMIREZ,CHUN,30.Mar.23 08:47:50,30.Mar.23 15:37:06,30.Mar.23 12:25:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+271,248358,MICAELA MARIA,JUAREZ,PERALTA,10.Ene.23 04:52:43,05.Abr.23 16:30:15,30.Mar.23 12:59:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,431,GastrostomÌ≠a,431,GastrostomÌ≠a
+272,249610,JOSE,BRIONES,CHAVEZ,31.Mar.23 07:09:25,31.Mar.23 13:18:39,31.Mar.23 08:45:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+273,247296,RAMONA ARCELIA,MACIAS,LECHUGA,31.Mar.23 06:56:04,31.Mar.23 13:45:28,31.Mar.23 08:58:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+274,246953,MANUEL AGUSTIN,ORTEGA,MAYA,31.Mar.23 07:17:43,31.Mar.23 14:44:58,31.Mar.23 09:19:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+275,180603,JERONIMO,ESPEJEL,TORRES,27.Mar.23 12:56:45,11.Abr.23 12:44:18,31.Mar.23 11:32:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+276,213642,LAZARO,ORDO—ES,HERNANDEZ,31.Mar.23 06:33:33,31.Mar.23 16:10:10,31.Mar.23 11:54:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+277,249372,DIEGO ENRIQUE,GARCIA,GARCIA,28.Feb.23 13:41:04,14.Abr.23 14:45:47,31.Mar.23 12:28:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+278,242656,RAQUEL,FUENTES,AGUILAR,03.Abr.23 07:24:01,03.Abr.23 11:45:58,03.Abr.23 09:00:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+280,249956,IRMA YADIRA,MONTBELIARD,MORENO, , ,03.Abr.23 09:37:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+281,246086,RAFAEL,DIAZ,SALAZAR, , ,03.Abr.23 10:09:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+279,249357,MARIA,ARELLANO,HUERTA, , ,03.Abr.23 09:28:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+282,249949,JOSE GUADALUPE,MARTINEZ,PEDRAZA,03.Abr.23 06:51:00,12.Abr.23 12:58:52,03.Abr.23 13:10:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+283,249924,DIANA MARLENE,REYES,CHONTAL,03.Abr.23 08:25:12,03.Abr.23 15:28:38,03.Abr.23 13:53:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+284,248645,IRAIS VERONICA,ALMAZAN,FRAGOSO,04.Abr.23 06:37:45,04.Abr.23 14:10:34,04.Abr.23 08:00:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+285,249320,ANGEL GUSTAVO,FIGUEROA,Y LANDETA,04.Abr.23 06:47:23,04.Abr.23 14:13:31,04.Abr.23 08:44:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+286,167293,CYNTHIA PAMELA,LOVERA,OLVERA, , ,04.Abr.23 09:09:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+287,247099,MA DE JESUS,DOMINGUEZ,DELGADO,04.Abr.23 08:09:37,04.Abr.23 11:36:32,04.Abr.23 10:57:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+288,249978,ROSA,SALAZAR,MEDINA,04.Abr.23 06:57:10,04.Abr.23 15:34:09,04.Abr.23 11:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+289,216738,DULCE MARIA,RAMON,PABLO,05.Abr.23 07:16:06,05.Abr.23 12:27:23,05.Abr.23 08:18:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+296,249357,MARIA,ARELLANO,HUERTA,10.Abr.23 06:57:34,10.Abr.23 11:59:46,10.Abr.23 09:52:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+293,246323,JUAN,MAQUEDA,VELAZQUEZ,10.Abr.23 06:52:30,10.Abr.23 11:47:41,10.Abr.23 08:13:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+294,240181,MARIA FERNANDA,VARGAS,SANCHEZ,10.Abr.23 07:16:52,10.Abr.23 15:38:55,10.Abr.23 08:34:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+295,246086,RAFAEL,DIAZ,SALAZAR, , ,10.Abr.23 09:31:00, , ,,,,
+291,249585,GUSTAVO,AGUILAR,FABILA,09.Mar.23 12:39:04,13.May.23 13:42:00,05.Abr.23 12:29:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+292,249959,PATRICIA,MENDEZ,GOMEZ,05.Abr.23 07:20:36,05.Abr.23 16:09:40,05.Abr.23 12:44:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+297,248927,AGUSTIN ARTURO,ROMERO,FLORES,10.Abr.23 07:18:09,10.Abr.23 13:50:15,10.Abr.23 10:19:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+298,246768,MARGARITA,DIAZ,VITE,10.Abr.23 08:15:40,10.Abr.23 14:21:28,10.Abr.23 11:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+299,242200,JOSE LUIS,DIAZ,CABRERA, , ,10.Abr.23 12:24:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+300,250033,MIGUEL ANGEL,GUERRERO,OLIVAR,10.Abr.23 07:25:59,10.Abr.23 16:00:13,10.Abr.23 13:08:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+301,248898,ELVIRA,MOCTEZUMA,OSORIO,10.Abr.23 13:05:43,10.Abr.23 13:58:19,10.Abr.23 13:54:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+302,226184,DELFINO IGNACIO,CASTRO,PELAEZ,11.Abr.23 07:10:02,11.Abr.23 14:10:09,11.Abr.23 08:20:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+303,233979,JOSE JESUS,BARCENAS,JUAREZ,11.Abr.23 06:55:23,11.Abr.23 14:00:31,11.Abr.23 08:27:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+304,250109,ALEJANDRINA,HERNANDEZ,ORREGO,11.Abr.23 07:21:00,11.Abr.23 18:07:58,11.Abr.23 10:46:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+305,250106,CELSO,FLORES,VITAL,04.Abr.23 11:04:54,19.Abr.23 13:27:19,11.Abr.23 11:19:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+306,250177,JOSE GUADALUPE,CASTRO,REYES,10.Abr.23 14:26:33,15.Abr.23 18:45:29,11.Abr.23 12:03:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+307,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,12.Abr.23 09:30:00, , ,,,,
+308,247608,OMERO,MIRANDA,GARCIA, , ,12.Abr.23 09:39:00, , ,,,,
+324,246953,MANUEL AGUSTIN,ORTEGA,MAYA,23.Mar.23 07:11:10, ,14.Abr.23 08:08:00,PROCEDIMIENTO AMBULATORIO , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+325,249800,ERNESTO,ALONSO,ENRIQUEZ, , ,14.Abr.23 08:32:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+310,244103,ROSALINA,ZAMORANO,SANCHEZ, , ,12.Abr.23 10:34:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+311,192767,REYNA,GARCIA,CAMA—OS,12.Abr.23 07:41:17,13.Abr.23 15:30:08,12.Abr.23 10:43:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+312,243741,ROSA MARIA,MARTINEZ,AUSTRIA,12.Abr.23 07:36:30,12.Abr.23 13:00:30,12.Abr.23 11:01:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+313,244103,ROSALINA,ZAMORANO,SANCHEZ, , ,12.Abr.23 11:23:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+314,250157,OMAR,PE—A,CABALLERO,06.Abr.23 16:07:43,20.Abr.23 15:09:43,12.Abr.23 11:35:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+315,249982,DARIA,RIVAS,CEDILLO,12.Abr.23 06:33:22,12.Abr.23 17:22:30,12.Abr.23 13:05:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+316,218993,JOSE OSVALDO,AGUILAR,ALCANTARA,13.Abr.23 07:11:20,13.Abr.23 15:46:16,13.Abr.23 08:38:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+317,233732,MARGARITA,MARTINEZ,MARTINEZ,13.Abr.23 07:12:55,13.Abr.23 14:34:21,13.Abr.23 08:45:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+318,245191,DIANA LISETT,ISLAS,DELGADO,13.Abr.23 07:32:11,13.Abr.23 16:25:37,13.Abr.23 10:19:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+319,244663,GLORIA HILARIA,FLORES,QUINTERO, , ,13.Abr.23 10:22:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+320,248997,EDILBERTA,ACEVEDO,PALMA,12.Feb.23 11:25:20,27.Abr.23 14:48:42,13.Abr.23 10:13:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+321,246431,JUAN JOSE,MENDOZA,ARANDA,13.Abr.23 07:02:08,13.Abr.23 15:05:01,13.Abr.23 10:29:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+322,249488,FRANCISCO,COLIN,BASTIDA,13.Abr.23 06:53:23,13.Abr.23 15:43:53,13.Abr.23 10:52:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+323,249613,MANUEL,VAZQUEZ,SANTIAGO,13.Abr.23 07:22:11,13.Abr.23 16:33:16,13.Abr.23 12:41:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+326,249965,DOLORES GUADALUPE,VARGAS,ARRIAGA,29.Mar.23 01:50:03,12.May.23 14:47:40,14.Abr.23 10:06:00,INGRESO A TERAPIA ,Unidad de Terapia Intermedia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+327,250128,MARTIN,GARCIA,CAMPOS,14.Abr.23 08:37:52,14.Abr.23 12:04:16,14.Abr.23 10:44:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+328,246086,RAFAEL,DIAZ,SALAZAR,17.Abr.23 06:56:54,17.Abr.23 09:48:04,17.Abr.23 09:15:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+329,244606,JHONNY ESTEBAN,ALVA,TORRES,17.Abr.23 06:47:33,20.Abr.23 16:49:28,17.Abr.23 09:23:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+330,250298,REYNA,ROMERO,GARAY,17.Abr.23 07:18:01,17.Abr.23 14:51:23,17.Abr.23 10:08:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+331,249330,CESAR ELIGIO,SOLIS,BARRAGAN,17.Abr.23 06:42:23,17.Abr.23 17:27:32,17.Abr.23 10:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+332,243492,FRANCISCO DANIEL,VELAZQUEZ,PONCE, , ,17.Abr.23 10:08:00, , ,,,,
+333,250290,MARIBEL,FLORES,JIMENEZ, , ,17.Abr.23 11:23:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+334,243492,FRANCISCO DANIEL,VELAZQUEZ,PONCE,17.Abr.23 06:54:39,17.Abr.23 16:17:56,17.Abr.23 12:02:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+335,248466,FRANCISCA,GARCIA,CARLOS, , ,17.Abr.23 12:08:00, , ,,,,
+336,211610,MARIA AUSENCIA TERESA,DIAZ,JUAREZ,31.Mar.23 14:26:19,30.May.23 13:03:18,17.Abr.23 13:24:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+337,245930,JUAN PABLO,IGLESIAS,IGLESIAS,18.Abr.23 07:32:36,18.Abr.23 13:20:18,18.Abr.23 09:28:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+338,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,18.Abr.23 09:33:00, , ,,,,
+339,233896,MARA ANAID,SORIA,AGUILAR,18.Abr.23 07:18:41,18.Abr.23 12:27:05,18.Abr.23 09:41:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+340,250292,GONZALO,FABIAN,GARCIA,18.Abr.23 07:47:20,18.Abr.23 13:36:58,18.Abr.23 10:38:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+341,250107,ANGEL,GONZALEZ,RIVERA,04.Abr.23 15:10:04,19.Abr.23 13:58:16,18.Abr.23 11:18:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+342,244668,CANDELARIA,CRISANTO,CHAVEZ,19.Abr.23 07:21:10,19.Abr.23 15:11:33,19.Abr.23 07:59:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+358,248428,JENNIFER,CONTRERAS,HERNANDEZ, , ,21.Abr.23 09:55:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+345,243764,MARICARMEN,ARMENTA,MENDOZA,19.Abr.23 07:26:35,28.Abr.23 14:23:31,19.Abr.23 10:02:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+357,246452,CONSTANTINO,SANCHEZ,GARCIA, , ,21.Abr.23 09:33:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+346,250300,GUADALUPE BELEM,GARCIA,MEJIA,14.Abr.23 03:17:19,26.Abr.23 16:52:39,19.Abr.23 11:58:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+347,239711,VICTOR HUGO,PEREZ,HIPOLITO,19.Abr.23 07:51:10,19.Abr.23 12:56:59,19.Abr.23 12:08:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+348,244321,JOSE ADRIAN,ELECHIGUERRA,VALDIVIA,19.Abr.23 07:34:26,19.Abr.23 15:15:52,19.Abr.23 12:36:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+356,246368,MARIA FERNANDA,TREJO,TAPIA,12.Ene.23 07:51:55, ,21.Abr.23 07:52:00,PROCEDIMIENTO AMBULATORIO , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+350,243843,YOLANDA,RAMON,ALVARADO,20.Abr.23 07:13:16,20.Abr.23 15:26:56,20.Abr.23 07:54:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+351,250126,MIRIAM,ARTEAGA,LOPEZ,20.Abr.23 08:02:39,20.Abr.23 12:57:57,20.Abr.23 10:21:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+352,200173,IRENE,DOMINGUEZ,MARTINEZ,20.Abr.23 07:56:57,20.Abr.23 12:15:40,20.Abr.23 10:48:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4414,Biopsia cerrada de estÛmago (endoscÛpica),4414,Biopsia cerrada de estÛmago (endoscÛpica)
+353,205462,JESUS,HERNANDEZ,CALDERON,20.Abr.23 07:58:47,20.Abr.23 16:08:27,20.Abr.23 11:18:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+354,248643,SONIA,GRAJALES,ESCOBAR,20.Abr.23 07:51:54,01.May.23 15:31:24,20.Abr.23 11:21:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+355,218993,JOSE OSVALDO,AGUILAR,ALCANTARA,20.Abr.23 07:31:35,20.Abr.23 18:18:33,20.Abr.23 11:39:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9656,Otro lavado de bronquio y tr·quea,9656,Otro lavado de bronquio y tr·quea
+359,250443,AMERICA SHERLYN,RUIZ,CRUZ,21.Abr.23 12:44:15,23.Abr.23 10:52:11,21.Abr.23 10:31:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+360,240946,MARIA BERTHA,MELO,JIMENEZ,18.Abr.23 12:26:43,27.Abr.23 16:20:38,21.Abr.23 12:26:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+361,238470,DAVID EDUARDO,HERRERA,RAMIREZ,21.Abr.23 07:20:15,21.Abr.23 17:13:01,21.Abr.23 13:42:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+362,201335,ANTONIO DE JESUS,RANGEL,RODRIGUEZ,21.Abr.23 11:14:35,21.Abr.23 15:35:41,21.Abr.23 13:39:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+363,249831,JESICA MONSERRAT,TORIZ,JUAREZ,24.Abr.23 06:59:51,24.Abr.23 15:21:14,24.Abr.23 08:04:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+364,245917,MICHELLE,HERNANDEZ,KAWAS,24.Abr.23 07:29:25,24.Abr.23 13:41:41,24.Abr.23 08:10:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+365,247495,FLORIBERTA,ESTRADA,ALVAREZ,24.Abr.23 06:53:45,24.Abr.23 14:50:10,24.Abr.23 08:58:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+366,246086,RAFAEL,DIAZ,SALAZAR, , ,24.Abr.23 09:07:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+367,249357,MARIA,ARELLANO,HUERTA, , ,24.Abr.23 09:11:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+368,248898,ELVIRA,MOCTEZUMA,OSORIO, , ,24.Abr.23 09:31:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+369,250356,GUILLERMO,AGUILAR,TORRES,24.Abr.23 08:31:53,24.Abr.23 14:40:55,24.Abr.23 11:06:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+370,250378,MARINO,SANCHEZ,CAMPOS,19.Abr.23 22:32:56,29.Abr.23 12:28:15,24.Abr.23 11:29:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+371,250134,FRANCISCA,SUAREZ,ESCAMILLA,10.Abr.23 17:47:48,30.Abr.23 20:12:51,24.Abr.23 13:12:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+372,208191,DULCE IVETH,VELAZQUEZ,LOPEZ,25.Abr.23 06:59:53,25.Abr.23 17:02:37,25.Abr.23 08:59:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+375,246685,JONATHAN,MORALES,MIRELES, , ,25.Abr.23 09:59:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+376,249966,JOSE GABRIEL,ALVAREZ,GASPAR,25.Abr.23 06:35:04,25.Abr.23 15:29:59,25.Abr.23 10:22:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+377,250348,CARLOS,GARCIA,ORTIZ,25.Abr.23 06:57:55,25.Abr.23 15:25:57,25.Abr.23 10:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+389,240491,MOISES,RODRIGUEZ,NAVARRETE, , ,27.Abr.23 08:28:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+407,233896,MARA ANAID,SORIA,AGUILAR,02.May.23 07:10:12,02.May.23 13:55:02,02.May.23 10:33:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+379,250354,MIGUEL ANGEL,OSORIO,ROMERO,25.Abr.23 07:51:02,25.Abr.23 13:39:50,25.Abr.23 12:56:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+380,249978,ROSA,SALAZAR,MEDINA,26.Abr.23 06:42:23,26.Abr.23 15:16:34,26.Abr.23 08:42:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+402,247621,NELSON SANTIAGO,ROMERO,RODRIGUEZ,28.Abr.23 06:44:39,28.Abr.23 16:35:05,28.Abr.23 11:51:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+382,247608,OMERO,MIRANDA,GARCIA, , ,26.Abr.23 09:03:00, , ,,,,
+401,249312,MARIA MARICELA,NAVARRO,CAMBRON, , ,28.Abr.23 10:25:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+384,249644,DEYVIS YAMIL,PORTILLO,,11.Mar.23 16:56:05,12.May.23 14:26:15,26.Abr.23 10:53:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+400,250467,ELIAS,GALINDO,IBA—EZ,22.Abr.23 23:19:07,04.May.23 15:16:55,28.Abr.23 10:21:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+397,249615,RENE ANGEL,MORALES,PEREZ,28.Abr.23 06:48:27,28.Abr.23 13:37:10,28.Abr.23 09:13:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+398,235428,ELISEO,AYALA,MENDOZA,28.Abr.23 06:52:20,28.Abr.23 15:04:09,28.Abr.23 09:33:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+399,246452,CONSTANTINO,SANCHEZ,GARCIA, , ,28.Abr.23 09:41:00, , ,,,,
+386,248997,EDILBERTA,ACEVEDO,PALMA,12.Feb.23 11:25:20,27.Abr.23 14:48:42,26.Abr.23 12:28:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+387,249608,JESUS EUSTAQUIO,CORTES,ALAVEZ,26.Abr.23 07:27:00,26.Abr.23 15:49:12,26.Abr.23 13:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+406,250538,JOSE ALONSO,JUAREZ,GARCIA,02.May.23 07:32:59,02.May.23 13:35:48,02.May.23 10:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+390,250285,LINO,NAVARRETE,HERNANDEZ,27.Abr.23 07:36:01,27.Abr.23 15:31:24,27.Abr.23 10:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+391,191245,MARIA GUADALUPE,MARTINEZ,CAMACHO,27.Abr.23 07:27:56,27.Abr.23 12:01:59,27.Abr.23 10:38:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+392,249953,MIGUEL,ALBERTO,LONGINO,28.Mar.23 12:21:01,28.Abr.23 13:48:59,27.Abr.23 11:05:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 4 ,,,,
+393,238938,ALEJANDRA,MIRANDA,LARA,25.Abr.23 19:43:14,04.May.23 18:28:28,27.Abr.23 11:42:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+394,243764,MARICARMEN,ARMENTA,MENDOZA,19.Abr.23 07:26:35,28.Abr.23 14:23:31,27.Abr.23 12:41:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+395,247838,GUILLERMO JAVIER,HERNANDEZ,RODRIGUEZ,15.Abr.23 18:34:49,08.Jun.23 23:23:11,27.Abr.23 13:06:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,9656,Otro lavado de bronquio y tr·quea,9656,Otro lavado de bronquio y tr·quea
+396,244607,ROMUALDO,MALAGON,DUARTE,21.Mar.23 19:55:21,01.Jun.23 23:14:31,27.Abr.23 13:19:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,,,,
+403,143277,SONIA,RAMOS,TRUJILLO,28.Abr.23 06:45:53,28.Abr.23 16:38:38,28.Abr.23 12:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+404,243294,ERNESTO,ROQUE,NAVA,20.Mar.23 16:05:45,09.May.23 13:12:42,28.Abr.23 13:09:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 4 ,3323,Otra broncoscopia,3323,Otra broncoscopia
+405,249084,PERLA DEL CARMEN,ALCOCER,OLAN,26.Abr.23 07:31:04,28.Abr.23 15:45:46,28.Abr.23 13:48:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+408,250217,REMEDIOS,PEREZ,ARANDA,02.May.23 08:08:39,02.May.23 16:30:32,02.May.23 11:07:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+409,167293,CYNTHIA PAMELA,LOVERA,OLVERA,02.May.23 08:13:24,02.May.23 15:47:33,02.May.23 11:23:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+410,250214,MARCO ALBERTO,SANCHEZ,ANZALDO, , ,02.May.23 11:27:00, , ,,,,
+411,231125,CARLOS ANDRES,VARGAS,BALENCIA,02.May.23 10:36:49,02.May.23 14:25:21,02.May.23 12:26:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 7 ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+412,210636,JOSE ARTURO,BAUTISTA,SALDA—A.,02.May.23 07:43:30,02.May.23 13:16:38,02.May.23 12:51:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+413,250556,AMELIA,GALICIA,MARTINEZ,27.Abr.23 17:02:08,12.May.23 14:19:27,02.May.23 13:08:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+414,249748,MARIA IRMA ISABEL,GRANADOS,GARCIA,03.May.23 06:58:43,03.May.23 16:59:47,03.May.23 08:54:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+415,243492,FRANCISCO DANIEL,VELAZQUEZ,PONCE,03.May.23 06:51:06,03.May.23 16:09:15,03.May.23 09:46:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+416,249946,ARTURO,VAZQUEZ,URIBE, , ,03.May.23 09:52:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+417,247608,OMERO,MIRANDA,GARCIA, , ,03.May.23 10:13:00, , ,,,,
+418,250143,EDUARDO ARMANDO,GUTIERREZ,GUTIERREZ,26.Abr.23 07:10:15, ,03.May.23 10:30:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+419,250548,ROBERTO,BALTAZAR,IBARRA,28.Abr.23 03:39:56,16.May.23 13:14:50,03.May.23 14:02:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+420,243492,FRANCISCO DANIEL,VELAZQUEZ,PONCE,03.May.23 06:51:06,03.May.23 16:09:15,03.May.23 15:23:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+421,164737,AZUCENA,REBOLLAR,CARBAJAL,04.May.23 07:29:07,04.May.23 15:55:42,04.May.23 08:47:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+422,250426,JUAN SEBASTIAN,CARRILLO,ROJAS,04.May.23 07:28:07,25.May.23 09:53:45,04.May.23 09:09:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,,,,
+423,246452,CONSTANTINO,SANCHEZ,GARCIA, , ,04.May.23 09:26:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+424,250198,HONORIA,HERNANDEZ,JIMENEZ,29.Abr.23 01:13:02,11.May.23 21:41:20,04.May.23 12:01:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+425,250457,SANDRA,LOPEZ,CRUZ,04.May.23 08:04:02,13.May.23 13:53:36,04.May.23 12:25:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+426,210354,MONICA,ESQUIVEL,SANCHEZ, , ,08.May.23 08:17:00, , ,,,,
+427,249357,MARIA,ARELLANO,HUERTA, , ,08.May.23 08:49:00, , ,,,,
+428,249357,MARIA,ARELLANO,HUERTA, , ,08.May.23 10:13:00, , ,,,,
+429,150010,AMALIA,GRANADOS,RAMIREZ,08.May.23 07:41:29,08.May.23 13:45:15,08.May.23 10:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+430,243294,ERNESTO,ROQUE,NAVA,20.Mar.23 16:05:45,09.May.23 13:12:42,08.May.23 11:00:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 4 ,9702,SustituciÛn de tubo de gastrostomÌ≠a,9702,SustituciÛn de tubo de gastrostomÌ≠a
+431,221075,JESUS,SOLIS,LIMA,07.May.23 18:25:01,16.May.23 13:33:58,08.May.23 11:27:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+432,250022,JOSE ANTONIO,TAPIA,MARTINEZ,28.Abr.23 00:12:05,12.May.23 12:49:11,08.May.23 13:42:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+434,226184,DELFINO IGNACIO,CASTRO,PELAEZ, , ,09.May.23 10:34:00, , ,,,,
+435,177187,RUTH,FERNANDEZ,ARZATE,09.May.23 07:31:17,09.May.23 15:58:18,09.May.23 10:57:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+443,253196,CANDIDA,FLORES,SOTERO, , ,18.Sep.23 11:30:00, , ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+437,242656,RAQUEL,FUENTES,AGUILAR, , ,09.May.23 12:00:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+438,177187,RUTH,FERNANDEZ,ARZATE,09.May.23 07:31:17,09.May.23 15:58:18,09.May.23 15:49:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+439,250615,KARLA CARINA,ROBLES,VAZQUEZ,10.May.23 06:33:09,10.May.23 14:31:26,10.May.23 09:35:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+440,250520,XIOMARA SARAI,JARAMILLO,BENITEZ, , ,10.May.23 10:21:00, , ,,,,
+449,249746,ALEXIS,DE LA CRUZ,ZU—IGA,15.May.23 06:52:55,15.May.23 16:16:25,15.May.23 12:32:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+447,250628,LUIS CRISTIAN,TORRES,DOMINGUEZ,03.May.23 07:42:12,23.Jun.23 14:29:43,15.May.23 11:35:00,PROCEDIMIENTO AMBULATORIO ,Unidad de Terapia Intermedia ,,,,
+448,249722,ANTONIO,ORTIZ,FIERROS,15.May.23 06:44:06,15.May.23 15:01:05,15.May.23 12:19:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+446,250813,CELSA,GOMEZ,HERNANDEZ,12.May.23 14:21:10,13.Jun.23 14:44:33,15.May.23 10:03:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+451,248694,GERARDO,SANTOS,LOBATO,16.May.23 07:40:16,16.May.23 13:55:55,16.May.23 11:19:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+452,246324,MARIA DE JESUS,LARA,AGUILA, , ,16.May.23 14:37:00, , ,,,,
+457,233732,MARGARITA,MARTINEZ,MARTINEZ,18.May.23 07:26:10,18.May.23 15:34:23,18.May.23 09:22:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+454,250818,ANDRES CRISTOBAL,URIAS,GAMEZ,17.May.23 07:23:17,17.May.23 13:42:56,17.May.23 10:36:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+455,250029,MARIA DEL SOCORRO,GONZALEZ,RODRIGUEZ, , ,17.May.23 09:22:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+456,249982,DARIA,RIVAS,CEDILLO, , ,17.May.23 10:57:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+458,250794,CESAR,JIMENEZ,SUAREZ,18.May.23 06:36:30,18.May.23 17:39:06,18.May.23 10:14:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+459,210016,MARIA GUADALUPE,GOMEZ,PEDRAZA,18.May.23 06:56:04,18.May.23 14:40:49,18.May.23 11:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+460,167293,CYNTHIA PAMELA,LOVERA,OLVERA,18.May.23 07:54:48,18.May.23 14:58:49,18.May.23 12:36:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+461,250285,LINO,NAVARRETE,HERNANDEZ,19.May.23 07:19:49,19.May.23 14:15:09,19.May.23 10:55:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+476,250896,HUGO,CASTILLO,SANCHEZ,17.May.23 16:32:30,26.May.23 16:25:28,24.May.23 10:30:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+465,250880,SANTIAGO,MU—OZ,ARMENTA,22.May.23 07:31:00,22.May.23 14:31:10,22.May.23 10:46:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+466,250776,RITA,ROBLES,NAVA,22.May.23 08:06:17,22.May.23 15:54:33,22.May.23 12:06:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+475,249982,DARIA,RIVAS,CEDILLO, , ,24.May.23 10:11:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+463,164737,AZUCENA,REBOLLAR,CARBAJAL,19.May.23 07:09:27,19.May.23 15:56:53,19.May.23 15:32:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+474,250029,MARIA DEL SOCORRO,GONZALEZ,RODRIGUEZ,24.May.23 08:05:27,24.May.23 10:00:31,24.May.23 09:29:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+467,221075,JESUS,SOLIS,LIMA,22.May.23 07:57:35,22.May.23 15:30:56,22.May.23 13:04:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+468,244321,JOSE ADRIAN,ELECHIGUERRA,VALDIVIA,23.May.23 07:13:19,23.May.23 14:27:35,23.May.23 09:49:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+469,250214,MARCO ALBERTO,SANCHEZ,ANZALDO,23.May.23 06:33:54,23.May.23 14:42:50,23.May.23 10:15:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+470,247608,OMERO,MIRANDA,GARCIA, , ,23.May.23 11:04:00, , ,,,,
+471,250258,MARIA SILVIA,FLORES,AYALA,23.May.23 07:01:19,23.May.23 15:20:19,23.May.23 11:58:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+472,243492,FRANCISCO DANIEL,VELAZQUEZ,PONCE,18.May.23 13:31:08,15.Jun.23 13:42:56,23.May.23 12:47:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+473,250959,CARLOS ARTURO,MARTINEZ,GUTIERREZ,19.May.23 02:44:43,02.Jun.23 16:57:28,23.May.23 13:19:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+478,250601,RAUL ALFREDO,MENDEZ,BANDERA,30.Abr.23 17:33:04,01.Jun.23 14:05:03,24.May.23 11:43:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+484,246452,CONSTANTINO,SANCHEZ,GARCIA, , ,26.May.23 09:07:00, , ,,,,
+485,250352,FRANCISCO JAVIER,YUEN,DURAN,26.May.23 08:14:35,26.May.23 15:17:43,26.May.23 11:03:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+486,250754,MARIA ELENA,ORTEGA,VALLE, , ,26.May.23 11:16:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+480,250927,SANTANA,MARCELINO,CHINO,18.May.23 13:30:54,02.Jun.23 17:53:18,24.May.23 14:10:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+481,241672,ANGELICA MARIA,BARRETO,FLORES,24.May.23 10:10:58,24.May.23 15:22:00,24.May.23 15:06:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+482,246865,TANIA,MADRIGAL,MARTINEZ, , ,25.May.23 08:59:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+483,220526,ROSALBA,OLIVARES,ORTIZ,25.May.23 08:31:17,25.May.23 13:53:47,25.May.23 12:35:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+491,241778,ANDREA,FLORES,MORALES, , ,31.May.23 10:47:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+488,246086,RAFAEL,DIAZ,SALAZAR, , ,29.May.23 09:09:00, , ,,,,
+489,210354,MONICA,ESQUIVEL,SANCHEZ, , ,29.May.23 11:21:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+490,247495,FLORIBERTA,ESTRADA,ALVAREZ,20.May.23 09:52:12,02.Jun.23 13:00:35,29.May.23 12:11:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+492,249922,VICTOR MANUEL,SUAREZ,MENDOZA,28.May.23 16:06:52,26.Jun.23 14:23:48,31.May.23 11:09:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+493,251091,MARCOS,MONDRAGON,CASTRO,25.May.23 13:31:50,10.Jun.23 01:55:47,31.May.23 11:29:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 9 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+494,251010,ANGELICA,BARCENAS,ORTEGA, , ,31.May.23 11:18:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+495,244103,ROSALINA,ZAMORANO,SANCHEZ,31.May.23 07:52:26,31.May.23 14:46:06,31.May.23 12:30:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+496,251143,LUIS ALBERTO,PEREZ,ESCUTIA,27.May.23 19:03:32,08.Jun.23 13:03:22,31.May.23 13:27:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+497,250504,SANDRA REBECA,ROQUE,PIRO,31.May.23 07:13:47,31.May.23 15:45:41,31.May.23 15:25:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+498,185716,JACQUELINE,SANDOVAL,CRUZ, , ,01.Jun.23 08:45:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+499,251117,TODD,STEPHEN,GERBER,01.Jun.23 07:49:40,01.Jun.23 14:55:15,01.Jun.23 10:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+500,251116,JUSTIN,BROCK,GERBER,01.Jun.23 07:49:46,01.Jun.23 14:55:47,01.Jun.23 10:58:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+501,250860,SELMIZA,GUTIERREZ,NORZAGARAY,29.May.23 20:04:44,14.Jun.23 13:22:56,01.Jun.23 12:39:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+502,246931,MARIO LEONEL,MERA,DIAZ,31.May.23 15:03:13,02.Jun.23 19:19:30,02.Jun.23 09:05:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+504,250536,ADRIANA,HERNANDEZ,HERNANDEZ, , ,02.Jun.23 09:35:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+505,246368,MARIA FERNANDA,TREJO,TAPIA,12.Ene.23 07:51:55, ,02.Jun.23 10:27:00,PROCEDIMIENTO AMBULATORIO , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+508,251205,JASSIEL,GAYOSSO,GUTIERREZ,31.May.23 19:16:38,07.Jun.23 13:22:26,05.Jun.23 09:45:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+509,251229,LAURA,MERCADO,VELAZQUEZ,01.Jun.23 03:44:53,13.Jun.23 14:25:07,05.Jun.23 10:04:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+522,240875,SERGIO AZAREL,MORALES,RAMOS, , ,07.Jun.23 08:54:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+523,250029,MARIA DEL SOCORRO,GONZALEZ,RODRIGUEZ,07.Jun.23 08:07:54,07.Jun.23 10:14:37,07.Jun.23 10:01:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+524,250529,JUAN,REBOLLO,RICO,07.Jun.23 08:56:15,07.Jun.23 15:46:16,07.Jun.23 10:33:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+511,249357,MARIA,ARELLANO,HUERTA, , ,05.Jun.23 11:08:00, , ,,,,
+521,248120,MARCO ANTONIO,SANTOS,RAMIREZ,07.Jun.23 07:14:04,07.Jun.23 15:40:46,07.Jun.23 08:05:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+513,240181,MARIA FERNANDA,VARGAS,SANCHEZ, , ,05.Jun.23 11:34:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+514,251198,CHRISTIAN,MEDINA,FARFAN,31.May.23 02:56:31,10.Jun.23 16:13:35,05.Jun.23 13:11:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+515,240234,MARGARITA,GUTIERREZ,MONTOYA,06.Jun.23 06:54:49,06.Jun.23 12:53:04,06.Jun.23 09:11:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+516,251298,YAMILETH,ESPINOZA,ANGULO,06.Jun.23 06:57:13,06.Jun.23 15:01:53,06.Jun.23 09:17:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+518,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,06.Jun.23 09:48:00, , ,,,,
+519,247608,OMERO,MIRANDA,GARCIA, , ,06.Jun.23 10:04:00, , ,,,,
+520,251282,NOE,TIMOTEO,MARTINEZ,04.Jun.23 02:22:14,22.Jun.23 14:49:50,06.Jun.23 11:58:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+528,248938,BERTA,TORRES,ORTEGA,08.Jun.23 08:03:58,08.Jun.23 13:25:01,08.Jun.23 11:00:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+535,249357,MARIA,ARELLANO,HUERTA, , ,12.Jun.23 09:10:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+529,251343,MARIA GUADALUPE,AGUILAR,GUILLEN,07.Jun.23 12:40:31,09.Jun.23 17:14:43,08.Jun.23 11:06:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,,,,
+525,251004,GUADALUPE,CALZADA,GONZALEZ,07.Jun.23 07:44:26,07.Jun.23 14:18:08,07.Jun.23 12:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+530,251232,CARLOS IVAN,PUGA,HERNANDEZ,08.Jun.23 08:42:31,08.Jun.23 14:18:11,08.Jun.23 11:40:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+531,249281,MARIELA,MENDOZA,LOPEZ,08.Jun.23 07:42:27,08.Jun.23 16:54:02,08.Jun.23 13:21:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+532,250677,KIMBERLY RUBI,HUITRON,BALTAZAR,09.Jun.23 06:29:56,09.Jun.23 11:28:01,09.Jun.23 08:25:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+533,249312,MARIA MARICELA,NAVARRO,CAMBRON,09.Jun.23 07:09:28,09.Jun.23 13:31:25,09.Jun.23 09:58:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+534,251247,JULIEN ELISSU,BELTRAN,DIAZ,01.Jun.23 17:41:09,15.Jun.23 13:07:24,09.Jun.23 10:32:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+536,246086,RAFAEL,DIAZ,SALAZAR, , ,12.Jun.23 09:21:00, , ,,,,
+537,249357,MARIA,ARELLANO,HUERTA, , ,12.Jun.23 09:10:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+538,247654,JUAN,CATA—O,MADRIGAL,12.Jun.23 07:32:14,12.Jun.23 15:03:06,12.Jun.23 09:58:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+539,246953,MANUEL AGUSTIN,ORTEGA,MAYA,12.Jun.23 07:23:41,12.Jun.23 15:24:07,12.Jun.23 10:05:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+540,250373,SANDI,PE—A,JIMENEZ, , ,12.Jun.23 10:34:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+541,248244,MA CONSEPCION,LAZARO,HERMOSILLO,12.Jun.23 07:25:25,12.Jun.23 16:20:19,12.Jun.23 13:18:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+542,233663,RAQUEL,VELAZQUEZ,ALVAREZ,25.Abr.23 07:08:51, ,13.Jun.23 08:09:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+543,233659,HELIODORO,FLORES,NERI, , ,13.Jun.23 08:16:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+544,251219,MARCO POLO,NANNI,CONTRERAS,13.Jun.23 07:07:07,13.Jun.23 13:51:53,13.Jun.23 08:51:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+545,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,13.Jun.23 09:12:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+546,250198,HONORIA,HERNANDEZ,JIMENEZ, , ,13.Jun.23 09:23:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+547,247608,OMERO,MIRANDA,GARCIA, , ,13.Jun.23 09:26:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+548,250473,ERNESTO,LOPEZ,LOPEZ,12.Jun.23 13:13:13,30.Jun.23 13:02:24,14.Jun.23 10:11:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+549,251455,LUVIA CONSUELO,SUAREZ,BALLINAZ,13.Jun.23 00:03:52,16.Jul.23 12:14:14,14.Jun.23 12:06:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+550,251217,ADA LUZ,FIGUEROA,ROBLERO,14.Jun.23 16:05:59,06.Jul.23 13:09:00,16.Jun.23 11:27:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+551,251506,CHRISTIAN RICARDO,TELLEZ,RODRIGUEZ,15.Jun.23 15:21:31,06.Jul.23 16:33:18,19.Jun.23 10:36:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+552,250908,MARIA DE LA LUZ,VILLANUEVA,SANCHEZ,19.Jun.23 07:59:02,19.Jun.23 13:02:40,19.Jun.23 11:27:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+564,249833,ALMA GRACIELA,MU—OZ,ZURITA,22.Jun.23 06:36:28,22.Jun.23 13:19:34,22.Jun.23 10:42:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+563,242656,RAQUEL,FUENTES,AGUILAR, , ,22.Jun.23 10:29:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+556,251515,ANTONIO,JAIMEZ,ROJAS,16.Jun.23 03:04:15,28.Jun.23 12:23:41,20.Jun.23 11:09:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+557,251528,JAVIER,CONTRERAS,BIRT,17.Jun.23 00:21:12,21.Jul.23 16:45:13,20.Jun.23 11:36:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+558,242620,ALFREDO,HERNANDEZ,RIVAS, , ,21.Jun.23 10:18:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+559,240788,ZEFERINO,TOKUNAGA,MEDINA,21.Jun.23 07:11:25,21.Jun.23 13:03:07,21.Jun.23 10:11:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+560,250818,ANDRES CRISTOBAL,URIAS,GAMEZ,21.Jun.23 07:09:01,21.Jun.23 13:28:38,21.Jun.23 10:39:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+562,250310,CARLOS,TAVERA,ZAVALA,21.Jun.23 07:25:36,21.Jun.23 14:13:25,21.Jun.23 12:03:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+565,251530,SANTIAGO,MELENDEZ,BELTRAN,18.Jun.23 17:46:03,31.Jul.23 13:18:24,22.Jun.23 11:33:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+566,243764,MARICARMEN,ARMENTA,MENDOZA,22.Jun.23 06:56:25,22.Jun.23 14:47:22,22.Jun.23 11:16:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+567,251537,JAVIER,CORREA,CORREA,19.Jun.23 13:17:57,12.Ago.23 14:06:22,22.Jun.23 11:48:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,,,,
+568,250518,RAYMUNDO DAVID,GARCIA,JIMENEZ,22.Jun.23 06:42:29,22.Jun.23 16:24:16,22.Jun.23 12:28:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+569,243843,YOLANDA,RAMON,ALVARADO,22.Jun.23 07:32:32,22.Jun.23 17:01:20,22.Jun.23 13:36:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,,,,
+580,248428,JENNIFER,CONTRERAS,HERNANDEZ,23.Jun.23 07:48:11,28.Jun.23 12:51:46,26.Jun.23 12:27:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+578,233896,MARA ANAID,SORIA,AGUILAR,26.Jun.23 07:08:27,27.Jun.23 13:09:58,26.Jun.23 10:11:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,,,,
+573,242079,AMELIA YAMILETH,HERNANDEZ,CORTES,19.Jun.23 17:06:23,24.Jun.23 13:54:16,23.Jun.23 11:07:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+575,249357,MARIA,ARELLANO,HUERTA, , ,26.Jun.23 09:05:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+576,250264,MARIA DE JESUS YOLANDA,CID,RUIZ, , ,26.Jun.23 09:55:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+577,251566,ROSA MARIA,VALDIVIA,VELAZQUEZ, , ,26.Jun.23 10:05:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+579,251574,JUAN CARLOS,GUTIERREZ,GUEVARA,26.Jun.23 07:12:29,26.Jun.23 14:29:27,26.Jun.23 10:45:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+581,245917,MICHELLE,HERNANDEZ,KAWAS,26.Jun.23 07:49:09,26.Jun.23 15:27:01,26.Jun.23 13:50:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+582,244668,CANDELARIA,CRISANTO,CHAVEZ,27.Jun.23 07:13:25,27.Jun.23 14:52:22,27.Jun.23 08:06:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+583,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,27.Jun.23 08:22:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+584,250198,HONORIA,HERNANDEZ,JIMENEZ, , ,27.Jun.23 08:32:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+589,249524,MAGDALENA,TAVERA,PI—A,29.Jun.23 06:35:25,29.Jun.23 12:28:50,29.Jun.23 08:04:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+586,250094,JOSE ALFREDO,REYES,PEREZ,27.Jun.23 07:55:09,27.Jun.23 12:29:06,27.Jun.23 09:35:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+587,248199,EFREN LIZANDRO,MATA,PI—A,28.Jun.23 06:31:21,28.Jun.23 12:48:09,28.Jun.23 07:49:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+588,250029,MARIA DEL SOCORRO,GONZALEZ,RODRIGUEZ, , ,28.Jun.23 08:25:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+590,241672,ANGELICA MARIA,BARRETO,FLORES,04.May.23 08:40:27, ,29.Jun.23 10:22:00,PROCEDIMIENTO AMBULATORIO , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+591,245191,DIANA LISETT,ISLAS,DELGADO,29.Jun.23 07:51:27,29.Jun.23 13:30:10,29.Jun.23 10:28:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+592,251274,GERONIMO,TREJO,RAMIREZ,29.Jun.23 06:40:39,29.Jun.23 15:29:08,29.Jun.23 13:09:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+593,229037,DIANA LUISA,MORENO,AGUILAR,30.Jun.23 07:09:48,30.Jun.23 12:33:50,30.Jun.23 08:36:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+594,247608,OMERO,MIRANDA,GARCIA,30.Jun.23 07:58:21,30.Jun.23 10:55:51,30.Jun.23 08:44:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+595,246452,CONSTANTINO,SANCHEZ,GARCIA,30.Jun.23 07:24:23,30.Jun.23 10:19:22,30.Jun.23 08:53:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+596,251405,ROBERTO,MERCADO,CERON, , ,30.Jun.23 09:22:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+597,249357,MARIA,ARELLANO,HUERTA, , ,03.Jul.23 08:57:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+598,246613,SOTERO ANTONIO,REYES,MONJARAS,03.Jul.23 07:55:01,03.Jul.23 13:59:13,03.Jul.23 09:22:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+599,246086,RAFAEL,DIAZ,SALAZAR, , ,03.Jul.23 09:25:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+600,234964,VIRGINIA,CAMACHO,RODRIGUEZ,03.Jul.23 07:38:19,03.Jul.23 14:17:37,03.Jul.23 10:05:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+601,226773,ZULMA KARINA,CABALLERO,CORONA, , ,03.Jul.23 10:17:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+602,250977,GAUDENCIO,MENDOZA,DIAZ,03.Jul.23 07:34:24,03.Jul.23 14:15:09,03.Jul.23 10:49:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+603,250953,LUIS,CUELLAR,FLORES,03.Jul.23 07:30:09,03.Jul.23 15:10:56,03.Jul.23 11:47:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+604,251840,SERGIO,AGUI—AGA,GARCIA,03.Jul.23 11:46:04,13.Jul.23 12:52:45,03.Jul.23 13:12:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+605,250198,HONORIA,HERNANDEZ,JIMENEZ, , ,04.Jul.23 09:04:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+606,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,04.Jul.23 09:17:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+607,226184,DELFINO IGNACIO,CASTRO,PELAEZ,04.Jul.23 06:56:04,04.Jul.23 14:50:32,04.Jul.23 09:23:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+608,251655,MARIA CRISTINA,SOTO,MAGALLANES,04.Jul.23 07:43:46,11.Jul.23 12:14:43,04.Jul.23 09:34:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+609,250029,MARIA DEL SOCORRO,GONZALEZ,RODRIGUEZ, , ,05.Jul.23 09:00:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+610,250214,MARCO ALBERTO,SANCHEZ,ANZALDO,05.Jul.23 06:44:52,05.Jul.23 14:22:55,05.Jul.23 09:16:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+611,245930,JUAN PABLO,IGLESIAS,IGLESIAS,05.Abr.23 07:03:00, ,05.Jul.23 09:32:00,PROCEDIMIENTO AMBULATORIO , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+612,250597,CARMEN,MENDOZA,CAMPOS, , ,05.Jul.23 09:53:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+613,249949,JOSE GUADALUPE,MARTINEZ,PEDRAZA, , ,05.Jul.23 09:57:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+614,251655,MARIA CRISTINA,SOTO,MAGALLANES,04.Jul.23 07:43:46,11.Jul.23 12:14:43,05.Jul.23 12:32:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+615,185716,JACQUELINE,SANDOVAL,CRUZ,06.Jul.23 07:56:33,06.Jul.23 12:35:34,06.Jul.23 09:06:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+616,156964,ENRIQUETA,FRIAS,CRUZ, , ,06.Jul.23 09:14:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+617,247608,OMERO,MIRANDA,GARCIA, , ,06.Jul.23 09:18:00, , ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+618,251674,ADAN JESUS,ALONSO,CHAVEZ,06.Jul.23 07:48:13,06.Jul.23 13:30:04,06.Jul.23 10:36:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+619,251684,MARIA,VAZQUEZ,VAZQUEZ,06.Jul.23 07:50:03,06.Jul.23 13:37:01,06.Jul.23 10:55:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+620,248114,ROBERTO,CHELIUS,GUZMAN,06.Jul.23 08:00:02,06.Jul.23 14:33:57,06.Jul.23 12:07:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+625,242567,BLANCA SARA,SEGURA,LEON, , ,07.Jul.23 11:19:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+621,250921,CLAUDIA,ALONSO,ULLOA,06.Jul.23 07:54:42,06.Jul.23 17:29:28,06.Jul.23 13:33:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+622,210636,JOSE ARTURO,BAUTISTA,SALDA—A.,07.Jul.23 07:46:52,07.Jul.23 10:46:16,07.Jul.23 09:14:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+623,246452,CONSTANTINO,SANCHEZ,GARCIA,07.Jul.23 07:42:53,07.Jul.23 09:54:37,07.Jul.23 09:29:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3406,Drenaje de cavidad pleural por toracoscopÌ≠a,3406,Drenaje de cavidad pleural por toracoscopÌ≠a
+624,244468,LILIANA,ALVAREZ,GARCIA, , ,07.Jul.23 10:39:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+626,251895,SANDRA ESTHER,ROSANO,URASMO,07.Jul.23 07:58:13,07.Jul.23 11:45:01,07.Jul.23 11:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+627,203055,LUIS MOISES,MONDRAGON,BAEZ,07.Jul.23 08:04:18,08.Jul.23 11:17:00,07.Jul.23 11:49:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+628,251836,ANDREA,MARTINEZ,MANZANO,02.Jul.23 15:37:19,11.Jul.23 15:10:24,07.Jul.23 13:46:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+629,246086,RAFAEL,DIAZ,SALAZAR, , ,10.Jul.23 08:34:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+630,249357,MARIA,ARELLANO,HUERTA, , ,10.Jul.23 08:53:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+631,243764,MARICARMEN,ARMENTA,MENDOZA, , ,10.Jul.23 09:05:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+632,250751,BENITA,RAMIREZ,AREVALO,10.Jul.23 06:42:51,10.Jul.23 14:45:51,10.Jul.23 09:19:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+633,246953,MANUEL AGUSTIN,ORTEGA,MAYA,07.Jul.23 12:02:33,12.Jul.23 15:12:41,10.Jul.23 12:49:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+634,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,11.Jul.23 08:55:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+635,250198,HONORIA,HERNANDEZ,JIMENEZ, , ,11.Jul.23 09:41:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+636,251882,ANDREA,BELTRAN,RODRIGUEZ,11.Jul.23 06:59:43,11.Jul.23 15:08:13,11.Jul.23 10:36:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+637,251803,MA. REFUGIO,MAYA,ARIAZ,29.Jun.23 19:07:45,13.Jul.23 15:25:06,11.Jul.23 11:02:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+638,247570,JOSE VICTOR HUGO,VAZQUEZ,QUI—ONES, , ,11.Jul.23 10:49:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+639,251372,GUILLERMO,RUIZ,MILLAN,15.Jun.23 13:00:57,04.Ene.24 08:44:02,11.Jul.23 11:27:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+640,167293,CYNTHIA PAMELA,LOVERA,OLVERA, , ,11.Jul.23 11:29:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+641,250333,MARIO,COBIAN,NU—EZ, , ,12.Jul.23 08:27:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+642,250029,MARIA DEL SOCORRO,GONZALEZ,RODRIGUEZ, , ,12.Jul.23 09:46:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+643,251437,LILIANA,JULIAN,FELICIANO,12.Jul.23 07:40:48,12.Jul.23 15:55:02,12.Jul.23 12:29:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+644,247608,OMERO,MIRANDA,GARCIA, , ,13.Jul.23 08:28:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+645,251790,FATIMA LUCIA,AGUILAR,CASTA—ON, , ,13.Jul.23 08:46:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+648,247608,OMERO,MIRANDA,GARCIA, , ,13.Jul.23 11:01:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+660,243131,IRMA,ORTIZ,PATI—O,18.Jul.23 07:20:17,18.Jul.23 14:14:08,18.Jul.23 10:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+661,183116,DANIEL ROBERTO,MAGDALENO,RODRIGUEZ,18.Jul.23 07:33:53,18.Jul.23 14:21:31,18.Jul.23 11:42:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+658,251372,GUILLERMO,RUIZ,MILLAN,15.Jun.23 13:00:57,04.Ene.24 08:44:02,17.Jul.23 12:50:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+659,250993,LAZARO,ALVARADO,PE—A,17.Jul.23 13:50:00,16.Ago.23 17:23:01,17.Jul.23 13:07:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+650,246452,CONSTANTINO,SANCHEZ,GARCIA, , ,14.Jul.23 08:23:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+651,210636,JOSE ARTURO,BAUTISTA,SALDA—A., , ,14.Jul.23 09:27:00, , ,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural,9741,ExtracciÛn de tubo de toracotomÌ≠a o de drenaje de la cavidad pleural
+663,251771,BEATRIZ,PALACIOS,SANTANA,19.Jul.23 06:43:30,19.Jul.23 13:36:06,19.Jul.23 09:20:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+656,247168,MANUEL,TREJO,CORONA,17.Jul.23 07:34:53,17.Jul.23 12:09:08,17.Jul.23 11:49:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+657,251222,MARIA SILVIA,BECERRIL,HERNANDEZ,17.Jul.23 06:32:22,17.Jul.23 18:16:04,17.Jul.23 12:12:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+653,252027,VICTORIA SOFIA,QUIROZ,VELAZQUEZ,12.Jul.23 02:13:01,10.Ago.23 12:54:11,14.Jul.23 11:52:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+662,233896,MARA ANAID,SORIA,AGUILAR,18.Jul.23 07:00:39,18.Jul.23 17:15:43,18.Jul.23 12:34:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+664,251427,JULIA,OROPEZA,LOPEZ,19.Jul.23 07:10:52,19.Jul.23 13:51:21,19.Jul.23 12:04:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+665,242656,RAQUEL,FUENTES,AGUILAR,20.Jul.23 08:07:13,20.Jul.23 12:13:02,20.Jul.23 10:48:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+666,251974,JAIME FRANCISCO,RAMIREZ,GARRIDO ABREU,20.Jul.23 07:39:59,20.Jul.23 14:33:11,20.Jul.23 11:07:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+667,249207,JOVAN ADONAI,ROMERO,GUILLEN,20.Jul.23 09:37:41,20.Jul.23 14:41:20,20.Jul.23 12:36:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+668,229911,HUGO,OVIEDO,LOPEZ,20.Jul.23 07:15:24,20.Jul.23 16:15:57,20.Jul.23 13:56:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+669,251952,CHELSY,GARCIA,BARAJAS,17.Jul.23 11:11:36,26.Jul.23 13:19:43,21.Jul.23 10:17:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+670,250410,ANGEL,ROSAS,OVALLE,21.Jul.23 07:22:03,21.Jul.23 13:32:15,21.Jul.23 10:53:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+671,234964,VIRGINIA,CAMACHO,RODRIGUEZ,24.Jul.23 07:35:33,24.Jul.23 13:10:44,24.Jul.23 11:06:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+676,243838,ANTONINA LIOVA,CERRITO,ESCAMILLA,26.Jul.23 06:36:05,26.Jul.23 14:55:58,26.Jul.23 10:47:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+673,246953,MANUEL AGUSTIN,ORTEGA,MAYA,24.Jul.23 07:52:01,24.Jul.23 15:11:57,24.Jul.23 13:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+674,249200,VICENTE MARTIN,VALENCIA,CHAVEZ,25.Jul.23 06:35:54,25.Jul.23 13:44:14,25.Jul.23 09:49:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+675,249681,JUAN ANTONIO,MATEOS,CICERO,25.Jul.23 07:22:06,25.Jul.23 13:40:33,25.Jul.23 11:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+677,240788,ZEFERINO,TOKUNAGA,MEDINA,26.Jul.23 07:12:28,26.Jul.23 13:25:54,26.Jul.23 12:07:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+678,251222,MARIA SILVIA,BECERRIL,HERNANDEZ,26.Jul.23 06:49:50,26.Jul.23 14:50:12,26.Jul.23 13:03:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+679,246368,MARIA FERNANDA,TREJO,TAPIA,27.Jul.23 07:15:15,27.Jul.23 13:34:55,27.Jul.23 09:39:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+680,231734,JOAQUIN MISSAEL,MARTINEZ,HERNANDEZ,27.Jul.23 07:58:51,27.Jul.23 13:29:15,27.Jul.23 10:19:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+691,251925,SALVADOR,ZARCO,ROMERO,25.Jul.23 20:13:24,08.Ago.23 13:29:55,02.Ago.23 10:34:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+686,252010,FRANCISCA,MELO,NAVA,31.Jul.23 07:46:39,31.Jul.23 16:38:18,31.Jul.23 10:42:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+682,244103,ROSALINA,ZAMORANO,SANCHEZ,28.Jul.23 07:49:13,28.Jul.23 12:33:53,28.Jul.23 10:28:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+684,229037,DIANA LUISA,MORENO,AGUILAR,28.Jul.23 07:48:53,28.Jul.23 16:21:34,28.Jul.23 13:29:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+687,251323,ERIKA,ESTRADA,CAYETANO,31.Jul.23 07:39:05,31.Jul.23 13:42:08,31.Jul.23 10:50:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+688,146780,NATIVIDAD,MU—OZ,MEDINA,31.Jul.23 07:34:28,31.Jul.23 14:46:55,31.Jul.23 14:02:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+689,240234,MARGARITA,GUTIERREZ,MONTOYA,01.Ago.23 07:52:51,01.Ago.23 13:53:00,01.Ago.23 10:19:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+690,250778,EVELIA DEL CARMEN,LOPEZ,Y LOPEZ,01.Ago.23 08:00:37,01.Ago.23 13:58:50,01.Ago.23 11:25:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+692,235098,MARIA TERESA DE JESUS,ANZALDO,HEREDIA,02.Ago.23 07:58:07,02.Ago.23 14:38:02,02.Ago.23 11:59:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+693,250677,KIMBERLY RUBI,HUITRON,BALTAZAR,02.Ago.23 07:30:47,04.Ago.23 14:41:51,02.Ago.23 11:52:00,PROCEDIMIENTO AMBULATORIO ,Unidad de Terapia Intermedia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+694,247932,MARIA PAOLA,GUERRERO,DE LEON,01.Ago.23 17:41:17,10.Ago.23 13:12:24,02.Ago.23 12:43:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+695,250214,MARCO ALBERTO,SANCHEZ,ANZALDO,03.Ago.23 06:44:57,03.Ago.23 13:56:06,03.Ago.23 10:29:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+699,252047,ANTONIA,DOMINGUEZ,MARQUEZ,07.Ago.23 07:29:03,07.Ago.23 12:45:03,07.Ago.23 09:47:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+697,145752,GUADALUPE,NAVARRETE,NANDI,04.Ago.23 08:08:05,04.Ago.23 18:09:25,04.Ago.23 10:33:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+698,246859,ANA BERTA,CARLOS,MENDOZA,04.Ago.23 07:42:11,04.Ago.23 13:02:21,04.Ago.23 10:55:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+700,251258,JUAN ROGELIO,SOTELO,SALAMANCA,07.Ago.23 06:36:56,07.Ago.23 12:52:36,07.Ago.23 10:18:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+701,250264,MARIA DE JESUS YOLANDA,CID,RUIZ,07.Ago.23 07:59:12,07.Ago.23 13:07:24,07.Ago.23 11:14:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+702,252122,MARIA GUADALUPE,DURAN,NIETO,16.Jul.23 18:08:23,16.Ago.23 13:06:50,07.Ago.23 12:50:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 2 ,4521,EndoscopÌ≠a transabdominal de intestino grueso,4521,EndoscopÌ≠a transabdominal de intestino grueso
+703,176403,DIOCELINA,OCHOA,SANCHEZ,07.Ago.23 07:21:12,07.Ago.23 14:24:14,07.Ago.23 13:17:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+704,233896,MARA ANAID,SORIA,AGUILAR,08.Ago.23 07:09:07,08.Ago.23 14:33:32,08.Ago.23 10:31:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+705,251427,JULIA,OROPEZA,LOPEZ,08.Ago.23 08:04:12,08.Ago.23 14:21:41,08.Ago.23 10:43:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+706,251943,YURIKO LARETH,AVILA,MONTES,08.Ago.23 07:35:45,08.Ago.23 18:29:13,08.Ago.23 13:36:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+707,240788,ZEFERINO,TOKUNAGA,MEDINA,09.Ago.23 07:19:43,09.Ago.23 12:18:51,09.Ago.23 09:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+708,251880,ARMANDO,MEDINA,VALDEZ,09.Ago.23 07:04:30,09.Ago.23 14:01:36,09.Ago.23 11:21:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+709,251372,GUILLERMO,RUIZ,MILLAN,15.Jun.23 13:00:57,04.Ene.24 08:44:02,09.Ago.23 11:32:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+710,252154,CARLOS,VARGAS,PEREZ,09.Ago.23 06:55:09,09.Ago.23 15:32:12,09.Ago.23 14:15:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+717,252495,MARIA ESTHER,REYES,NAVA, , ,14.Ago.23 10:36:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+712,251656,NATALIA,BARROSO,MENESES,10.Ago.23 07:23:14,10.Ago.23 13:10:57,10.Ago.23 10:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+713,251467,EDUARDO,ZAMORA,LECHUGA,10.Ago.23 06:52:20,10.Ago.23 13:35:25,10.Ago.23 12:04:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+714,252014,JUAN,MARTINEZ,MARTINEZ,10.Ago.23 07:08:07,10.Ago.23 14:27:34,10.Ago.23 12:39:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+715,252287,HUGO CESAR,NEAVE,PAREDES, , ,11.Ago.23 11:05:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+716,252016,MARTIN,CHAVEZ,MOLINA,11.Ago.23 06:51:34,11.Ago.23 15:20:06,11.Ago.23 12:40:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+718,252262,JOSE MANUEL,NORIEGA,GIRONES,24.Jul.23 12:59:03,11.Sep.23 18:32:40,14.Ago.23 12:37:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+719,245653,JOSE,LOPEZ,MIRAMONTES,14.Ago.23 07:30:59,14.Ago.23 17:44:51,14.Ago.23 13:55:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+720,252363,MARIA LUISA,TOUSSAINT,VIDAL,28.Jul.23 13:38:23,22.Ago.23 11:06:31,14.Ago.23 14:18:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+721,251907,MARIA EUGENIA,PALMA,ESTRADA,15.Ago.23 06:53:34,15.Ago.23 13:20:00,15.Ago.23 09:44:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+722,233663,RAQUEL,VELAZQUEZ,ALVAREZ,15.Ago.23 07:35:13,15.Ago.23 14:09:13,15.Ago.23 11:04:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+723,252598,IRIS GUADALUPE,MENA,MONROY,15.Ago.23 06:37:37,16.Ago.23 15:44:49,15.Ago.23 13:59:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+726,243548,MARIA DEL RAYO,ALVAREZ,LOZANO,18.Ago.23 07:23:23,18.Ago.23 13:47:51,18.Ago.23 11:00:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+725,252567,J. ASUNCION,RAMIREZ,PEREZ,12.Ago.23 17:38:23,21.Ago.23 16:49:46,17.Ago.23 14:15:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,4521,EndoscopÌ≠a transabdominal de intestino grueso,4521,EndoscopÌ≠a transabdominal de intestino grueso
+727,252347,ALEJANDRO,VERGARA,SIGUENZA,18.Ago.23 06:54:37,18.Ago.23 15:15:08,18.Ago.23 12:59:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+728,252680,KATIA SAHIR,RAMIREZ,OVIEDO,21.Ago.23 07:03:42,21.Ago.23 14:06:43,21.Ago.23 09:44:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+729,252595,EDUARDO,CONTRERAS,HERNANDEZ,21.Ago.23 06:37:34,21.Ago.23 13:58:25,21.Ago.23 11:32:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+730,252645,MARIO ALBERTO,RAMON,HERRERA,16.Ago.23 13:27:08,29.Ago.23 11:37:21,22.Ago.23 09:42:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+731,252776,FERNANDO RAUL,GUERRERO,MARTINEZ, , ,22.Ago.23 09:38:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+732,245930,JUAN PABLO,IGLESIAS,IGLESIAS,22.Ago.23 07:00:50,22.Ago.23 14:34:44,22.Ago.23 11:28:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+733,250906,JOSE GUILLERMO,GEBARA,Y FRANCIS,04.Jun.23 01:44:22,25.Ago.23 14:50:58,22.Ago.23 11:27:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 1 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+734,252662,LESLIE,SANCHEZ,BARRIOS,15.Ago.23 17:58:38,25.Ago.23 16:44:50,22.Ago.23 14:07:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+735,252693,RICARDO,ALEMAN,NAVA,23.Ago.23 07:23:43,23.Ago.23 13:06:47,23.Ago.23 09:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+736,252602,JOVITA,MENDEZ,MENDEZ,15.Ago.23 02:33:58,20.Sep.23 15:29:27,23.Ago.23 10:23:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+737,252204,ANGELICA,SOLANO,HUERTA,23.Ago.23 06:42:41,23.Ago.23 17:06:09,23.Ago.23 11:50:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+738,252781,ARMANDO,ARREDONDO,ALAVEZ,22.Ago.23 20:06:59,18.Sep.23 12:54:31,23.Ago.23 11:16:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+739,252758,JOSE ARNULFO,PE—A,MOLINA,24.Ago.23 06:49:07,24.Ago.23 12:57:05,24.Ago.23 10:08:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+740,248991,BLANCA AZUCENA,PALACIOS,SANCHEZ,06.Sep.23 13:50:54,06.Sep.23 14:23:16,24.Ago.23 11:05:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+741,243764,MARICARMEN,ARMENTA,MENDOZA,24.Ago.23 07:10:14,24.Ago.23 16:28:39,24.Ago.23 11:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+742,251556,FELIPE,TREJO,FELIPE,04.Ago.23 07:00:17,21.Sep.23 17:37:40,24.Ago.23 12:59:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 4 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+743,248991,BLANCA AZUCENA,PALACIOS,SANCHEZ,06.Sep.23 13:50:54,06.Sep.23 14:23:16,25.Ago.23 09:56:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+744,251662,ALEJANDRA,SARABIA,ROSARIO,25.Ago.23 06:37:44,25.Ago.23 17:22:49,25.Ago.23 11:07:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+745,233220,TAMARA VALENTINA,VICTORIA,ALVAREZ,25.Ago.23 07:02:37,25.Ago.23 16:40:06,25.Ago.23 11:41:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+746,249713,LUIS GERARDO,GOMEZ,GODINEZ,25.Ago.23 07:29:18,25.Ago.23 16:09:10,25.Ago.23 12:50:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+747,222852,OSVALDO,FRANCISCO,PEREZ,25.Ago.23 08:02:49,25.Ago.23 17:30:38,25.Ago.23 14:00:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+748,252825,ALEJANDRO WILLIAMS,MARTINEZ,MARTINEZ,28.Ago.23 06:37:07,05.Sep.23 18:04:18,28.Ago.23 09:54:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+749,245917,MICHELLE,HERNANDEZ,KAWAS,28.Ago.23 07:56:44,28.Ago.23 14:14:57,28.Ago.23 11:53:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+750,251927,JOSE,ALVARADO,PEREZ,28.Ago.23 08:22:13,28.Ago.23 16:42:26,28.Ago.23 13:27:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+751,233896,MARA ANAID,SORIA,AGUILAR,29.Ago.23 07:11:52,29.Ago.23 16:39:18,29.Ago.23 11:33:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+752,250818,ANDRES CRISTOBAL,URIAS,GAMEZ, , ,29.Ago.23 12:58:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+753,242171,ULISES FERNANDO,PEREZ,FUENTES,30.Ago.23 07:19:56,30.Ago.23 16:46:20,30.Ago.23 09:02:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+754,251779,ADRIANA,JIMENEZ,LOPEZ,30.Ago.23 07:46:27,19.Sep.23 13:49:09,30.Ago.23 11:11:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+755,242711,JUAN ANTONIO,MENES,BAHENA,30.Ago.23 06:33:44,30.Ago.23 15:55:49,30.Ago.23 12:36:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+756,252927,MAURICIO,PEREZ,TORRES,29.Ago.23 14:35:15,10.Sep.23 17:30:11,30.Ago.23 13:21:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+758,218855,MARIA DE LOURDES,JUAREZ,HUERTA,31.Ago.23 07:11:31,31.Ago.23 13:27:14,31.Ago.23 10:29:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+759,252347,ALEJANDRO,VERGARA,SIGUENZA,31.Ago.23 06:43:03,31.Ago.23 14:39:59,31.Ago.23 11:08:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+763,252868,MARCELINA,RAFAEL,GARCIA,25.Ago.23 13:35:12,06.Oct.23 18:41:08,04.Sep.23 11:46:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+761,188676,MARIA GUADALUPE,MARTINEZ,ACOSTA,31.Ago.23 08:01:01,31.Ago.23 17:07:46,31.Ago.23 12:37:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+762,252705,MANUELA URBANA,GOMEZ,,28.Ago.23 13:01:41,01.Sep.23 13:29:47,31.Ago.23 13:36:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+764,251906,CARLOS,ARENAS,GUTIERREZ,05.Sep.23 06:40:08,05.Sep.23 11:40:21,05.Sep.23 10:27:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+765,167293,CYNTHIA PAMELA,LOVERA,OLVERA,05.Sep.23 07:52:53,05.Sep.23 14:59:00,05.Sep.23 11:01:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+766,210636,JOSE ARTURO,BAUTISTA,SALDA—A.,05.Sep.23 07:54:05,05.Sep.23 14:44:33,05.Sep.23 13:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+767,253039,EDGAR,ROSASLANDA,FLORES,05.Sep.23 23:11:36,06.Sep.23 17:51:38,06.Sep.23 10:34:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+768,252811,MARIA DOLORES,GONZALEZ,SANTOS,06.Sep.23 06:55:50,06.Sep.23 11:33:49,06.Sep.23 10:22:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+769,251905,MISAEL,TORICES,ALVARADO,06.Sep.23 07:16:23,06.Sep.23 13:50:23,06.Sep.23 11:02:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+770,252632,FILOGONIA,ROQUE,SALAZAR,06.Sep.23 07:39:05,06.Sep.23 14:18:23,06.Sep.23 12:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+771,196835,MARIA SILVIA,GUZMAN,MENDOZA,05.Sep.23 15:18:22,25.Sep.23 18:25:28,06.Sep.23 13:44:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+772,221409,OCTAVIO,GOMEZ,BARRON,30.Ago.23 14:21:23,22.Sep.23 12:30:24,06.Sep.23 18:01:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+773,252613,DANIEL,CASTILLO,PRIETO,15.Ago.23 17:47:05,18.Dic.23 18:10:16,07.Sep.23 08:58:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+774,252943,LORENA MARTHA,LORA,FRANCO,07.Sep.23 06:54:16,07.Sep.23 14:34:38,07.Sep.23 09:56:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+775,229037,DIANA LUISA,MORENO,AGUILAR,07.Sep.23 07:59:49,07.Sep.23 14:30:34,07.Sep.23 11:25:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+776,252199,ROSA LAURA,TORRES,MORALES,07.Sep.23 07:02:54,07.Sep.23 15:29:54,07.Sep.23 13:06:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+777,251427,JULIA,OROPEZA,LOPEZ,07.Sep.23 11:52:01,12.Sep.23 13:52:01,07.Sep.23 18:05:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,,,,
+778,217615,JAVIER,GARCIA,MARIANO,25.Jul.23 22:40:16,13.Feb.24 13:56:13,07.Sep.23 19:27:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+779,250262,MARGARITA,VELAZQUEZ,ARREDONDO,08.Sep.23 07:07:31,08.Sep.23 17:36:05,08.Sep.23 08:34:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+780,250964,RUBEN DARIO,VIDAL,PEREZ,08.Sep.23 06:47:37,08.Sep.23 14:55:28,08.Sep.23 10:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,441,Procedimientos diagnÛsticos sobre estÛmago,441,Procedimientos diagnÛsticos sobre estÛmago
+781,253094,NATALY EMANNY,MARTINEZ,RAMIREZ, , ,08.Sep.23 11:59:00, , ,,,,
+782,252781,ARMANDO,ARREDONDO,ALAVEZ,22.Ago.23 20:06:59,18.Sep.23 12:54:31,08.Sep.23 12:15:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+783,252132,PATRICIO,RUIZ,SANCHEZ,17.Jul.23 19:20:55,10.Oct.23 14:26:52,08.Sep.23 17:04:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+784,252357,SANTOS,NIETO,ORDO—EZ,11.Sep.23 06:45:00,11.Sep.23 12:51:29,11.Sep.23 10:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+785,208191,DULCE IVETH,VELAZQUEZ,LOPEZ,11.Sep.23 07:06:48,11.Sep.23 16:23:26,11.Sep.23 12:16:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+786,243843,YOLANDA,RAMON,ALVARADO,11.Sep.23 07:03:11,11.Sep.23 16:16:59,11.Sep.23 13:53:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+787,250410,ANGEL,ROSAS,OVALLE,12.Sep.23 07:03:05,12.Sep.23 14:04:33,12.Sep.23 09:37:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+788,208681,BERNARDO DE JESUS,RUEDA,DANINI,12.Sep.23 07:00:52,12.Sep.23 14:01:29,12.Sep.23 11:04:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+789,243131,IRMA,ORTIZ,PATI—O,12.Sep.23 07:21:02,12.Sep.23 15:11:31,12.Sep.23 11:51:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+790,252796,GUADALUPE,GARCIA,RENDON,23.Ago.23 04:49:00,12.Oct.23 14:59:03,12.Sep.23 12:48:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+799,252145,FLORA,GARCIA,NIEVA,14.Sep.23 07:20:58,14.Sep.23 13:02:29,14.Sep.23 09:15:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+804,245497,MARIO,SANCHEZ,LUNA,15.Sep.23 07:13:07,15.Sep.23 11:28:11,15.Sep.23 09:46:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+793,251121,VERONICA,ALCOCER,GOMEZ,13.Sep.23 06:44:45,13.Sep.23 14:02:41,13.Sep.23 09:41:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+794,193996,ALICIA,RUIZ,ROMERO,13.Sep.23 06:50:00,13.Sep.23 12:53:58,13.Sep.23 10:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+795,252475,ANTONIO,JULIAN,OSORIO,13.Sep.23 06:24:53,13.Sep.23 15:25:17,13.Sep.23 10:34:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+796,193996,ALICIA,RUIZ,ROMERO,13.Sep.23 06:50:00,13.Sep.23 12:53:58,13.Sep.23 10:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+797,252796,GUADALUPE,GARCIA,RENDON,23.Ago.23 04:49:00,12.Oct.23 14:59:03,13.Sep.23 12:15:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+798,246743,MARIO MAGDALENO,GARCIA,MARTINEZ,02.Sep.23 02:36:35,21.Sep.23 19:01:01,13.Sep.23 12:35:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+800,246368,MARIA FERNANDA,TREJO,TAPIA,14.Sep.23 06:45:17,14.Sep.23 13:12:20,14.Sep.23 10:47:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+801,252163,FAUSTINO,MIGUEL,,14.Sep.23 07:51:46,14.Sep.23 15:07:54,14.Sep.23 13:04:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+802,247478,JOSE MANUEL,LARIOS,NORIEGA,21.Ago.23 20:39:07,25.Oct.23 13:24:40,14.Sep.23 13:44:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+810,244321,JOSE ADRIAN,ELECHIGUERRA,VALDIVIA,18.Sep.23 07:59:04,18.Sep.23 12:26:32,18.Sep.23 09:55:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+805,252880,CHRISTIAN,MORALES,HERNANDEZ,15.Sep.23 06:53:38,15.Sep.23 13:32:01,15.Sep.23 11:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+806,253180,VICTORIA SARAI,MORENO,GUTIERREZ,13.Sep.23 14:02:21,16.Sep.23 12:26:53,15.Sep.23 12:08:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+807,251589,BLANCA ESTELA,GONZALEZ,VAZQUEZ,13.Sep.23 15:25:48,15.Sep.23 17:17:04,15.Sep.23 12:40:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 8 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+808,253086,DAVID,MARQUEZ,PEDRAZA,08.Sep.23 15:12:42,25.Sep.23 21:16:47,15.Sep.23 13:38:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,,,,
+809,253170,FRANCISCA,BORJA,SOLORZA,12.Sep.23 23:02:27,17.Nov.23 17:37:01,15.Sep.23 13:19:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+811,248221,CORNELIO,DELGADO,BELTRAN,13.Sep.23 18:31:06,25.Sep.23 17:28:51,18.Sep.23 10:21:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+812,253196,CANDIDA,FLORES,SOTERO,14.Sep.23 01:49:36,09.Oct.23 06:06:44,18.Sep.23 11:30:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+813,243764,MARICARMEN,ARMENTA,MENDOZA,18.Sep.23 07:06:00,20.Sep.23 14:37:49,18.Sep.23 12:14:00,PROCEDIMIENTO AMBULATORIO ,Unidad de Terapia Intermedia ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+814,252383,JAMI RENATA,RODRIGUEZ,CALDERON,19.Sep.23 07:08:54,19.Sep.23 17:02:25,19.Sep.23 10:13:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+815,250818,ANDRES CRISTOBAL,URIAS,GAMEZ,19.Sep.23 03:05:33,07.Oct.23 11:53:56,19.Sep.23 09:41:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+816,233896,MARA ANAID,SORIA,AGUILAR,19.Sep.23 06:53:45,20.Sep.23 16:17:04,19.Sep.23 11:17:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+817,252747,ADELINA,ROMAN,SEGURA,19.Sep.23 07:27:22,19.Sep.23 17:18:57,19.Sep.23 13:35:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+818,249584,ANDREY JAIR,FLORES,MENDOZA,20.Sep.23 06:58:00,20.Sep.23 13:50:56,20.Sep.23 09:33:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+819,252798,ESTEBAN,VARGAS,MERINO,20.Sep.23 07:02:37,20.Sep.23 13:49:10,20.Sep.23 12:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+820,253159,J.SOCORRO,ROJAS,EVARISTO,20.Sep.23 07:04:48,20.Sep.23 15:21:37,20.Sep.23 13:01:00,PROCEDIMIENTO AMBULATORIO ,Broncoscopia Intervencionista ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+821,252815,EULALIA,PEREZ,CASTRO,06.Sep.23 11:03:31,22.Nov.23 15:39:55,20.Sep.23 14:13:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+822,253167,ROSA KRISTELL,SUAREZ,LAZARO,21.Sep.23 06:52:12,21.Sep.23 13:46:16,21.Sep.23 09:47:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+823,253314,BRAULIO ALBERTO,MEDINA,VAZQUEZ, , ,21.Sep.23 10:25:00, , ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+824,206909,AUSENCIA,LOPEZ,CORTEZ,20.Ago.23 02:48:06,20.Oct.23 12:02:34,21.Sep.23 12:01:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+825,252482,ANA MARIA,DE SANTIAGO,MARTINEZ,20.Sep.23 19:39:21,10.Oct.23 14:30:25,21.Sep.23 12:07:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+832,252711,BETZAIRA LIZETH,MARTINEZ,ESTRADA,25.Sep.23 07:17:27,25.Sep.23 13:16:01,25.Sep.23 09:50:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3323,Otra broncoscopia,3323,Otra broncoscopia
+833,253284,SAUL,DURAN,VILLANUEVA,25.Sep.23 06:59:25,25.Sep.23 13:23:49,25.Sep.23 11:04:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+827,244495,MIGUEL ANGEL,CHAVEZ,NOLASCO,22.Sep.23 07:55:54,22.Sep.23 12:28:09,22.Sep.23 10:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+828,252043,GUADALUPE,SUAREZ,PEREZ,22.Sep.23 07:32:02,22.Sep.23 12:35:13,22.Sep.23 10:07:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+829,246290,OSCAR DAVID,SARMIENTO,DE JESUS,22.Sep.23 08:01:38,22.Sep.23 13:23:58,22.Sep.23 11:03:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+830,253322,ARMANDO,VILLALOBOS,JIMENEZ,21.Sep.23 19:01:52,14.Oct.23 13:30:50,22.Sep.23 12:36:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+831,251861,MARGARITA,GUTIERREZ,RAMIREZ,22.Sep.23 06:37:48,22.Sep.23 15:36:27,22.Sep.23 13:34:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+834,247482,JESUS,DIAZ,ALCANTARA,14.Sep.23 13:45:50,11.Oct.23 14:44:56,25.Sep.23 12:02:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+835,252479,JEMIMA,CONTRERAS,SOTO,25.Sep.23 07:13:48,25.Sep.23 14:11:54,25.Sep.23 12:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+836,250410,ANGEL,ROSAS,OVALLE,23.Sep.23 00:31:25,28.Sep.23 12:58:28,25.Sep.23 12:31:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+837,242656,RAQUEL,FUENTES,AGUILAR,25.Sep.23 08:00:00,25.Sep.23 14:19:30,25.Sep.23 13:09:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+838,253198,JOSE LUIS,VALDEZ,MARTINEZ,14.Sep.23 17:18:45,10.Nov.23 12:58:39,26.Sep.23 10:26:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+839,167293,CYNTHIA PAMELA,LOVERA,OLVERA,26.Sep.23 07:57:02,26.Sep.23 14:20:17,26.Sep.23 10:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+840,147271,MARCELO,CALIXTO,MANUEL,21.Sep.23 19:02:23,09.Oct.23 15:45:58,26.Sep.23 12:15:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+841,253129,FERMIN,TANUZ,MARTINEZ,26.Sep.23 07:07:48,26.Sep.23 14:31:26,26.Sep.23 12:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+848,233732,MARGARITA,MARTINEZ,MARTINEZ,28.Sep.23 07:34:25,28.Sep.23 13:20:23,28.Sep.23 09:43:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+843,253337,GUILLERMO,SANCHEZ,CORONA,27.Sep.23 07:07:24,27.Sep.23 12:37:39,27.Sep.23 09:54:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+844,253217,MIGUEL ANGEL,MARTINEZ,NIEVES,15.Sep.23 02:23:14,06.Oct.23 16:29:51,27.Sep.23 10:15:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+845,247554,JONATHAN GREGORIO,SOTO,BA—OS,27.Sep.23 08:24:49,27.Sep.23 12:50:12,27.Sep.23 11:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+846,253026,LIVIA ALEJANDRA,GARCIA,MARIN,27.Sep.23 07:20:41,27.Sep.23 13:35:17,27.Sep.23 11:41:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+847,214633,RICARDO,ARELLANO,ALVAREZ,27.Sep.23 07:33:38,27.Sep.23 14:06:52,27.Sep.23 12:49:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+849,228521,DARIO,DIAZ,BOYZO, , ,28.Sep.23 10:07:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+850,250310,CARLOS,TAVERA,ZAVALA,28.Sep.23 07:20:59,28.Sep.23 14:38:24,28.Sep.23 11:37:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+851,253088,ROSENDO,CORTES,LOPEZ,28.Sep.23 06:54:52,28.Sep.23 15:14:57,28.Sep.23 11:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+852,253185,BERTHA AIDEE,ESTRADA,CALVA,14.Sep.23 01:49:29,17.Nov.23 15:25:32,28.Sep.23 12:20:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+861,253151,GUADALUPE,CASIANO,RAMÌçREZ,02.Oct.23 07:16:44,02.Oct.23 15:15:50,02.Oct.23 10:59:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+859,252888,JUANA,ZAMORANO,BELTRAN,02.Oct.23 07:49:46,02.Oct.23 13:22:26,02.Oct.23 09:28:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+860,249818,JORGE,HERNANDEZ,RUBI,02.Oct.23 06:31:52,02.Oct.23 13:59:57,02.Oct.23 09:37:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+855,252576,JOSE LUIS,FELIX,DE SANTIAGO,29.Sep.23 07:25:31,29.Sep.23 13:48:42,29.Sep.23 11:39:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+856,180857,LUIS ENRIQUE,PEDRAZA,COLIN,29.Sep.23 06:33:18,29.Sep.23 14:27:08,29.Sep.23 12:11:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+857,244179,GILBERTO HIRAM,ARAIZA,AYALA,29.Sep.23 06:27:41,29.Sep.23 15:15:59,29.Sep.23 12:19:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+858,253360,ANA MARIA,ROSALES,GOMEZ,29.Sep.23 07:20:32,29.Sep.23 14:24:43,29.Sep.23 12:54:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+862,252446,JOSE,QUIROZ,SUMANO,05.Ago.23 00:05:48,04.Oct.23 15:20:26,02.Oct.23 11:15:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+863,241672,ANGELICA MARIA,BARRETO,FLORES,02.Oct.23 08:29:19,02.Oct.23 15:19:11,02.Oct.23 12:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+864,253198,JOSE LUIS,VALDEZ,MARTINEZ,14.Sep.23 17:18:45,10.Nov.23 12:58:39,02.Oct.23 13:41:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+865,253119,ARTURO,TORRES,BARRETO,12.Sep.23 02:42:25,06.Oct.23 14:20:18,02.Oct.23 14:12:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+866,253444,JESUS,GONZALEZ,BOBADILLA,27.Sep.23 23:26:36,25.Oct.23 17:36:46,03.Oct.23 09:55:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+868,253512,ARACELI,SOLANO,JULIAN,01.Oct.23 17:51:25,08.Oct.23 16:39:40,03.Oct.23 12:01:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+881,244952,IVAN,ORTEGA,HERNANDEZ,02.Oct.23 23:38:03,23.Oct.23 14:41:31,05.Oct.23 09:01:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+882,246681,GUSTAVO,LEON,GOMEZ,05.Oct.23 06:52:38,05.Oct.23 14:07:57,05.Oct.23 10:46:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+870,253256,HUGO,PEDROZA,SOLIS,18.Sep.23 20:33:41,11.Oct.23 12:42:25,03.Oct.23 12:59:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+871,253510,SOCORRO AMALIA,RODRIGUEZ,ALCANTARA,01.Oct.23 04:05:13,08.Nov.23 15:04:28,03.Oct.23 13:26:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+872,SN0000001,SN,SN,SN,02.Oct.23 08:46:45, ,03.Oct.23 14:44:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 10 Postquir˙rgicos ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+873,SN0000001,SN,SN,SN,02.Oct.23 08:46:45, ,04.Oct.23 09:27:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 10 Postquir˙rgicos ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+874,252010,FRANCISCA,MELO,NAVA,04.Oct.23 07:01:51,04.Oct.23 11:45:31,04.Oct.23 10:25:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+875,252045,RAQUEL,GRANADOS,QUINTOS,04.Oct.23 07:12:56,04.Oct.23 15:17:56,04.Oct.23 10:34:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+876,240758,MA. MARTINA,MENDOZA,RUIZ,04.Oct.23 08:26:04,04.Oct.23 14:12:21,04.Oct.23 11:23:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,9656,Otro lavado de bronquio y tr·quea,9656,Otro lavado de bronquio y tr·quea
+877,110515,EMILIA,SILVIANO,CASIMIRO,04.Oct.23 08:53:14,04.Oct.23 14:16:46,04.Oct.23 12:06:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+887,253624,LEONARDO JOSUE,SANCHEZ,GARCIA, , ,06.Oct.23 10:04:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+888,188344,ARISTEO,ARIZMENDI,HERNANDEZ,06.Oct.23 06:49:48,06.Oct.23 12:30:00,06.Oct.23 09:55:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+879,253185,BERTHA AIDEE,ESTRADA,CALVA,14.Sep.23 01:49:29,17.Nov.23 15:25:32,04.Oct.23 13:33:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,311,TraqueostomÌ≠a temporal,311,TraqueostomÌ≠a temporal
+880,253278,RUBEN,SANCHEZ,ESTRADA,04.Oct.23 06:52:45,04.Oct.23 16:08:23,04.Oct.23 13:55:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+883,167513,MARIA ELENA,HERNANDEZ,TAPIA,05.Oct.23 07:37:57,05.Oct.23 12:27:43,05.Oct.23 11:15:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+884,253250,BEATRIZ,DURAN,RIVERA,05.Oct.23 07:30:08,05.Oct.23 14:18:47,05.Oct.23 12:25:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+885,251880,ARMANDO,MEDINA,VALDEZ,05.Oct.23 07:05:13,05.Oct.23 14:51:55,05.Oct.23 13:34:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+890,253226,ROBERTA,SANTOS,MALDONADO,17.Sep.23 16:30:58,11.Oct.23 14:29:11,09.Oct.23 10:37:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+889,253422,JOSE GUADALUPE,CASTILLO,PEREZ,03.Oct.23 18:30:21,11.Oct.23 13:49:38,06.Oct.23 13:57:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3323,Otra broncoscopia,3323,Otra broncoscopia
+891,251917,CARLOS FEDERICO,OROZCO,PATONI,09.Oct.23 07:18:18,09.Oct.23 16:06:16,09.Oct.23 10:57:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+892,251106,TERESA DE JESUS,HERNANDEZ,RODRIGUEZ,09.Oct.23 06:38:06,09.Oct.23 13:30:27,09.Oct.23 11:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+893,248120,MARCO ANTONIO,SANTOS,RAMIREZ,09.Oct.23 07:13:28,09.Oct.23 15:15:48,09.Oct.23 13:28:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+894,252089,VERONICA,ANTONIO,MELENDEZ,10.Oct.23 07:20:57,10.Oct.23 14:22:30,10.Oct.23 10:03:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+895,240875,SERGIO AZAREL,MORALES,RAMOS,10.Oct.23 08:14:37,10.Oct.23 13:07:12,10.Oct.23 11:37:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+896,253167,ROSA KRISTELL,SUAREZ,LAZARO,11.Oct.23 06:31:02,12.Oct.23 16:04:48,11.Oct.23 09:53:00,PROCEDIMIENTO AMBULATORIO ,Servicio ClÌ≠nico 1 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+897,253466,MARIA JENNIFER,OSIO,ECHANOVE,11.Oct.23 07:42:09,11.Oct.23 13:17:23,11.Oct.23 10:40:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+898,252457,LUCIA,CRUZ,PEREZ,11.Oct.23 07:51:35,11.Oct.23 13:21:07,11.Oct.23 11:41:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+899,244952,IVAN,ORTEGA,HERNANDEZ,02.Oct.23 23:38:03,23.Oct.23 14:41:31,11.Oct.23 12:10:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+900,252570,ADELA,FELICIANO,PADRE,11.Oct.23 07:50:51,11.Oct.23 13:24:41,11.Oct.23 12:31:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+901,245930,JUAN PABLO,IGLESIAS,IGLESIAS,12.Oct.23 06:31:07,12.Oct.23 14:12:08,12.Oct.23 10:26:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+902,248788,GRAVIELA,REYES,CRUZ, , ,12.Oct.23 12:20:00, , ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+903,247891,NATHAN MITCHEELL,ARCOS,PEREZ,13.Oct.23 06:57:53,13.Oct.23 16:23:54,13.Oct.23 11:37:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+904,253774,DANTE,XICOHTENCATL,CARRETO,13.Oct.23 02:24:26,23.Oct.23 12:26:54,13.Oct.23 12:04:00,INGRESO A TERAPIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+905,243669,ABIGAIL,RAMOS,RODRIGUEZ,11.Oct.23 07:32:35,14.Oct.23 11:46:19,13.Oct.23 13:16:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+906,253792,LISANDRO JESUS,MORAN,LOPEZ,16.Oct.23 06:59:25,16.Oct.23 17:16:14,16.Oct.23 13:48:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+907,253655,JULIETA,MEDINA,GALINDO,17.Oct.23 06:56:31,17.Oct.23 12:50:14,17.Oct.23 11:18:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+908,253787,ARNULFO,REYES,SANCHEZ,17.Oct.23 08:11:02,17.Oct.23 14:12:37,17.Oct.23 11:33:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+909,253770,JAIME JORGE,CERVANTES,TAPIA,13.Oct.23 12:31:04,21.Oct.23 13:22:31,17.Oct.23 13:10:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+910,233896,MARA ANAID,SORIA,AGUILAR,18.Oct.23 07:05:35,18.Oct.23 12:33:46,18.Oct.23 09:49:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+911,253784,ISRAEL,RAMIREZ,GARCIA,18.Oct.23 08:11:29,18.Oct.23 12:52:08,18.Oct.23 10:54:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+912,244321,JOSE ADRIAN,ELECHIGUERRA,VALDIVIA,19.Oct.23 07:18:57,19.Oct.23 11:36:56,19.Oct.23 10:10:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+913,253627,JOSE NATIVIDAD,GOMEZ,PEREZ,19.Oct.23 07:08:56,19.Oct.23 12:53:37,19.Oct.23 12:30:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+914,253137,MARIA GUADALUPE,FLORES,MORENO,19.Oct.23 06:39:25,19.Oct.23 15:24:02,19.Oct.23 12:54:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+920,250013,ALEXA SOPHIA,FONSECA,MACEDO,18.Oct.23 19:52:41,31.Oct.23 13:43:53,27.Oct.23 09:35:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+916,252505,MANUEL,TOBON,HERNANDEZ,24.Oct.23 07:42:30,24.Oct.23 15:55:58,24.Oct.23 11:03:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+917,253891,JOSE ARMANDO,CRUZ,YA—EZ,19.Oct.23 13:16:13,01.Nov.23 15:24:35,24.Oct.23 13:50:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+918,245988,CLEMENCIA,SALAS,LOPEZ, , ,24.Oct.23 14:14:00, , ,,,,
+919,252663,FLAVIA,RAMON,JIMENEZ,25.Oct.23 07:15:46,25.Oct.23 15:42:54,25.Oct.23 13:53:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+921,254080,HERIBERTA,PE—A,ORTIZ,30.Oct.23 08:13:14,30.Oct.23 11:32:01,30.Oct.23 11:01:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+922,252847,MARIA,SAINZ,MORALES,30.Oct.23 06:56:08,30.Oct.23 14:10:16,30.Oct.23 11:18:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+923,253715,FIDEL SAUL,VAZQUEZ,RAMIREZ,30.Oct.23 06:53:06,30.Oct.23 14:13:49,30.Oct.23 12:05:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+924,253997,PRISCILA KARINA,ACO,RAMIREZ,25.Oct.23 06:23:28,08.Nov.23 14:19:50,31.Oct.23 10:28:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+925,253755,VICTOR,URO,HUERTA,12.Oct.23 11:57:53,17.Nov.23 13:23:34,01.Nov.23 13:27:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,5186,InserciÛn endoscÛpica de tubo de drenaje nasobiliar,5186,InserciÛn endoscÛpica de tubo de drenaje nasobiliar
+926,253369,ODILIO,MARCELINO,MELCHOR,24.Sep.23 17:55:50,04.Nov.23 14:59:34,01.Nov.23 13:43:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG),4311,GastrostomÌ≠a percut·nea [endoscÛpica] (PEG)
+927,233595,ALEJANDRO,HERNANDEZ,CONFESOR,03.Nov.23 07:12:10,03.Nov.23 15:12:50,03.Nov.23 10:35:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+928,185671,XIMENA,TAVERA,RAMOS,03.Nov.23 06:57:09,03.Nov.23 15:10:23,03.Nov.23 13:30:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+929,254251,CAROLINA,RADAMONTES,NOVOA,04.Nov.23 14:31:47,06.Nov.23 15:50:54,06.Nov.23 09:55:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 7 ,,,,
+930,185716,JACQUELINE,SANDOVAL,CRUZ,06.Nov.23 08:01:17,06.Nov.23 14:53:14,06.Nov.23 10:20:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+931,185716,JACQUELINE,SANDOVAL,CRUZ,06.Nov.23 08:01:17,06.Nov.23 14:53:14,06.Nov.23 10:38:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+932,251917,CARLOS FEDERICO,OROZCO,PATONI,06.Nov.23 06:57:36,06.Nov.23 21:36:00,06.Nov.23 11:25:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+933,244131,MARIA,HERNANDEZ,DAVILA,06.Nov.23 06:45:09,06.Nov.23 15:13:17,06.Nov.23 12:16:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+934,197425,BRENDA MONICA,GABINO,VENTURA,27.Oct.23 00:33:02,15.Nov.23 16:18:01,06.Nov.23 13:53:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+935,253046,VIRGINIA,GIL,MERCADO,07.Nov.23 06:41:28,07.Nov.23 15:32:15,07.Nov.23 09:54:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+936,253425,JUAN,LETO,HERNANDEZ,07.Nov.23 06:42:47,07.Nov.23 14:51:59,07.Nov.23 11:05:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+937,254009,JULIO CESAR,LOPEZ,MARQUEZ,07.Nov.23 06:48:05,07.Nov.23 14:54:15,07.Nov.23 12:31:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+938,253832,EDUARDO,HEVIA,GONZALEZ,08.Nov.23 07:26:47,08.Nov.23 17:27:42,08.Nov.23 10:10:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+939,229037,DIANA LUISA,MORENO,AGUILAR,08.Nov.23 07:55:14,08.Nov.23 15:07:53,08.Nov.23 12:17:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+940,254265,JOSE IGNACIO,RIVERA,GARCIA,09.Nov.23 06:44:38,09.Nov.23 17:08:47,09.Nov.23 10:15:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+941,218075,ISABELLA,GALARZA,XOLALPA,10.Nov.23 07:12:54,10.Nov.23 18:02:56,10.Nov.23 11:04:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+942,220386,FRANCISCA,OFELIA,ALVAREZ,06.Nov.23 19:38:40,30.Nov.23 14:56:37,10.Nov.23 12:18:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+943,220386,FRANCISCA,OFELIA,ALVAREZ,06.Nov.23 19:38:40,30.Nov.23 14:56:37,10.Nov.23 13:41:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+946,247058,LOAN SEBASTIAN,MARTINEZ,CABRERA,17.Nov.23 07:29:49,17.Nov.23 16:19:33,17.Nov.23 09:54:00,PROCEDIMIENTO AMBULATORIO ,NeumologÌ≠a Pedi·trica Ambulatoria ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+947,254326,ALEJANDRA PATRICIA,MIRANDA,PUENTE,21.Nov.23 07:01:06,21.Nov.23 14:07:06,21.Nov.23 09:31:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+945,253755,VICTOR,URO,HUERTA,12.Oct.23 11:57:53,17.Nov.23 13:23:34,14.Nov.23 11:58:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
+948,254037,AGUSTIN,SANCHEZ,RODRIGUEZ,22.Nov.23 07:43:55,22.Nov.23 14:31:13,22.Nov.23 09:07:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+949,252309,JUAN FERNANDO,MARTINEZ,VERA,23.Nov.23 06:47:39,23.Nov.23 16:07:39,23.Nov.23 12:02:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+950,254531,EIBHY ANTONIO,ARCOS,HERNANDEZ,27.Nov.23 07:00:12,27.Nov.23 13:44:17,27.Nov.23 09:24:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+951,215368,PAULINA ALEJANDRA,NOGUEDA,CAIXBA,27.Nov.23 07:05:34,27.Nov.23 15:33:48,27.Nov.23 10:48:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+952,254203,ANTONIO,ONTIVEROS,ZAMARRIPA,28.Nov.23 06:56:09,28.Nov.23 13:39:32,28.Nov.23 09:33:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+953,253761,JOSEFINA,CUEVAS,SOSA,28.Nov.23 07:20:35,28.Nov.23 14:32:31,28.Nov.23 10:32:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+954,253280,MAGDALENA GUADALUPE,MENDOZA,PORTALES,29.Nov.23 07:25:42,29.Nov.23 15:30:26,29.Nov.23 11:22:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+955,252207,GUILLERMO,DURAN,AVALOS,30.Nov.23 07:01:18,30.Nov.23 13:55:46,30.Nov.23 09:52:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+956,234252,ANGELA,RUIZ,PEREZ,30.Nov.23 07:53:54,30.Nov.23 17:39:58,30.Nov.23 11:31:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+957,254468,ALFREDO,CRUZ,HERNANDEZ,04.Dic.23 07:05:52,04.Dic.23 17:22:52,04.Dic.23 12:25:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+958,254171,ISRAEL,HERNANDEZ,GALLEGOS,04.Dic.23 06:47:17,04.Dic.23 16:43:45,04.Dic.23 13:01:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+959,253660,SAMUEL,QUIROZ,RUIZ,05.Dic.23 06:56:38,05.Dic.23 15:12:02,05.Dic.23 10:25:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+960,254411,JOSE ANTONIO MARIO,NOVALDO,GONZALEZ,24.Nov.23 13:27:29,02.Feb.24 17:59:19,05.Dic.23 12:13:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,,,,
+961,229037,DIANA LUISA,MORENO,AGUILAR,06.Dic.23 07:44:49,06.Dic.23 13:30:34,06.Dic.23 09:05:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+963,254645,LUIS MATEO,TORRES,AGUIRRE,11.Dic.23 06:38:11,11.Dic.23 14:10:36,11.Dic.23 09:28:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+964,254668,SELINA,CHAVEZ,LOPEZ,11.Dic.23 06:48:59,11.Dic.23 15:37:15,11.Dic.23 11:48:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+965,249584,ANDREY JAIR,FLORES,MENDOZA,12.Dic.23 06:35:34,12.Dic.23 13:39:36,12.Dic.23 10:09:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+966,233732,MARGARITA,MARTINEZ,MARTINEZ,13.Dic.23 07:49:51,13.Dic.23 14:58:33,13.Dic.23 09:47:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3321,Broncoscopia a travÌ©s de estoma artificial,3321,Broncoscopia a travÌ©s de estoma artificial
+967,253719,ANGELA,CERON,GUARNEROS,13.Dic.23 07:40:07,13.Dic.23 13:00:19,13.Dic.23 10:45:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+968,254571,MARICELA,HERNANDEZ,DE LA CRUZ,19.Dic.23 07:14:31,19.Dic.23 15:20:59,19.Dic.23 09:42:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+969,254806,ALONSO,AYALA,MENDOZA,19.Dic.23 06:41:00,19.Dic.23 15:05:23,19.Dic.23 11:37:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+970,253839,MAURA,LOPEZ,HERNANDEZ,19.Dic.23 06:45:25,19.Dic.23 16:10:05,19.Dic.23 13:02:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+971,255200,DANIEL,MU—OZ,CHAVEZ,16.Dic.23 02:55:12,28.Dic.23 13:39:46,20.Dic.23 09:39:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+972,255189,PRYSILA,TRONCOSO,HUITRON,22.Dic.23 08:10:58,22.Dic.23 12:26:32,22.Dic.23 11:13:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+973,252267,SILVIA,MARTINEZ,MEJIA,26.Dic.23 06:37:39,26.Dic.23 13:55:52,26.Dic.23 12:23:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4511,EndoscopÌ≠a transabdominal de intestino delgado,4511,EndoscopÌ≠a transabdominal de intestino delgado
+974,243978,ELSA,GUTIERREZ,SALAZAR,16.Dic.23 14:46:37,19.Ene.24 17:51:45,27.Dic.23 11:11:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 1 ,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada,4516,EsofagogastroduodenoscopÌ≠a [EGD] con biopsia cerrada
+975,255015,JUAN JOSE,FLORES,ZARATE,27.Dic.23 06:53:33,27.Dic.23 16:36:30,27.Dic.23 12:38:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+976,233896,MARA ANAID,SORIA,AGUILAR,28.Dic.23 06:51:56,28.Dic.23 15:21:24,28.Dic.23 09:44:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+977,254757,JOSE LUIS,ALVIRDE,ANGELES,24.Dic.23 14:55:58,12.Ene.24 14:31:12,28.Dic.23 12:30:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+978,251109,CIRILO,LOPEZ,LOVERA,26.Dic.23 02:47:57,08.Ene.24 12:38:31,28.Dic.23 13:04:00,ADMIS”N HOSPITALARIA ,Unidad de Terapia Intermedia ,3323,Otra broncoscopia,3323,Otra broncoscopia
+979,247168,MANUEL,TREJO,CORONA,29.Dic.23 12:39:09,11.Ene.24 13:12:22,29.Dic.23 11:44:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+980,252423,CAROLINA,SALINAS,MARTINEZ,02.Ago.23 17:00:16,20.Ene.24 10:07:11,29.Dic.23 13:27:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+981,255182,JOSE ALFREDO,BARRERA,VALENCIA,02.Ene.24 06:37:40,02.Ene.24 11:14:55,02.Ene.24 09:56:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3323,Otra broncoscopia,3323,Otra broncoscopia
+982,214448,NORMAN HERNAN,LOPEZ,ALANIZ,28.Dic.23 02:11:10,11.Ene.24 12:54:56,02.Ene.24 10:37:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+983,214448,NORMAN HERNAN,LOPEZ,ALANIZ,28.Dic.23 02:11:10,11.Ene.24 12:54:56,02.Ene.24 12:00:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 2 ,4513,Otra endoscopÌ≠a de intestino delgado,4513,Otra endoscopÌ≠a de intestino delgado
+984,250977,GAUDENCIO,MENDOZA,DIAZ,03.Ene.24 06:44:45,03.Ene.24 12:36:03,03.Ene.24 11:08:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,4523,ColonoscopÌ≠a,4523,ColonoscopÌ≠a
+985,255183,AXEL OMAR,ORTEGA,GARRIDO,03.Ene.24 07:17:37,03.Ene.24 14:45:15,03.Ene.24 11:38:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+986,218438,ROSA EDELMIRA,PEREZ,GONZALEZ,04.Ene.24 06:54:54,04.Ene.24 12:08:32,04.Ene.24 10:01:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+987,243843,YOLANDA,RAMON,ALVARADO,04.Ene.24 06:35:07,04.Ene.24 12:15:39,04.Ene.24 10:15:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+988,241672,ANGELICA MARIA,BARRETO,FLORES,04.Ene.24 09:04:13,04.Ene.24 13:46:24,04.Ene.24 12:54:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+993,247739,JUANA,ZUBIETA,LOREDO,15.Ene.24 08:14:47,15.Ene.24 17:22:47,15.Ene.24 13:40:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+990,255554,GERARDO FERNANDO,MARTINEZ,MENDOZA,05.Ene.24 14:35:51,31.Ene.24 13:18:40,08.Ene.24 13:33:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 4 ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+991,250410,ANGEL,ROSAS,OVALLE,09.Ene.24 07:00:17,09.Ene.24 13:38:05,09.Ene.24 11:36:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+992,241004,ANTONIO,PE—A,MORALES,09.Ene.24 07:03:21,09.Ene.24 15:44:39,09.Ene.24 12:29:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+995,254149,PONCIANO,MAYORAL,CRUZ,23.Ene.24 06:49:18,23.Ene.24 14:11:52,23.Ene.24 12:34:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+996,251343,MARIA GUADALUPE,AGUILAR,GUILLEN,25.Ene.24 06:57:12,25.Ene.24 13:56:24,25.Ene.24 09:40:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+997,255678,MA. GUADALUPE,MARTINEZ,GARCIA,25.Ene.24 07:41:20,25.Ene.24 13:29:07,25.Ene.24 12:46:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+999,251834,LENIN,MEDEL,HERNANDEZ,29.Ene.24 07:04:48,29.Ene.24 11:43:19,29.Ene.24 10:43:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,,,,
+1000,255830,RICARDO,MENDOZA,AGUILAR,01.Feb.24 06:44:56,01.Feb.24 12:12:32,01.Feb.24 10:03:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+1001,253057,ANA MARIA,GONZALEZ,GONZALEZ,01.Feb.24 08:25:49,01.Feb.24 15:39:47,01.Feb.24 11:54:00,PROCEDIMIENTO AMBULATORIO ,Hospital de DÌ≠a ,3322,Broncoscopia fibroÛptica,3322,Broncoscopia fibroÛptica
+1003,259448,JOSE ANTONIO,GUTIERREZ,SOTO,11.Jun.24 18:26:14,10.Jul.24 16:33:00,11.Jun.24 17:55:00,ADMIS”N HOSPITALARIA ,Servicio ClÌ≠nico 3 ,,,,
