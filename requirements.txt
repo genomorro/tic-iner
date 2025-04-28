@@ -12,7 +12,8 @@ NumPy
 jupyter-book
 jupytext
 openpyxl
-pandas
+pandas >= 2.2.0
+pyarrow
 
 ## Extra
 # graphviz
