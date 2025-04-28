@@ -6,7 +6,7 @@ import os
 import chainlit as cl
 
 # LLM model
-llm = ChatGroq(model_name="llama3-70b-8192", api_key= os_environ["GROQ_API_KEY"])
+llm = ChatGroq(model_name="llama3-70b-8192")
 # llm = Ollama(model="llama3")
 
 # Chat init
