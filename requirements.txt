@@ -9,19 +9,22 @@
 ## Basics
 IPython
 NumPy
-jupytext
 jupyter-book
-pandas
+jupytext
 openpyxl
+pandas
 
 ## Extra
+# graphviz
+langchain_community
+langchain_groq
 matplotlib
 # nltk
-# opencv-python
 # opencv-contrib-python
+# opencv-python
+pandasai
+# pydotplus
 # scikit-learn
 # seaborn
 # spacy
 # tensorflow
-# graphviz
-# pydotplus
