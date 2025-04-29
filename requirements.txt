@@ -16,6 +16,7 @@ pandas >= 2.2.0
 pyarrow
 
 ## Extra
+chainlit
 # graphviz
 langchain_community
 langchain_groq
