@@ -9,18 +9,18 @@ import chainlit as cl
 llm = ChatGroq(model_name="llama3-70b-8192")
 # llm = Ollama(model="llama3")
 
-# Chat init
-# @cl.on_chat_start
-# def chat_start():
-#     cl.user_session.set(
-#         "message_history",
-#         [{"role": "system", "content": "Hazme una pregunta"}],
-#     )
+Chat init
+@cl.on_chat_start
+def chat_start():
+    cl.user_session.set(
+        "message_history",
+        [{"role": "system", "content": "Hazme una pregunta"}],
+    )
 
-# @cl.on_message
-# async def main(message: cl.Message):
-#     message_history = cl.user_session.get("message_history")
-#     message_history.append({"role": "user", "content": message.content})
+@cl.on_message
+async def main(message: cl.Message):
+    message_history = cl.user_session.get("message_history")
+    message_history.append({"role": "user", "content": message.content})
 
 # Source data
 df_hq = pd.read_csv("ds/Procedimiento1Hojadequirofano_20250424_utf-8.csv")
@@ -28,14 +28,14 @@ df_np = pd.read_csv("ds/Procedimiento2NotaPostoperatoria_20250424_utf-8.csv")
 df_hi = pd.read_csv("ds/Procedimiento3Hojadeintervencionismo_20250424_utf-8.csv")
 
 # Define dataframe
-df_hq = SmartDataframe(df_hq, config={"llm": llm})
+ai = Agent([df_hq, df_hi, df_np], config={"llm": llm}, memory_size=100)
 
 # Questions on pynb
 #print(df_hq.chat('Question'))
 
 # Chat questions
 question = message.content
-response = df_hq.chat(question)
+response = ai.chat(question)
 msg = cl.Message(content=response)
 await msg.send()
 
