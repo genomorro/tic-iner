@@ -26,7 +26,7 @@ Para la instalación local solo corre:
 
 ## Uso
 
-En cada rama verás aquí un botón que lleva a [MyBinder](mybinder.org "My Binder"), así podrán ver cada ejemplo en acción.
+En línea [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/genomorro%2Ftic-iner/decodificar)
 
 Cada proyecto usa archivos `ipynb` y `py` de forma indistinta, gracias a jupytext se pueden sincronizar. Para saber como hacerlo de momento lo mejor es consultar [jupytext](https://jupytext.readthedocs.io/en/latest/index.html "la documentación de jupytext"), después pondré aquí los comandos que use más comúnmente. 
 
