@@ -13,22 +13,24 @@ Cada rama se compone por el nombre del requerimiento, cada palabra separada por 
 ## FHS
 
 - `apt.txt` configura dependencias a instalar sobre el contenedor, ubuntu por default para mybinder.org
-- `requirements.txt` configura las dependencias de python sobre el contenedor, se instalan vía pip.
-- La carpeta `im` contiene imágenes de ejemplo, se pueden agregar las necesarias.
-- La carpeta `out` contendrá los archivos de salida.
-- La carpeta `ds` contendrá los archivos datasets de entrada.
+- `requirements.txt` configura las dependencias de python sobre el contenedor, se instalan vï¿½a pip.
+- La carpeta `im` contiene imï¿½genes de ejemplo, se pueden agregar las necesarias.
+- La carpeta `out` contendrï¿½ los archivos de salida.
+- La carpeta `ds` contendrï¿½ los archivos datasets de entrada.
 
-## Instalación
+## Instalaciï¿½n
 
-Para la instalación local solo corre:
+Para la instalaciï¿½n local solo corre:
 
     pip install -r requirements.txt
 
 ## Uso
 
-En cada rama verás aquí un botón que lleva a [MyBinder](mybinder.org "My Binder"), así podrán ver cada ejemplo en acción.
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/https%3A%2F%2Fgitlab.com%2Fgenomorro%2Ftic-iner/registro-io)
 
-Cada proyecto usa archivos `ipynb` y `py` de forma indistinta, gracias a jupytext se pueden sincronizar. Para saber como hacerlo de momento lo mejor es consultar [jupytext](https://jupytext.readthedocs.io/en/latest/index.html "la documentación de jupytext"), después pondré aquí los comandos que use más comúnmente. 
+En cada rama verï¿½s aquï¿½ un botï¿½n que lleva a [MyBinder](mybinder.org "My Binder"), asï¿½ podrï¿½n ver cada ejemplo en acciï¿½n.
+
+Cada proyecto usa archivos `ipynb` y `py` de forma indistinta, gracias a jupytext se pueden sincronizar. Para saber como hacerlo de momento lo mejor es consultar [jupytext](https://jupytext.readthedocs.io/en/latest/index.html "la documentaciï¿½n de jupytext"), despuï¿½s pondrï¿½ aquï¿½ los comandos que use mï¿½s comï¿½nmente. 
 
 Si inicio con un `ipynb` lo convierto a `py`:
 
@@ -38,7 +40,7 @@ De otra forma:
 
     jupytext --to notebook test.py
 	
-Después de eso hacer algo como:
+Despuï¿½s de eso hacer algo como:
 
     jupytext --update --to notebook test.py
     
@@ -49,7 +51,7 @@ Generar la imagen desde el archivo `.dot`:
 ## Licencia
 This repo is part of TIC-INER
 
-Copyright (C) 2022, Edgar Uriel Domínguez Espinoza
+Copyright (C) 2022, Edgar Uriel Domï¿½nguez Espinoza
 
 TIC-INER is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
