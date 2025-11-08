@@ -168,7 +168,7 @@ Estos valores deben estar listados en el expediente electrónico.
   patient[patient["file"].duplicated()]
 #+end_src
 
-#+RESULTS: check-unique-values
+#+RESULTS: check-duplicate-values
 #+begin_example
             id       file                            name  disability
 71791    71793     161778   ENRIQUE JULIO ESTRADA Y GASCA           1
@@ -217,6 +217,14 @@ Estos valores deben estar listados en el expediente electrónico.
 #+end_src
 
 #+RESULTS: delete-NaN-values
+: None
+
+#+NAME: delete-duplicates-file
+#+begin_src python
+  patient.drop_duplicates(subset=['file'], keep='first')
+#+end_src
+
+#+RESULTS: delete-duplicates-file
 #+begin_example
             id       file                             name  disability
 3            1  000028567       BLANDINA HERNANDEZ PAREDES           0
@@ -231,6 +239,5 @@ Estos valores deben estar listados en el expediente electrónico.
 719971  720564  IAN807818        GRACIELA GARCIA HERNANDEZ           0
 719972  720565  IAN807819         JORGE OMAR REYES ROSALES           0
 
-[719964 rows x 4 columns]
+[719951 rows x 4 columns]
 #+end_example
-
