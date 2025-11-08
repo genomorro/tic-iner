@@ -13,19 +13,21 @@ Este software extrae los datos de una vista de una base de datos MySQL y los pro
 ## Información útil sobre el ECE
 
 ### patient
-|Propiedad | Tabla | Campo | 
-| file|  th5_FYF292FI2JII5 | FYF292FI2JII5_F2FF91IBY |
-| id |  th5_FYF292FI2JII5 | FYF292FI2JII5_id |
-|name|  th5_FYF292FI2JII5 | FYF292FI2JII5_FFF1YJ7I + FYF292FI2JII5_FFF1YJ7Ib + FYF292FI2JII5_FFF1YJ7Ic |
-| disability | th5_FF2YI727I1JIY | FF2YI727I1JIY_FYY15FJ5F9Y59 |
+| Propiedad  | Tabla             | Campo                                                                      |
+|------------+-------------------+----------------------------------------------------------------------------|
+| file       | th5_FYF292FI2JII5 | FYF292FI2JII5_F2FF91IBY                                                    |
+| id         | th5_FYF292FI2JII5 | FYF292FI2JII5_id                                                           |
+| name       | th5_FYF292FI2JII5 | FYF292FI2JII5_FFF1YJ7I + FYF292FI2JII5_FFF1YJ7Ib + FYF292FI2JII5_FFF1YJ7Ic |
+| disability | th5_FF2YI727I1JIY | FF2YI727I1JIY_FYY15FJ5F9Y59                                                |
 
 
 ### appointment
-| Propiedad | Tabla | Campo |
-| patient_id | th5_FB12I2722I1BI | FB12I2722I1BI_F2FF91IBY 
-| place | th5_FB12I2722I1BI | FB12I2722I1BI_FFF1YJ7I (FK) 
-| date_at | th5_FB12I2722I1BI | FB12I2722I1BI_Y7FY7YF1B
-| type | th5_FB12I2722I1BI | FB12I2722I1BI_YY2191I51F (vacío)
+| Propiedad  | Tabla             | Campo                            |
+|------------+-------------------+----------------------------------|
+| patient_id | th5_FB12I2722I1BI | FB12I2722I1BI_F2FF91IBY          |
+| place      | th5_FB12I2722I1BI | FB12I2722I1BI_FFF1YJ7I (FK)      |
+| date_at    | th5_FB12I2722I1BI | FB12I2722I1BI_Y7FY7YF1B          |
+| type       | th5_FB12I2722I1BI | FB12I2722I1BI_YY2191I51F (vacío) |
 
 
 ## Instalación
