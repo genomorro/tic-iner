@@ -141,6 +141,7 @@
 #+end_src
 
 ** Testing
+
 #+NAME: get-appointment-by-patient
 #+begin_src python
   appointment.loc[appointment["patient_id"] == 117096]
@@ -161,3 +162,75 @@
 : 117091  117096  207910  VALERIA AYONECTIL SANTILLAN AMADO           1
 
 Estos valores deben estar listados en el expediente electrónico. 
+
+#+NAME: check-duplicate-values
+#+begin_src python
+  patient[patient["file"].duplicated()]
+#+end_src
+
+#+RESULTS: check-unique-values
+#+begin_example
+            id       file                            name  disability
+71791    71793     161778   ENRIQUE JULIO ESTRADA Y GASCA           1
+111792  111797     202611         ANA MARIA VEGA MARTINEZ           0
+132000  132006  000222827     RICARDO ELORRIAGA HERNANDEZ           0
+149242  149249  000240070     ROBERTO CARLOS REYES TORRES           0
+150267  150273  000241094            SAMARA RETANA PATIÑO           1
+150640  150645  000241466          GABRIEL BAUTISTA LOPEZ           0
+596650  597035  IAN684295  DORA JOSEFA BALDERAS HERNANDEZ           0
+597864  598254  IAN685513        JORGE JOSE BARREDA SALAS           0
+598693  599089  IAN686347  JHORDY GERARDO VELAZQUEZ PEREZ           0
+598744  599140  IAN686397    TEODORA RODRIGUEZ GARCILIANO           0
+599370  599768  IAN687024  JESUS JORGE CISNEROS HERNANDEZ           0
+599556  599954  IAN687209           ALBERTO GARCIA ZAVALA           0
+600059  600457  IAN687711     NOELIA LIZETH GUERRERO SOTO           0
+646712  647220        NaN         JOAQUINA AVILES BLANCO.           0
+653847  654365        NaN           J.JESUS GARCIA CHAVEZ           0
+665759  666300        NaN     MARIA ISABEL AGUILAR LOPEZ            0
+703348  703928        NaN         JOSE CARLOS BAEZ CHAVEZ           0
+703361  703941        NaN             CARLOS FONSECA PEÑA           0
+#+end_example
+
+#+NAME: check-NaN-values
+#+begin_src python
+  patient.isnull().any()
+#+end_src
+
+#+RESULTS: check-NaN-values
+: id            False
+: file           True
+: name          False
+: disability    False
+: dtype: bool
+
+#+NAME: patient-size
+#+begin_src python
+  patient.shape
+#+end_src
+
+#+RESULTS: patient-size
+| 719970 | 4 |
+
+#+NAME: delete-NaN-values
+#+begin_src python
+  patient.dropna(subset=['file'], inplace=True)
+#+end_src
+
+#+RESULTS: delete-NaN-values
+#+begin_example
+            id       file                             name  disability
+3            1  000028567       BLANDINA HERNANDEZ PAREDES           0
+4            2  000028878            FRANCISCO ARIZA BRAVO           0
+5            3  000028915                JUAN SANTIN ROSEL           0
+6            4  000028974            CARMELO REYES PACHECO           0
+7            5  000029064             ANTONIA LARA HERRERA           0
+...        ...        ...                              ...         ...
+719968  720561  IAN807815  MARIA LUISA ESPINDOLA ESPINDOLA           0
+719969  720562  IAN807816                SARA PEREZ IBARRA           0
+719970  720563  IAN807817              ALONSO PIÑA RAMIREZ           0
+719971  720564  IAN807818        GRACIELA GARCIA HERNANDEZ           0
+719972  720565  IAN807819         JORGE OMAR REYES ROSALES           0
+
+[719964 rows x 4 columns]
+#+end_example
+
