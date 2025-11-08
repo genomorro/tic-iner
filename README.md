@@ -10,7 +10,25 @@ Este software extrae los datos de una vista de una base de datos MySQL y los pro
 - La carpeta `out` contendrá los archivos de salida.
 - La carpeta `ds` contendrá los archivos datasets de entrada.
 
-## Instalaci�n
+## Información útil sobre el ECE
+
+### patient
+|Propiedad | Tabla | Campo | 
+| file|  th5_FYF292FI2JII5 | FYF292FI2JII5_F2FF91IBY |
+| id |  th5_FYF292FI2JII5 | FYF292FI2JII5_id |
+|name|  th5_FYF292FI2JII5 | FYF292FI2JII5_FFF1YJ7I + FYF292FI2JII5_FFF1YJ7Ib + FYF292FI2JII5_FFF1YJ7Ic |
+| disability | th5_FF2YI727I1JIY | FF2YI727I1JIY_FYY15FJ5F9Y59 |
+
+
+### appointment
+| Propiedad | Tabla | Campo |
+| patient_id | th5_FB12I2722I1BI | FB12I2722I1BI_F2FF91IBY 
+| place | th5_FB12I2722I1BI | FB12I2722I1BI_FFF1YJ7I (FK) 
+| date_at | th5_FB12I2722I1BI | FB12I2722I1BI_Y7FY7YF1B
+| type | th5_FB12I2722I1BI | FB12I2722I1BI_YY2191I51F (vacío)
+
+
+## Instalación
 
 Para la instalación local solo corre:
 
@@ -20,7 +38,7 @@ Para la instalación local solo corre:
 
 En línea: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/https%3A%2F%2Fgitlab.com%2Fgenomorro%2Ftic-iner/registro-io)
 
-Cada proyecto usa archivos `ipynb` y `py` de forma indistinta, gracias a jupytext se pueden sincronizar. Para saber como hacerlo de momento lo mejor es consultar [jupytext](https://jupytext.readthedocs.io/en/latest/index.html "la documentaci�n de jupytext"), despu�s pondr� aqu� los comandos que use m�s com�nmente. 
+Cada proyecto usa archivos `ipynb` y `py` de forma indistinta, gracias a jupytext se pueden sincronizar. Para saber como hacerlo de momento lo mejor es consultar [jupytext](https://jupytext.readthedocs.io/en/latest/index.html "la documentación de jupytext"), después pondrá aquí los comandos que use más comúnmente. 
 
 Si inicio con un `ipynb` lo convierto a `py`:
 
@@ -30,7 +48,7 @@ De otra forma:
 
     jupytext --to notebook test.py
 	
-Despu�s de eso hacer algo como:
+Después de eso hacer algo como:
 
     jupytext --update --to notebook test.py
     
