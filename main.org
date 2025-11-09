@@ -8,11 +8,14 @@
   import os
 #+end_src
 
+*** From files
 #+NAME: load-data
 #+begin_src python :results silent
   df_a = pd.read_csv("./ds/citasmedicas.csv")
   df_p = pd.read_csv("./ds/pacientes.csv")
 #+end_src
+
+*** From DB Connection
 
 ** Patient table
 Se muestran las columnas del DF inicial.
@@ -191,8 +194,8 @@ Se crea la columna faltante. De momento todos los registros se catalogan como ci
 
 Se guarda el DF en un nuevo DS.
 #+NAME: save-file-appointment
-#+begin_src python :results file silent
-    appointment.to_csv("out/appointment.csv", index=False)
+#+begin_src python :results file silent :exports code
+  appointment.to_csv("out/appointment.csv", index=False)
 #+end_src
 
 ** Export to SQL
