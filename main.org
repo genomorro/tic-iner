@@ -51,13 +51,13 @@ Se buscan errores tipográficos  que puedan interferir con un nuevo CSV, primero
 #+begin_src python :results output
   comma = ','
   quote = '\''
-  print("Existen comas:",(patient['name'].eq(comma)).any())
-  print("Existen comillas:",(patient['name'].eq(quote)).any())
+  print("Existen comas:",(patient['name'].str.contains(comma)).any())
+  print("Existen comillas:",(patient['name'].str.contains(quote)).any())
 #+end_src
 
 #+RESULTS: find-commas-in-names
-: Existen comas: False
-: Existen comillas: False
+: Existen comas: True
+: Existen comillas: True
 
 Se borran las comas, puesto que un nombre no debe contenerlas. Las comillas se reemplazan por dobles comillas simples ('') que es una forma excluirlas en SQL
 #+NAME: delete-commas-in-names
@@ -69,16 +69,16 @@ Se borran las comas, puesto que un nombre no debe contenerlas. Las comillas se r
 #+RESULTS: delete-commas-in-names
 : None
 
-Se verifica que ya no exista el caracter.
+Se verifica que ya no exista el carácter. El segundo test sigue siendo ~True~ porque se duplicó el caracter, no se eliminó, existe la opción de reemplazarlo por ~CHAR(39)~ que es válido en SQL.
 #+NAME: find-commas-in-names-2
 #+begin_src python :results output
-  print("Existen comas:",(patient['name'].eq(comma)).any())
-  print("Existen comillas:",(patient['name'].eq(quote)).any())
+  print("Existen comas:",(patient['name'].str.contains(comma)).any())
+  print("Existen comillas:",(patient['name'].str.contains(quote)).any())
   #+end_src
 
 #+RESULTS: find-commas-in-names-2
 : Existen comas: False
-: Existen comillas: False
+: Existen comillas: True
 
 Se lista cuales son los posibles valores de ~tipoDificultad~.
 #+NAME: tipoDificultad-values
@@ -134,12 +134,9 @@ Esta función convierte la columna en boleano.
 
 Se guarda el DF resultante en un nuevo DS.
 #+NAME: save-file-patient
-#+begin_src python :results file
+#+begin_src python :results file silent
   patient.to_csv("out/patient.csv", index=False)
 #+end_src
-
-#+RESULTS: save-file-patient
-[[file:None]]
 
 ** Appointment table
 Se listan las columnas del DF original.
@@ -166,7 +163,7 @@ Se crea el nuevo DF.
   appointment.columns = ["id", "patient_id", "place", "date_at"]
 #+end_src
 
-Se crea la columna faltante. De momento todos los registros se catalogan como citas.
+Se crea la columna faltante. De momento todos los registros se catalogan como citas. Quizá en el ECE exista esta información.
 #+NAME: create-type-column
 #+begin_src python :results silent
   appointment = appointment.assign(type="Cita")
@@ -174,25 +171,29 @@ Se crea la columna faltante. De momento todos los registros se catalogan como ci
 
 #+NAME: show-df
 #+begin_src python
-  appointment.head()
+  appointment.head(10)
 #+end_src
 
 #+RESULTS: show-df
-:         id  patient_id                             place              date_at  type
-: 0  1068560      117096       ALERGOLOGIA C1 - DR. GANDHI  2032-01-05 10:00:00  Cita
-: 1  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2  2033-01-13 09:00:00  Cita
-: 2  1071766      130297       ALERGOLOGIA C1 - DR. GANDHI  2032-01-12 10:00:00  Cita
-: 3  1071865      117973      ALERGOLOGIA E INMUNOLOGIA C1  2032-01-28 10:00:00  Cita
-: 4  1213097      518444    DR. GUSTAVO IVAN CENTENO SAENZ  2034-01-26 10:30:00  Cita
+#+begin_example
+        id  patient_id                                      place              date_at  type
+0  1068560      117096                ALERGOLOGIA C1 - DR. GANDHI  2032-01-05 10:00:00  Cita
+1  1069399      150583           GERIATRÍA SEGUIMIENTO SARS-COV-2  2033-01-13 09:00:00  Cita
+2  1071766      130297                ALERGOLOGIA C1 - DR. GANDHI  2032-01-12 10:00:00  Cita
+3  1071865      117973               ALERGOLOGIA E INMUNOLOGIA C1  2032-01-28 10:00:00  Cita
+4  1213097      518444             DR. GUSTAVO IVAN CENTENO SAENZ  2034-01-26 10:30:00  Cita
+5  1320803      124439  TB - DRA. NORMA ANGÉLICA TÉLLEZ NAVARRETE  2028-06-07 10:00:00  Cita
+6  1329585      122214                      AUDIOLOGIA 3 DR. LARA  2026-01-05 11:00:00  Cita
+7  1335178      114581                      CONSULTORIO DEL SUEÑO  2025-11-28 09:40:00  Cita
+8  1335190      637821                      CONSULTORIO DEL SUEÑO  2025-11-28 09:40:00  Cita
+9  1336738      666081       TELECONSULTA - CONSULTORIO DEL SUEÑO  2025-11-14 12:00:00  Cita
+#+end_example
 
 Se guarda el DF en un nuevo DS.
 #+NAME: save-file-appointment
-#+begin_src python :results file
+#+begin_src python :results file silent
     appointment.to_csv("out/appointment.csv", index=False)
 #+end_src
-
-#+RESULTS: save-file-appointment
-[[file:None]]
 
 ** Export to SQL
 Se exportarán los DS a formato SQL, la particularidad es que dichos archivos SQL deben actualizar la base de datos, no solo insertar los registros
@@ -204,8 +205,8 @@ Se exportarán los DS a formato SQL, la particularidad es que dichos archivos SQ
       """
       patient_csv = 'out/patient.csv'
       appointment_csv = 'out/appointment.csv'
-      mysql_output = 'output-mysql.sql'
-      sqlite_output = 'output-sqlite.sql'
+      mysql_output = 'out/update-mysql.sql'
+      sqlite_output = 'out/update-sqlite.sql'
       
       if not os.path.exists(patient_csv) or not os.path.exists(appointment_csv):
           print("Error: Input CSV files not found.")
@@ -272,12 +273,10 @@ Se exportarán los DS a formato SQL, la particularidad es que dichos archivos SQ
                       f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
                   )
                   f_sqlite.write(sqlite_stmt)
-                  
-      print("SQL scripts generated successfully.")
 #+end_src
 
 #+NAME: create-sql
-#+begin_src python :results file
+#+begin_src python :results file silent
   generate_sql()
 #+end_src
 
