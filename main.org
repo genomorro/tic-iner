@@ -4,6 +4,8 @@
 #+NAME: libraries
 #+begin_src python :results silent
   import pandas as pd
+  import csv
+  import os
 #+end_src
 
 #+NAME: load-data
@@ -13,6 +15,7 @@
 #+end_src
 
 ** Patient table
+Se muestran las columnas del DF inicial.
 #+NAME: desc-data-paciente
 #+begin_src python
   df_p.columns
@@ -24,22 +27,60 @@
 :        'nivelSE', 'derHab', 'excentoPago', 'tipoDificultad'],
 :       dtype='object')
 
+Se seleccionan las columnas que no requieren procesamiento adicional.
 #+NAME: sel-columns-paciente
 #+begin_src python :results silent
   patient_columns = ["idPac", "numExpediente"]
 #+end_src
 
+Se crea el nuevo DF excluyendo los pacientes de prueba.
 #+NAME: delete-fake-pacientes
 #+begin_src python :results silent
   patient = df_p.loc[3:, patient_columns]
   patient.columns = ["id", "file"]
 #+end_src
 
+Se crea una nueva columna con el nombre completo en una sola cadena.
 #+NAME: concatenate-name
 #+begin_src python :results silent
   patient["name"] = df_p.loc[3:, "nomPaciente"].fillna('') + " " + df_p.loc[3:, "primerApellido"].fillna('') + " " + df_p.loc[3:, "segundoApellido"].fillna('')
 #+end_src
 
+Se buscan errores tipográficos  que puedan interferir con un nuevo CSV, primero el uso indebido de coma (,). Luego las comillas simples (')
+#+NAME: find-commas-in-names
+#+begin_src python :results output
+  comma = ','
+  quote = '\''
+  print("Existen comas:",(patient['name'].eq(comma)).any())
+  print("Existen comillas:",(patient['name'].eq(quote)).any())
+#+end_src
+
+#+RESULTS: find-commas-in-names
+: Existen comas: False
+: Existen comillas: False
+
+Se borran las comas, puesto que un nombre no debe contenerlas. Las comillas se reemplazan por dobles comillas simples ('') que es una forma excluirlas en SQL
+#+NAME: delete-commas-in-names
+#+begin_src python
+  patient['name'] = patient['name'].replace({comma:''}, regex=True)
+  patient['name'] = patient['name'].replace({quote:"''"}, regex=True)
+#+end_src
+
+#+RESULTS: delete-commas-in-names
+: None
+
+Se verifica que ya no exista el caracter.
+#+NAME: find-commas-in-names-2
+#+begin_src python :results output
+  print("Existen comas:",(patient['name'].eq(comma)).any())
+  print("Existen comillas:",(patient['name'].eq(quote)).any())
+  #+end_src
+
+#+RESULTS: find-commas-in-names-2
+: Existen comas: False
+: Existen comillas: False
+
+Se lista cuales son los posibles valores de ~tipoDificultad~.
 #+NAME: tipoDificultad-values
 #+begin_src python
   df_p["tipoDificultad"].unique().tolist()
@@ -48,6 +89,7 @@
 #+RESULTS: tipoDificultad-values
 | SE IGNORA | ESCUCHAR | NINGUNA | CAMINAR | VER | HABLAR/COMUNICARSE | EMOCIONAL/MENTAL | USAR BRAZOS/MANOS | CUIDADO PERSONAL | APRENDER/RECORDAR |
 
+Esta función convierte la columna en boleano.
 #+NAME: define-disability_to_dummy
 #+begin_src python :results silent
   def disability_to_dummy(x):
@@ -90,12 +132,17 @@
 12  10  000029897              ARNULFO DIAZ BARRAGAN           0
 #+end_example
 
+Se guarda el DF resultante en un nuevo DS.
 #+NAME: save-file-patient
-#+begin_src python :results silent
+#+begin_src python :results file
   patient.to_csv("out/patient.csv", index=False)
 #+end_src
 
+#+RESULTS: save-file-patient
+[[file:None]]
+
 ** Appointment table
+Se listan las columnas del DF original.
 #+NAME: desc-data-cita
 #+begin_src python
   df_a.columns.values
@@ -106,17 +153,20 @@
 :        'segundoApellidoUsr', 'fechaHoraElaboracion', 'estatusCita',
 :        'lugRealizacion', 'ubicacion', 'especialidad'], dtype=object)
 
+Se seleccionan las columnas que no requieren procesamiento adicional.
 #+NAME: sel-columns-cita
 #+begin_src python :results silent
   appointment_columns = ["idCita", "idPac", "lugRealizacion", "fechaCita"]
 #+end_src
 
+Se crea el nuevo DF.
 #+NAME: create-appointment
 #+begin_src python :results silent
   appointment = df_a[appointment_columns]
   appointment.columns = ["id", "patient_id", "place", "date_at"]
 #+end_src
 
+Se crea la columna faltante. De momento todos los registros se catalogan como citas.
 #+NAME: create-type-column
 #+begin_src python :results silent
   appointment = appointment.assign(type="Cita")
@@ -135,9 +185,100 @@
 : 3  1071865      117973      ALERGOLOGIA E INMUNOLOGIA C1  2032-01-28 10:00:00  Cita
 : 4  1213097      518444    DR. GUSTAVO IVAN CENTENO SAENZ  2034-01-26 10:30:00  Cita
 
+Se guarda el DF en un nuevo DS.
 #+NAME: save-file-appointment
-#+begin_src python :results silent
+#+begin_src python :results file
     appointment.to_csv("out/appointment.csv", index=False)
+#+end_src
+
+#+RESULTS: save-file-appointment
+[[file:None]]
+
+** Export to SQL
+Se exportarán los DS a formato SQL, la particularidad es que dichos archivos SQL deben actualizar la base de datos, no solo insertar los registros
+#+NAME: generate_sql
+#+begin_src python :results silent
+  def generate_sql():
+      """
+      Generates SQL scripts from CSV files for MySQL and SQLite.
+      """
+      patient_csv = 'out/patient.csv'
+      appointment_csv = 'out/appointment.csv'
+      mysql_output = 'output-mysql.sql'
+      sqlite_output = 'output-sqlite.sql'
+      
+      if not os.path.exists(patient_csv) or not os.path.exists(appointment_csv):
+          print("Error: Input CSV files not found.")
+          return
+
+      with open(mysql_output, 'w', encoding='utf-8') as f_mysql, \
+           open(sqlite_output, 'w', encoding='utf-8') as f_sqlite:
+
+          f_mysql.write("-- patient\n")
+          f_sqlite.write("-- patient\n")
+          with open(patient_csv, 'r', encoding='utf-8') as infile:
+              reader = csv.reader(infile)
+              next(reader)  # Skip header
+              
+              for row in reader:
+                  id_val, file_val, name_val, disability_val = row
+                  
+                  file_val = file_val.replace("'", "''")
+                  name_val = name_val.replace("'", "''")
+
+                  mysql_update_clause = f"file = '{file_val}', name = '{name_val}', disability = {disability_val}"
+                  mysql_stmt = (
+                      f"INSERT INTO patient (id, file, name, disability) "
+                      f"VALUES ({id_val}, '{file_val}', '{name_val}', {disability_val}) "
+                      f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
+                  )
+                  f_mysql.write(mysql_stmt)
+
+                  sqlite_update_clause = "file = excluded.file, name = excluded.name, disability = excluded.disability"
+                  sqlite_stmt = (
+                      f"INSERT INTO patient (id, file, name, disability) "
+                      f"VALUES ({id_val}, '{file_val}', '{name_val}', {disability_val}) "
+                      f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
+                  )
+                  f_sqlite.write(sqlite_stmt)
+
+          f_mysql.write("\n")
+          f_sqlite.write("\n")
+
+          f_mysql.write("-- appointment\n")
+          f_sqlite.write("-- appointment\n")
+          with open(appointment_csv, 'r', encoding='utf-8') as infile:
+              reader = csv.reader(infile)
+              next(reader)  # Skip header
+
+              for row in reader:
+                  id_val, patient_id_val, place_val, date_at_val, type_val = row
+                  
+                  place_val = place_val.replace("'", "''")
+                  type_val = type_val.replace("'", "''")
+
+                  mysql_update_clause = f"patient_id = {patient_id_val}, place = '{place_val}', date_at = '{date_at_val}', type = '{type_val}'"
+                  mysql_stmt = (
+                      f"INSERT INTO appointment (id, patient_id, place, date_at, type) "
+                      f"VALUES ({id_val}, {patient_id_val}, '{place_val}', '{date_at_val}', '{type_val}') "
+                      f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
+                  )
+                  f_mysql.write(mysql_stmt)
+                  
+                  sqlite_update_clause = "patient_id = excluded.patient_id, place = excluded.place, date_at = excluded.date_at, type = excluded.type"
+                  sqlite_stmt = (
+                      f"INSERT INTO appointment (id, patient_id, place, date_at, type) "
+                      f"VALUES ({id_val}, {patient_id_val}, '{place_val}', '{date_at_val}', '{type_val}') "
+                      f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
+                  )
+                  f_sqlite.write(sqlite_stmt)
+                  
+      print("SQL scripts generated successfully.")
+#+end_src
+
+#+NAME: create-sql
+#+begin_src python :results file
+  generate_sql()
 #+end_src
 
 ** Testing
@@ -161,8 +302,9 @@
 :             id    file                               name  disability
 : 117091  117096  207910  VALERIA AYONECTIL SANTILLAN AMADO           1
 
-Estos valores deben estar listados en el expediente electrónico. 
+Estos valores deben estar listados en el expediente electrónico.
 
+Se buscan valores de número de expediente que estén duplicados, no deberían existir, pero los hay.
 #+NAME: check-duplicate-values
 #+begin_src python
   patient[patient["file"].duplicated()]
@@ -191,6 +333,17 @@ Estos valores deben estar listados en el expediente electrónico.
 703361  703941        NaN             CARLOS FONSECA PEÑA           0
 #+end_example
 
+#+NAME: get-patient-duplicated
+#+begin_src python
+  patient.loc[patient["file"] == '000222827']
+#+end_src
+
+#+RESULTS: get-patient-duplicated
+:             id       file                         name  disability
+: 131999  132006  000222827  RICARDO ELORRIAGA HERNANDEZ           0
+: 132000  132006  000222827  RICARDO ELORRIAGA HERNANDEZ           0
+
+Se buscan datos vacíos, no deberían exitir tampoco.
 #+NAME: check-NaN-values
 #+begin_src python
   patient.isnull().any()
@@ -211,14 +364,13 @@ Estos valores deben estar listados en el expediente electrónico.
 #+RESULTS: patient-size
 | 719970 | 4 |
 
+Se borran los datos vacíos
 #+NAME: delete-NaN-values
-#+begin_src python
+#+begin_src python :results silent
   patient.dropna(subset=['file'], inplace=True)
 #+end_src
 
-#+RESULTS: delete-NaN-values
-: None
-
+Se borran los números de expedientes duplicados, se conserva el primer registro
 #+NAME: delete-duplicates-file
 #+begin_src python
   patient.drop_duplicates(subset=['file'], keep='first')
@@ -241,3 +393,13 @@ Estos valores deben estar listados en el expediente electrónico.
 
 [719951 rows x 4 columns]
 #+end_example
+
+Muestra un ejemplo de anomalía, 20913 es O'FARRIL 186452 es con coma
+#+NAME: get-patient-2
+#+begin_src python
+  patient.loc[patient["id"] == 20913]
+#+end_src
+
+#+RESULTS: get-patient-2
+:           id       file                             name  disability
+: 20913  20913  000101512  MARIA ELENA GUTIERREZ O''FARRIL           0
