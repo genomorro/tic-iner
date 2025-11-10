@@ -6,6 +6,7 @@
   import pandas as pd
   import csv
   import os
+  import sqlalchemy as db
 #+end_src
 
 *** From files
@@ -16,6 +17,26 @@
 #+end_src
 
 *** From DB Connection
+#+NAME: DB-connection
+#+begin_src python :eval no
+  engine = db.create_engine("mysql://pbaconnectmsql:Tduc$aupydl$5t@192.168.27.30")
+  conn = engine.connect()
+#+end_src
+
+#+RESULTS: DB-connection
+
+#+begin_src python :eval no
+  cur = engine.cursor()
+#+end_src
+
+#+RESULTS:
+
+#+begin_src python :eval no
+  cur.execute("SHOW DATABASES")
+#+end_src
+
+#+RESULTS:
+
 
 ** Patient table
 Se muestran las columnas del DF inicial.
@@ -62,15 +83,12 @@ Se buscan errores tipográficos  que puedan interferir con un nuevo CSV, primero
 : Existen comas: True
 : Existen comillas: True
 
-Se borran las comas, puesto que un nombre no debe contenerlas. Las comillas se reemplazan por dobles comillas simples ('') que es una forma excluirlas en SQL
+Se borran las comas, puesto que un nombre no debe contenerlas. Las comillas se reemplazan por dobles comillas simples ('') que es una forma excluirlas en SQL, aunque es más sencillo manejarlas más adelante al generar los archivos SQL, así no se modifican los datos del DF.
 #+NAME: delete-commas-in-names
-#+begin_src python
+#+begin_src python :results silent
   patient['name'] = patient['name'].replace({comma:''}, regex=True)
-  patient['name'] = patient['name'].replace({quote:"''"}, regex=True)
+  # patient['name'] = patient['name'].replace({quote:"''"}, regex=True)
 #+end_src
-
-#+RESULTS: delete-commas-in-names
-: None
 
 Se verifica que ya no exista el carácter. El segundo test sigue siendo ~True~ porque se duplicó el caracter, no se eliminó, existe la opción de reemplazarlo por ~CHAR(39)~ que es válido en SQL.
 #+NAME: find-commas-in-names-2
@@ -403,5 +421,5 @@ Muestra un ejemplo de anomalía, 20913 es O'FARRIL 186452 es con coma
 #+end_src
 
 #+RESULTS: get-patient-2
-:           id       file                             name  disability
-: 20913  20913  000101512  MARIA ELENA GUTIERREZ O''FARRIL           0
+:           id       file                            name  disability
+: 20913  20913  000101512  MARIA ELENA GUTIERREZ O'FARRIL           0
