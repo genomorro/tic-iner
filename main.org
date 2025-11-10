@@ -1,6 +1,12 @@
 #+PROPERTY: header-args:python  :session main  
 
 ** Preamble
+Es necesario tener instalados los siguientes paquetes en Debian:
+- python3-pandas
+- python3-sqlalchemy
+- python3-mysqldb
+
+*** Libraries
 #+NAME: libraries
 #+begin_src python :results silent
   import pandas as pd
@@ -11,32 +17,29 @@
 
 *** From files
 #+NAME: load-data
-#+begin_src python :results silent
+#+begin_src python :results silent :eval no
   df_a = pd.read_csv("./ds/citasmedicas.csv")
-  df_p = pd.read_csv("./ds/pacientes.csv")
+  df_p = pdy.read_csv("./ds/pacientes.csv")
 #+end_src
 
 *** From DB Connection
 #+NAME: DB-connection
-#+begin_src python :eval no
-  engine = db.create_engine("mysql://pbaconnectmsql:Tduc$aupydl$5t@192.168.27.30")
+#+begin_src python :results silent
+  engine = db.create_engine("mysql://pbaconnectmsql:Tduc$aupydl$5t@192.168.27.30/r3sp1ra770ri4x8025")
   conn = engine.connect()
 #+end_src
 
-#+RESULTS: DB-connection
-
-#+begin_src python :eval no
-  cur = engine.cursor()
+#+NAME: load-data-db
+#+begin_src python :results silent
+  df_a = pd.read_sql('SELECT * FROM citasmedicas', conn)
+  df_p = pd.read_sql('SELECT * FROM pacientes', conn)
 #+end_src
 
-#+RESULTS:
-
-#+begin_src python :eval no
-  cur.execute("SHOW DATABASES")
+#+NAME: save-ds
+#+begin_src python :results file silent :exports code
+  df_a.to_csv("./ds/citasmedicas-db.csv", index=False)
+  df_p.to_csv("./ds/pacientes-db.csv", index=False)
 #+end_src
-
-#+RESULTS:
-
 
 ** Patient table
 Se muestran las columnas del DF inicial.
