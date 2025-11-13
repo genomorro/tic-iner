@@ -1,10 +1,29 @@
 #+PROPERTY: header-args:python  :session main  
 
 ** Preamble
-Es necesario tener instalados los siguientes paquetes en Debian:
+The follow Debian packages are required:
+
 - python3-pandas
 - python3-sqlalchemy
 - python3-mysqldb
+
+In other SO, or as an alternative, is posible create a virtual environment and install all packages in ~requirements.txt~.
+#+NAME: create-venv
+#+begin_src bash :results silent :async t
+  python3 -m venv /tmp/babelvenv
+  . /tmp/babelvenv/bin/activate
+  pip install --upgrade pip
+  pip install -r requirements.txt
+#+end_src
+
+Now, you must set some Emacs variables.
+#+NAME: set-python-venv
+#+begin_src elisp :results silent
+  (setq python-shell-interpreter "/tmp/babelvenv/bin/ipython")
+  (setq python-shell-interpreter-args "-i --simple-prompt")
+#+end_src
+
+Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 
 *** Libraries
 #+NAME: libraries
@@ -15,6 +34,7 @@ Es necesario tener instalados los siguientes paquetes en Debian:
   import sqlalchemy as db
 #+end_src
 
+** Load Data
 *** From files
 #+NAME: load-data
 #+begin_src python :results silent :eval no
@@ -42,7 +62,7 @@ Es necesario tener instalados los siguientes paquetes en Debian:
 #+end_src
 
 ** Patient table
-Se muestran las columnas del DF inicial.
+The columns of the initial data frame are displayed.
 #+NAME: desc-data-paciente
 #+begin_src python
   df_p.columns
@@ -54,26 +74,26 @@ Se muestran las columnas del DF inicial.
 :        'nivelSE', 'derHab', 'excentoPago', 'tipoDificultad'],
 :       dtype='object')
 
-Se seleccionan las columnas que no requieren procesamiento adicional.
+The columns that do not require additional processing are selected.
 #+NAME: sel-columns-paciente
 #+begin_src python :results silent
   patient_columns = ["idPac", "numExpediente"]
 #+end_src
 
-Se crea el nuevo DF excluyendo los pacientes de prueba.
+The new data frame is created excluding the test patients.
 #+NAME: delete-fake-pacientes
 #+begin_src python :results silent
   patient = df_p.loc[3:, patient_columns]
   patient.columns = ["id", "file"]
 #+end_src
 
-Se crea una nueva columna con el nombre completo en una sola cadena.
+A new column is created with the full name in a single string.
 #+NAME: concatenate-name
 #+begin_src python :results silent
   patient["name"] = df_p.loc[3:, "nomPaciente"].fillna('') + " " + df_p.loc[3:, "primerApellido"].fillna('') + " " + df_p.loc[3:, "segundoApellido"].fillna('')
 #+end_src
 
-Se buscan errores tipográficos  que puedan interferir con un nuevo CSV, primero el uso indebido de coma (,). Luego las comillas simples (')
+We look for typographical errors that could interfere with a new CSV file, starting with the misuse of commas (,). Then we look for single quotes (').
 #+NAME: find-commas-in-names
 #+begin_src python :results output
   comma = ','
@@ -86,14 +106,14 @@ Se buscan errores tipográficos  que puedan interferir con un nuevo CSV, primero
 : Existen comas: True
 : Existen comillas: True
 
-Se borran las comas, puesto que un nombre no debe contenerlas. Las comillas se reemplazan por dobles comillas simples ('') que es una forma excluirlas en SQL, aunque es más sencillo manejarlas más adelante al generar los archivos SQL, así no se modifican los datos del DF.
+The commas are removed, since a name should not contain them. The quotation marks are replaced with double single quotes (''), which is a way to exclude them in SQL, although it is simpler to handle them later when generating the SQL files, so the data in the data frame is not modified.
 #+NAME: delete-commas-in-names
 #+begin_src python :results silent
   patient['name'] = patient['name'].replace({comma:''}, regex=True)
   # patient['name'] = patient['name'].replace({quote:"''"}, regex=True)
 #+end_src
 
-Se verifica que ya no exista el carácter. El segundo test sigue siendo ~True~ porque se duplicó el caracter, no se eliminó, existe la opción de reemplazarlo por ~CHAR(39)~ que es válido en SQL.
+It is verified that there are no longer any commas. The second test is still ~True~ because the character was duplicated, not deleted; there is the option to replace it with ~CHAR(39)~ which is valid in SQL.
 #+NAME: find-commas-in-names-2
 #+begin_src python :results output
   print("Existen comas:",(patient['name'].str.contains(comma)).any())
@@ -104,7 +124,7 @@ Se verifica que ya no exista el carácter. El segundo test sigue siendo ~True~ p
 : Existen comas: False
 : Existen comillas: True
 
-Se lista cuales son los posibles valores de ~tipoDificultad~.
+The possible values ​​of ~tipoDificultad~ are listed.
 #+NAME: tipoDificultad-values
 #+begin_src python
   df_p["tipoDificultad"].unique().tolist()
@@ -113,7 +133,7 @@ Se lista cuales son los posibles valores de ~tipoDificultad~.
 #+RESULTS: tipoDificultad-values
 | SE IGNORA | ESCUCHAR | NINGUNA | CAMINAR | VER | HABLAR/COMUNICARSE | EMOCIONAL/MENTAL | USAR BRAZOS/MANOS | CUIDADO PERSONAL | APRENDER/RECORDAR |
 
-Esta función convierte la columna en boleano.
+This function converts the column to boolean.
 #+NAME: define-disability_to_dummy
 #+begin_src python :results silent
   def disability_to_dummy(x):
@@ -156,14 +176,14 @@ Esta función convierte la columna en boleano.
 12  10  000029897              ARNULFO DIAZ BARRAGAN           0
 #+end_example
 
-Se guarda el DF resultante en un nuevo DS.
+The resulting data frame is saved in a new data set.
 #+NAME: save-file-patient
 #+begin_src python :results file silent
   patient.to_csv("out/patient.csv", index=False)
 #+end_src
 
 ** Appointment table
-Se listan las columnas del DF original.
+The columns of the initial data frame are displayed.
 #+NAME: desc-data-cita
 #+begin_src python
   df_a.columns.values
@@ -174,20 +194,20 @@ Se listan las columnas del DF original.
 :        'segundoApellidoUsr', 'fechaHoraElaboracion', 'estatusCita',
 :        'lugRealizacion', 'ubicacion', 'especialidad'], dtype=object)
 
-Se seleccionan las columnas que no requieren procesamiento adicional.
+The columns that do not require additional processing are selected.
 #+NAME: sel-columns-cita
 #+begin_src python :results silent
   appointment_columns = ["idCita", "idPac", "lugRealizacion", "fechaCita"]
 #+end_src
 
-Se crea el nuevo DF.
+The new data frame is created.
 #+NAME: create-appointment
 #+begin_src python :results silent
   appointment = df_a[appointment_columns]
   appointment.columns = ["id", "patient_id", "place", "date_at"]
 #+end_src
 
-Se crea la columna faltante. De momento todos los registros se catalogan como citas. Quizá en el ECE exista esta información.
+The missing column is created. For now, all records are categorized as appointments. This information may exist in the ECE.
 #+NAME: create-type-column
 #+begin_src python :results silent
   appointment = appointment.assign(type="Cita")
@@ -213,14 +233,14 @@ Se crea la columna faltante. De momento todos los registros se catalogan como ci
 9  1336738      666081       TELECONSULTA - CONSULTORIO DEL SUEÑO  2025-11-14 12:00:00  Cita
 #+end_example
 
-Se guarda el DF en un nuevo DS.
+The resulting data frame is saved in a new data set.
 #+NAME: save-file-appointment
 #+begin_src python :results file silent :exports code
   appointment.to_csv("out/appointment.csv", index=False)
 #+end_src
 
 ** Export to SQL
-Se exportarán los DS a formato SQL, la particularidad es que dichos archivos SQL deben actualizar la base de datos, no solo insertar los registros
+The data sets will be exported to SQL format; the key feature is that these SQL files must update the database, not just insert records.
 #+NAME: generate_sql
 #+begin_src python :results silent
   def generate_sql():
@@ -299,6 +319,7 @@ Se exportarán los DS a formato SQL, la particularidad es que dichos archivos SQ
                   f_sqlite.write(sqlite_stmt)
 #+end_src
 
+Run the code above.
 #+NAME: create-sql
 #+begin_src python :results file silent
   generate_sql()
