@@ -7,15 +7,15 @@
 ## package >= 1.0, <=2.0       # Between ver 1.0 and 2.0
 
 ## Basics
-IPython
+IPython == 9.3.0
 NumPy
 jupyter-book
 jupytext
 mysqlclient
 openpyxl
-pandas
+pandas == 2.3.0
 pyarrow 
-sqlalchemy
+sqlalchemy == 2.0.43
 
 ## Extra
 # chainlit
