@@ -7,25 +7,26 @@
 ## package >= 1.0, <=2.0       # Between ver 1.0 and 2.0
 
 ## Basics
-IPython
+IPython == 9.3.0
 NumPy
 jupyter-book
 jupytext
+mysqlclient
 openpyxl
-pandas
-pyarrow
-sqlalchemy
+pandas == 2.3.0
+pyarrow 
+sqlalchemy == 2.0.43
 
 ## Extra
-chainlit
+# chainlit
 # graphviz
-langchain_community
-langchain_groq
-matplotlib
+# langchain_community
+# langchain_groq
+# matplotlib
 # nltk
 # opencv-contrib-python
 # opencv-python
-pandasai
+# pandasai
 # pydotplus
 # scikit-learn
 # seaborn
