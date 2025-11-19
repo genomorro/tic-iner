@@ -15,6 +15,7 @@ In other SO, or as an alternative, is posible create a virtual environment and i
   pip install --upgrade pip
   pip install -r requirements.txt
 #+end_src
+If a virtual environment is created, is necessary to install libs via the package manager manually.
 
 Now, you must set some Emacs variables.
 #+NAME: set-python-venv
@@ -38,8 +39,8 @@ Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 *** From files
 #+NAME: load-data
 #+begin_src python :results silent :eval no
-  df_a = pd.read_csv("./ds/citasmedicas.csv")
-  df_p = pdy.read_csv("./ds/pacientes.csv")
+  df_a = pd.read_csv("./ds/citasmedicas-db.csv")
+  df_p = pd.read_csv("./ds/pacientes-db.csv")
 #+end_src
 
 *** From DB Connection
@@ -192,7 +193,8 @@ The columns of the initial data frame are displayed.
 #+RESULTS: desc-data-cita
 : array(['idCita', 'idPac', 'fechaCita', 'nombreUsr', 'primerApellidoUsr',
 :        'segundoApellidoUsr', 'fechaHoraElaboracion', 'estatusCita',
-:        'lugRealizacion', 'ubicacion', 'especialidad'], dtype=object)
+:        'lugRealizacion', 'ubicacion', 'especialidad', 'tipoConsulta'],
+:       dtype=object)
 
 The columns that do not require additional processing are selected.
 #+NAME: sel-columns-cita
@@ -207,10 +209,11 @@ The new data frame is created.
   appointment.columns = ["id", "patient_id", "place", "date_at"]
 #+end_src
 
-The missing column is created. For now, all records are categorized as appointments. This information may exist in the ECE.
+The missing column is created. Convert column to uppercase.
 #+NAME: create-type-column
 #+begin_src python :results silent
-  appointment = appointment.assign(type="Cita")
+  appointment["type"] = df_a["tipoConsulta"].str.upper()
+  appointment["type"].unique().tolist()
 #+end_src
 
 #+NAME: show-df
@@ -220,17 +223,17 @@ The missing column is created. For now, all records are categorized as appointme
 
 #+RESULTS: show-df
 #+begin_example
-        id  patient_id                                      place              date_at  type
-0  1068560      117096                ALERGOLOGIA C1 - DR. GANDHI  2032-01-05 10:00:00  Cita
-1  1069399      150583           GERIATRÍA SEGUIMIENTO SARS-COV-2  2033-01-13 09:00:00  Cita
-2  1071766      130297                ALERGOLOGIA C1 - DR. GANDHI  2032-01-12 10:00:00  Cita
-3  1071865      117973               ALERGOLOGIA E INMUNOLOGIA C1  2032-01-28 10:00:00  Cita
-4  1213097      518444             DR. GUSTAVO IVAN CENTENO SAENZ  2034-01-26 10:30:00  Cita
-5  1320803      124439  TB - DRA. NORMA ANGÉLICA TÉLLEZ NAVARRETE  2028-06-07 10:00:00  Cita
-6  1329585      122214                      AUDIOLOGIA 3 DR. LARA  2026-01-05 11:00:00  Cita
-7  1335178      114581                      CONSULTORIO DEL SUEÑO  2025-11-28 09:40:00  Cita
-8  1335190      637821                      CONSULTORIO DEL SUEÑO  2025-11-28 09:40:00  Cita
-9  1336738      666081       TELECONSULTA - CONSULTORIO DEL SUEÑO  2025-11-14 12:00:00  Cita
+        id  patient_id                             place             date_at         type
+0  1068560      117096       ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  PRIMERA VEZ
+1  1068560      117096       ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  SUBSECUENTE
+2  1068560      117096       ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  PRIMERA VEZ
+3  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
+4  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
+5  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
+6  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
+7  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
+8  1071766      130297       ALERGOLOGIA C1 - DR. GANDHI 2032-01-12 10:00:00  PRIMERA VEZ
+9  1071766      130297       ALERGOLOGIA C1 - DR. GANDHI 2032-01-12 10:00:00  SUBSECUENTE
 #+end_example
 
 The resulting data frame is saved in a new data set.
@@ -325,6 +328,41 @@ Run the code above.
   generate_sql()
 #+end_src
 
+*** Save in DB
+**** SQLite3
+#+NAME: SQLite-connection
+#+begin_src python :results silent :eval no
+  sqlite_engine = db.create_engine('sqlite:///../public_html/var/data_dev.db')
+  patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
+  appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
+#+end_src
+
+**** MySQL
+
+#+NAME: MySQL-connection
+#+begin_src python :results silent :eval no
+  mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
+  patient.to_sql('patient', mysql_engine, if_exists='append', index=False)
+  appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
+#+end_src
+
+#+NAME: MySQL-update
+#+begin_src python :results silent :eval no
+  mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
+
+  # Escribir DataFrame en una tabla temporal
+  patient.to_sql('p_t', mysql_engine, if_exists='replace', index=False)
+
+  # Crear una sentencia SQL UPDATE
+  update_sql = db.text("UPDATE patient SET patient.file = p_t.file, patient.name = p_t.name, patient.disability = p_t.disability, FROM p_t WHERE patient.id = p_t.id")
+
+  # Ejecutar la sentencia UPDATE
+  with mysql_engine.connect() as con:
+      con.execute(update_sql)
+
+  appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
+#+end_src
+
 ** Testing
 
 #+NAME: get-appointment-by-patient
@@ -333,9 +371,27 @@ Run the code above.
 #+end_src
 
 #+RESULTS: get-appointment-by-patient
-:            id  patient_id                        place              date_at  type
-: 0     1068560      117096  ALERGOLOGIA C1 - DR. GANDHI  2032-01-05 10:00:00  Cita
-: 6052  1536748      117096        CONSULTORIO DEL SUEÑO  2026-07-24 09:00:00  Cita
+#+begin_example
+            id  patient_id                        place             date_at         type
+0      1068560      117096  ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  PRIMERA VEZ
+1      1068560      117096  ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  SUBSECUENTE
+2      1068560      117096  ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  PRIMERA VEZ
+35008  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRIMERA VEZ
+35009  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  SUBSECUENTE
+35010  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  SUBSECUENTE
+35011  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  SUBSECUENTE
+35012  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  SUBSECUENTE
+35013  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  SUBSECUENTE
+35014  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRIMERA VEZ
+35015  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRIMERA VEZ
+35016  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRIMERA VEZ
+35017  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRIMERA VEZ
+35018  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRECONSULTA
+35019  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRECONSULTA
+35020  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRECONSULTA
+35021  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRECONSULTA
+35022  1536748      117096        CONSULTORIO DEL SUEÑO 2026-07-24 09:00:00  PRECONSULTA
+#+end_example
 
 #+NAME: get-patient
 #+begin_src python
@@ -343,8 +399,8 @@ Run the code above.
 #+end_src
 
 #+RESULTS: get-patient
-:             id    file                               name  disability
-: 117091  117096  207910  VALERIA AYONECTIL SANTILLAN AMADO           1
+:             id       file                               name  disability
+: 117091  117096  000207910  VALERIA AYONECTIL SANTILLAN AMADO           1
 
 Estos valores deben estar listados en el expediente electrónico.
 
@@ -357,8 +413,8 @@ Se buscan valores de número de expediente que estén duplicados, no deberían e
 #+RESULTS: check-duplicate-values
 #+begin_example
             id       file                            name  disability
-71791    71793     161778   ENRIQUE JULIO ESTRADA Y GASCA           1
-111792  111797     202611         ANA MARIA VEGA MARTINEZ           0
+71791    71793  000161778   ENRIQUE JULIO ESTRADA Y GASCA           1
+111792  111797  000202611         ANA MARIA VEGA MARTINEZ           0
 132000  132006  000222827     RICARDO ELORRIAGA HERNANDEZ           0
 149242  149249  000240070     ROBERTO CARLOS REYES TORRES           0
 150267  150273  000241094            SAMARA RETANA PATIÑO           1
@@ -370,11 +426,11 @@ Se buscan valores de número de expediente que estén duplicados, no deberían e
 599370  599768  IAN687024  JESUS JORGE CISNEROS HERNANDEZ           0
 599556  599954  IAN687209           ALBERTO GARCIA ZAVALA           0
 600059  600457  IAN687711     NOELIA LIZETH GUERRERO SOTO           0
-646712  647220        NaN         JOAQUINA AVILES BLANCO.           0
-653847  654365        NaN           J.JESUS GARCIA CHAVEZ           0
-665759  666300        NaN     MARIA ISABEL AGUILAR LOPEZ            0
-703348  703928        NaN         JOSE CARLOS BAEZ CHAVEZ           0
-703361  703941        NaN             CARLOS FONSECA PEÑA           0
+646712  647220       None         JOAQUINA AVILES BLANCO.           0
+653847  654365       None           J.JESUS GARCIA CHAVEZ           0
+665759  666300       None     MARIA ISABEL AGUILAR LOPEZ            0
+703348  703928       None         JOSE CARLOS BAEZ CHAVEZ           0
+703361  703941       None             CARLOS FONSECA PEÑA           0
 #+end_example
 
 #+NAME: get-patient-duplicated
