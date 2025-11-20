@@ -1,5 +1,4 @@
-#+PROPERTY: header-args python :session main
-#+PROPERTY: header-args :eval yes
+#+PROPERTY: header-args:python :session main
 
 ** Preamble
 The follow Debian packages are required:
@@ -233,19 +232,17 @@ The missing column is created. Convert column to capitalize.
 
 #+RESULTS: show-df
 #+begin_example
-        id  patient_id  ...             date_at         type
-0  1068560      117096  ... 2032-01-05 10:00:00  Primera vez
-1  1068560      117096  ... 2032-01-05 10:00:00  Subsecuente
-2  1068560      117096  ... 2032-01-05 10:00:00  Primera vez
-3  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
-4  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
-5  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
-6  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
-7  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
-8  1071766      130297  ... 2032-01-12 10:00:00  Primera vez
-9  1071766      130297  ... 2032-01-12 10:00:00  Subsecuente
-
-[10 rows x 6 columns]
+        id  patient_id                             place                        specialty             date_at         type
+0  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-05 10:00:00  Primera vez
+1  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-05 10:00:00  Subsecuente
+2  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-05 10:00:00  Primera vez
+3  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
+4  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
+5  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
+6  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
+7  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
+8  1071766      130297       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-12 10:00:00  Primera vez
+9  1071766      130297       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-12 10:00:00  Subsecuente
 #+end_example
 
 #+NAME: Add-status
