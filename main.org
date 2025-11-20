@@ -1,4 +1,5 @@
-#+PROPERTY: header-args:python  :session main  
+#+PROPERTY: header-args python :session main
+#+PROPERTY: header-args :eval yes
 
 ** Preamble
 The follow Debian packages are required:
@@ -199,21 +200,30 @@ The columns of the initial data frame are displayed.
 The columns that do not require additional processing are selected.
 #+NAME: sel-columns-cita
 #+begin_src python :results silent
-  appointment_columns = ["idCita", "idPac", "lugRealizacion", "fechaCita"]
+  appointment_columns = ["idCita", "idPac", "lugRealizacion", "especialidad", "fechaCita"]
 #+end_src
 
 The new data frame is created.
 #+NAME: create-appointment
 #+begin_src python :results silent
   appointment = df_a[appointment_columns]
-  appointment.columns = ["id", "patient_id", "place", "date_at"]
+  appointment.columns = ["id", "patient_id", "place", "specialty", "date_at"]
 #+end_src
 
-The missing column is created. Convert column to uppercase.
+The missing column is created. Convert column to capitalize.
 #+NAME: create-type-column
-#+begin_src python :results silent
-  appointment["type"] = df_a["tipoConsulta"].str.upper()
+#+begin_src python
+  appointment["type"] = df_a["tipoConsulta"].str.capitalize()
   appointment["type"].unique().tolist()
+#+end_src
+
+#+RESULTS: create-type-column
+| Primera vez | Subsecuente | Preconsulta | Estudios | Apertura/primera vez | Primera vez y subsecuente |
+
+#+NAME: capitalize-columns
+#+begin_src python :results silent
+  appointment["place"] = appointment["place"].str.title()
+  appointment["specialty"] = appointment["specialty"].str.capitalize()
 #+end_src
 
 #+NAME: show-df
@@ -223,23 +233,30 @@ The missing column is created. Convert column to uppercase.
 
 #+RESULTS: show-df
 #+begin_example
-        id  patient_id                             place             date_at         type
-0  1068560      117096       ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  PRIMERA VEZ
-1  1068560      117096       ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  SUBSECUENTE
-2  1068560      117096       ALERGOLOGIA C1 - DR. GANDHI 2032-01-05 10:00:00  PRIMERA VEZ
-3  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
-4  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
-5  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
-6  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
-7  1069399      150583  GERIATRÍA SEGUIMIENTO SARS-COV-2 2033-01-13 09:00:00  SUBSECUENTE
-8  1071766      130297       ALERGOLOGIA C1 - DR. GANDHI 2032-01-12 10:00:00  PRIMERA VEZ
-9  1071766      130297       ALERGOLOGIA C1 - DR. GANDHI 2032-01-12 10:00:00  SUBSECUENTE
+        id  patient_id  ...             date_at         type
+0  1068560      117096  ... 2032-01-05 10:00:00  Primera vez
+1  1068560      117096  ... 2032-01-05 10:00:00  Subsecuente
+2  1068560      117096  ... 2032-01-05 10:00:00  Primera vez
+3  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
+4  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
+5  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
+6  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
+7  1069399      150583  ... 2033-01-13 09:00:00  Subsecuente
+8  1071766      130297  ... 2032-01-12 10:00:00  Primera vez
+9  1071766      130297  ... 2032-01-12 10:00:00  Subsecuente
+
+[10 rows x 6 columns]
 #+end_example
+
+#+NAME: Add-status
+#+begin_src python :results silent
+  appointment["status"] = df_a["estatusCita"]
+#+end_src  
 
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-appointment
 #+begin_src python :results file silent :exports code
-  appointment.to_csv("out/appointment.csv", index=False)
+    appointment.to_csv("out/appointment.csv", index=False)
 #+end_src
 
 ** Export to SQL
@@ -300,23 +317,25 @@ The data sets will be exported to SQL format; the key feature is that these SQL 
               next(reader)  # Skip header
 
               for row in reader:
-                  id_val, patient_id_val, place_val, date_at_val, type_val = row
+                  id_val, patient_id_val, place_val, date_at_val, specialty_val, type_val, status_val = row
                   
                   place_val = place_val.replace("'", "''")
+                  specialty_val = specialty_val.replace("'", "''")
                   type_val = type_val.replace("'", "''")
 
-                  mysql_update_clause = f"patient_id = {patient_id_val}, place = '{place_val}', date_at = '{date_at_val}', type = '{type_val}'"
+
+                  mysql_update_clause = f"patient_id = {patient_id_val}, place = '{place_val}', specialty = '{specialty_val}', date_at = '{date_at_val}', type = '{type_val}', status = '{status_val}'"
                   mysql_stmt = (
-                      f"INSERT INTO appointment (id, patient_id, place, date_at, type) "
-                      f"VALUES ({id_val}, {patient_id_val}, '{place_val}', '{date_at_val}', '{type_val}') "
+                      f"INSERT INTO appointment (id, patient_id, place, specialty, date_at, type, status) "
+                      f"VALUES ({id_val}, {patient_id_val}, '{place_val}', '{specialty_val}', '{date_at_val}', '{type_val}', '{status_val}') "
                       f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
                   )
                   f_mysql.write(mysql_stmt)
                   
-                  sqlite_update_clause = "patient_id = excluded.patient_id, place = excluded.place, date_at = excluded.date_at, type = excluded.type"
+                  sqlite_update_clause = "patient_id = excluded.patient_id, place = excluded.place, specialty = excluded.specialty, date_at = excluded.date_at, type = excluded.type, status = excluded.status"
                   sqlite_stmt = (
-                      f"INSERT INTO appointment (id, patient_id, place, date_at, type) "
-                      f"VALUES ({id_val}, {patient_id_val}, '{place_val}', '{date_at_val}', '{type_val}') "
+                      f"INSERT INTO appointment (id, patient_id, place, specialty, date_at, type, status) "
+                      f"VALUES ({id_val}, {patient_id_val}, '{place_val}', '{specialty_val}', '{date_at_val}', '{type_val}', '{status_val}') "
                       f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
                   )
                   f_sqlite.write(sqlite_stmt)
@@ -331,7 +350,7 @@ Run the code above.
 *** Save in DB
 **** SQLite3
 #+NAME: SQLite-connection
-#+begin_src python :results silent :eval no
+#+begin_src python :results silent
   sqlite_engine = db.create_engine('sqlite:///../public_html/var/data_dev.db')
   patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
   appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
@@ -366,7 +385,7 @@ Run the code above.
 ** Testing
 
 #+NAME: get-appointment-by-patient
-#+begin_src python
+#+begin_src python :eval no
   appointment.loc[appointment["patient_id"] == 117096]
 #+end_src
 
@@ -394,7 +413,7 @@ Run the code above.
 #+end_example
 
 #+NAME: get-patient
-#+begin_src python
+#+begin_src python :eval no
   patient.loc[patient["id"] == 117096]
 #+end_src
 
@@ -406,7 +425,7 @@ Estos valores deben estar listados en el expediente electrónico.
 
 Se buscan valores de número de expediente que estén duplicados, no deberían existir, pero los hay.
 #+NAME: check-duplicate-values
-#+begin_src python
+#+begin_src python :eval no
   patient[patient["file"].duplicated()]
 #+end_src
 
@@ -434,7 +453,7 @@ Se buscan valores de número de expediente que estén duplicados, no deberían e
 #+end_example
 
 #+NAME: get-patient-duplicated
-#+begin_src python
+#+begin_src python :eval no
   patient.loc[patient["file"] == '000222827']
 #+end_src
 
@@ -445,7 +464,7 @@ Se buscan valores de número de expediente que estén duplicados, no deberían e
 
 Se buscan datos vacíos, no deberían exitir tampoco.
 #+NAME: check-NaN-values
-#+begin_src python
+#+begin_src python :eval no
   patient.isnull().any()
 #+end_src
 
@@ -466,13 +485,13 @@ Se buscan datos vacíos, no deberían exitir tampoco.
 
 Se borran los datos vacíos
 #+NAME: delete-NaN-values
-#+begin_src python :results silent
+#+begin_src python :results silent :eval no
   patient.dropna(subset=['file'], inplace=True)
 #+end_src
 
 Se borran los números de expedientes duplicados, se conserva el primer registro
 #+NAME: delete-duplicates-file
-#+begin_src python
+#+begin_src python :eval no
   patient.drop_duplicates(subset=['file'], keep='first')
 #+end_src
 
@@ -496,7 +515,7 @@ Se borran los números de expedientes duplicados, se conserva el primer registro
 
 Muestra un ejemplo de anomalía, 20913 es O'FARRIL 186452 es con coma
 #+NAME: get-patient-2
-#+begin_src python
+#+begin_src python :eval no
   patient.loc[patient["id"] == 20913]
 #+end_src
 
