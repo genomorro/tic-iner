@@ -1,6 +1,7 @@
 #+PROPERTY: header-args:python :session main
 
 ** Preamble
+*** Create environment
 The follow Debian packages are required:
 
 - python3-pandas
@@ -29,20 +30,14 @@ Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 *** Libraries
 #+NAME: libraries
 #+begin_src python :results silent
-  import pandas as pd
+  from datetime import datetime
   import csv
   import os
+  import pandas as pd
   import sqlalchemy as db
 #+end_src
 
 ** Load Data
-*** From files
-#+NAME: load-data
-#+begin_src python :results silent :eval no
-  df_a = pd.read_csv("./ds/citasmedicas-db.csv")
-  df_p = pd.read_csv("./ds/pacientes-db.csv")
-#+end_src
-
 *** From DB Connection
 #+NAME: DB-connection
 #+begin_src python :results silent
@@ -60,6 +55,13 @@ Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 #+begin_src python :results file silent :exports code
   df_a.to_csv("./ds/citasmedicas-db.csv", index=False)
   df_p.to_csv("./ds/pacientes-db.csv", index=False)
+#+end_src
+
+*** From files
+#+NAME: load-data
+#+begin_src python :results silent :eval no
+  df_a = pd.read_csv("./ds/citasmedicas-db.csv")
+  df_p = pd.read_csv("./ds/pacientes-db.csv")
 #+end_src
 
 ** Patient table
@@ -180,7 +182,9 @@ This function converts the column to boolean.
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-patient
 #+begin_src python :results file silent
-  patient.to_csv("out/patient.csv", index=False)
+  cur_time=datetime.now().strftime("%Y%m%d")
+  filename="out/patient-" + cur_time + ".csv"
+  patient.to_csv(filename, index=False)
 #+end_src
 
 ** Appointment table
@@ -253,19 +257,23 @@ The missing column is created. Convert column to capitalize.
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-appointment
 #+begin_src python :results file silent :exports code
-    appointment.to_csv("out/appointment.csv", index=False)
+  cur_time=datetime.now().strftime("%Y%m%d")
+  filename="out/appointment-" + cur_time + ".csv"
+  appointment.to_csv(filename, index=False)
 #+end_src
 
 ** Export to SQL
+*** Save in files
 The data sets will be exported to SQL format; the key feature is that these SQL files must update the database, not just insert records.
-#+NAME: generate_sql
+#+NAME: generate-sql
 #+begin_src python :results silent
   def generate_sql():
       """
       Generates SQL scripts from CSV files for MySQL and SQLite.
       """
-      patient_csv = 'out/patient.csv'
-      appointment_csv = 'out/appointment.csv'
+      cur_time=datetime.now().strftime("%Y%m%d")
+      patient_csv = "out/patient-" + cur_time + ".csv"
+      appointment_csv = "out/appointment-" + cur_time + ".csv"
       mysql_output = 'out/update-mysql.sql'
       sqlite_output = 'out/update-sqlite.sql'
       
@@ -346,7 +354,7 @@ Run the code above.
 
 *** Save in DB
 **** SQLite3
-#+NAME: SQLite-connection
+#+NAME: SQLite-update-tables
 #+begin_src python :results silent
   sqlite_engine = db.create_engine('sqlite:///../public_html/var/data_dev.db')
   patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
@@ -355,28 +363,26 @@ Run the code above.
 
 **** MySQL
 
-#+NAME: MySQL-connection
-#+begin_src python :results silent :eval no
+#+NAME: MySQL-nil-restrictions
+#+begin_src python :results silent
   mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
-  patient.to_sql('patient', mysql_engine, if_exists='append', index=False)
+  sentence = db.text("""SET foreign_key_checks = 0;""")
+  with mysql_engine.connect() as con:
+      con.execute(sentence)
+#+end_src
+
+#+NAME: MySQL-update-tables
+#+begin_src python :results silent
+  patient.to_sql('patient', mysql_engine, if_exists='replace', index=False)
   appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
 #+end_src
 
-#+NAME: MySQL-update
-#+begin_src python :results silent :eval no
+#+NAME: MySQL-set-restrictions
+#+begin_src python :results silent
   mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
-
-  # Escribir DataFrame en una tabla temporal
-  patient.to_sql('p_t', mysql_engine, if_exists='replace', index=False)
-
-  # Crear una sentencia SQL UPDATE
-  update_sql = db.text("UPDATE patient SET patient.file = p_t.file, patient.name = p_t.name, patient.disability = p_t.disability, FROM p_t WHERE patient.id = p_t.id")
-
-  # Ejecutar la sentencia UPDATE
+  sentence = db.text("""SET foreign_key_checks = 1;""")
   with mysql_engine.connect() as con:
-      con.execute(update_sql)
-
-  appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
+      con.execute(sentence)
 #+end_src
 
 ** Testing
@@ -459,7 +465,7 @@ Se buscan valores de número de expediente que estén duplicados, no deberían e
 : 131999  132006  000222827  RICARDO ELORRIAGA HERNANDEZ           0
 : 132000  132006  000222827  RICARDO ELORRIAGA HERNANDEZ           0
 
-Se buscan datos vacíos, no deberían exitir tampoco.
+Se buscan datos vacíos, no deberían existir tampoco.
 #+NAME: check-NaN-values
 #+begin_src python :eval no
   patient.isnull().any()
@@ -473,7 +479,7 @@ Se buscan datos vacíos, no deberían exitir tampoco.
 : dtype: bool
 
 #+NAME: patient-size
-#+begin_src python
+#+begin_src python :eval no
   patient.shape
 #+end_src
 
