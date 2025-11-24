@@ -1,4 +1,6 @@
-#+PROPERTY: header-args:python :session main
+#+TITLE: ECE to IO
+#+AUTHOR: Edgar Uriel Domínguez Espinoza
+#+PROPERTY: header-args:python :session main :comments org :shebang #!/usr/bin/python3
 
 ** Preamble
 *** Create environment
@@ -10,7 +12,7 @@ The follow Debian packages are required:
 
 In other SO, or as an alternative, is posible create a virtual environment and install all packages in ~requirements.txt~.
 #+NAME: create-venv
-#+begin_src bash :results silent :async t
+#+begin_src bash :results silent :async t :tangle main.sh :shebang #!/bin/bash
   python3 -m venv /tmp/babelvenv
   . /tmp/babelvenv/bin/activate
   pip install --upgrade pip
@@ -27,9 +29,15 @@ Now, you must set some Emacs variables.
 
 Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 
+This line complete the bash script.
+#+begin_src bash :results silent :eval no :tangle main.sh :shebang #!/bin/bash
+  ./main.py
+#+end_src
+
+
 *** Libraries
 #+NAME: libraries
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   from datetime import datetime
   import csv
   import os
@@ -40,19 +48,19 @@ Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 ** Load Data
 *** From DB Connection
 #+NAME: DB-connection
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   engine = db.create_engine("mysql://pbaconnectmsql:Tduc$aupydl$5t@192.168.27.30/r3sp1ra770ri4x8025")
   conn = engine.connect()
 #+end_src
 
 #+NAME: load-data-db
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   df_a = pd.read_sql('SELECT * FROM citasmedicas', conn)
   df_p = pd.read_sql('SELECT * FROM pacientes', conn)
 #+end_src
 
 #+NAME: save-ds
-#+begin_src python :results file silent :exports code
+#+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
   df_a.to_csv("./ds/citasmedicas-db.csv", index=False)
   df_p.to_csv("./ds/pacientes-db.csv", index=False)
 #+end_src
@@ -79,26 +87,26 @@ The columns of the initial data frame are displayed.
 
 The columns that do not require additional processing are selected.
 #+NAME: sel-columns-paciente
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   patient_columns = ["idPac", "numExpediente"]
 #+end_src
 
 The new data frame is created excluding the test patients.
 #+NAME: delete-fake-pacientes
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   patient = df_p.loc[3:, patient_columns]
   patient.columns = ["id", "file"]
 #+end_src
 
 A new column is created with the full name in a single string.
 #+NAME: concatenate-name
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   patient["name"] = df_p.loc[3:, "nomPaciente"].fillna('') + " " + df_p.loc[3:, "primerApellido"].fillna('') + " " + df_p.loc[3:, "segundoApellido"].fillna('')
 #+end_src
 
 We look for typographical errors that could interfere with a new CSV file, starting with the misuse of commas (,). Then we look for single quotes (').
 #+NAME: find-commas-in-names
-#+begin_src python :results output
+#+begin_src python :results output 
   comma = ','
   quote = '\''
   print("Existen comas:",(patient['name'].str.contains(comma)).any())
@@ -111,7 +119,7 @@ We look for typographical errors that could interfere with a new CSV file, start
 
 The commas are removed, since a name should not contain them. The quotation marks are replaced with double single quotes (''), which is a way to exclude them in SQL, although it is simpler to handle them later when generating the SQL files, so the data in the data frame is not modified.
 #+NAME: delete-commas-in-names
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   patient['name'] = patient['name'].replace({comma:''}, regex=True)
   # patient['name'] = patient['name'].replace({quote:"''"}, regex=True)
 #+end_src
@@ -129,7 +137,7 @@ It is verified that there are no longer any commas. The second test is still ~Tr
 
 The possible values ​​of ~tipoDificultad~ are listed.
 #+NAME: tipoDificultad-values
-#+begin_src python
+#+begin_src python 
   df_p["tipoDificultad"].unique().tolist()
 #+end_src
 
@@ -138,7 +146,7 @@ The possible values ​​of ~tipoDificultad~ are listed.
 
 This function converts the column to boolean.
 #+NAME: define-disability_to_dummy
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   def disability_to_dummy(x):
     """
     Read a column with multiple options of disability.
@@ -159,9 +167,14 @@ This function converts the column to boolean.
         return 1
 #+end_src
 
-#+begin_src python
+#+NAME: disability-to-dummy
+#+begin_src python :tangle main.py :shebang #!/usr/bin/python3
   patient["disability"] = df_p.loc[3:, "tipoDificultad"].map(disability_to_dummy)
-  patient.head(10)
+#+end_src
+
+#+NAME: show-patient
+#+begin_src python
+    patient.head(10)
 #+end_src
 
 #+RESULTS:
@@ -181,7 +194,7 @@ This function converts the column to boolean.
 
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-patient
-#+begin_src python :results file silent
+#+begin_src python :results file silent :tangle main.py :shebang #!/usr/bin/python3
   cur_time=datetime.now().strftime("%Y%m%d")
   filename="out/patient-" + cur_time + ".csv"
   patient.to_csv(filename, index=False)
@@ -202,21 +215,25 @@ The columns of the initial data frame are displayed.
 
 The columns that do not require additional processing are selected.
 #+NAME: sel-columns-cita
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   appointment_columns = ["idCita", "idPac", "lugRealizacion", "especialidad", "fechaCita"]
 #+end_src
 
 The new data frame is created.
 #+NAME: create-appointment
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   appointment = df_a[appointment_columns]
   appointment.columns = ["id", "patient_id", "place", "specialty", "date_at"]
 #+end_src
 
 The missing column is created. Convert column to capitalize.
 #+NAME: create-type-column
-#+begin_src python
+#+begin_src python :tangle main.py :shebang #!/usr/bin/python3
   appointment["type"] = df_a["tipoConsulta"].str.capitalize()
+#+end_src
+
+#+NAME: type-values
+#+begin_src python  
   appointment["type"].unique().tolist()
 #+end_src
 
@@ -224,12 +241,12 @@ The missing column is created. Convert column to capitalize.
 | Primera vez | Subsecuente | Preconsulta | Estudios | Apertura/primera vez | Primera vez y subsecuente |
 
 #+NAME: capitalize-columns
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   appointment["place"] = appointment["place"].str.title()
   appointment["specialty"] = appointment["specialty"].str.capitalize()
 #+end_src
 
-#+NAME: show-df
+#+NAME: show-appointment
 #+begin_src python
   appointment.head(10)
 #+end_src
@@ -250,13 +267,13 @@ The missing column is created. Convert column to capitalize.
 #+end_example
 
 #+NAME: Add-status
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   appointment["status"] = df_a["estatusCita"]
 #+end_src  
 
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-appointment
-#+begin_src python :results file silent :exports code
+#+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
   cur_time=datetime.now().strftime("%Y%m%d")
   filename="out/appointment-" + cur_time + ".csv"
   appointment.to_csv(filename, index=False)
@@ -266,7 +283,7 @@ The resulting data frame is saved in a new data set.
 *** Save in files
 The data sets will be exported to SQL format; the key feature is that these SQL files must update the database, not just insert records.
 #+NAME: generate-sql
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   def generate_sql():
       """
       Generates SQL scripts from CSV files for MySQL and SQLite.
@@ -348,14 +365,14 @@ The data sets will be exported to SQL format; the key feature is that these SQL 
 
 Run the code above.
 #+NAME: create-sql
-#+begin_src python :results file silent
+#+begin_src python :results file silent :tangle main.py :shebang #!/usr/bin/python3
   generate_sql()
 #+end_src
 
 *** Save in DB
 **** SQLite3
 #+NAME: SQLite-update-tables
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   sqlite_engine = db.create_engine('sqlite:///../public_html/var/data_dev.db')
   patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
   appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
@@ -364,7 +381,7 @@ Run the code above.
 **** MySQL
 
 #+NAME: MySQL-nil-restrictions
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
   sentence = db.text("""SET foreign_key_checks = 0;""")
   with mysql_engine.connect() as con:
@@ -372,13 +389,13 @@ Run the code above.
 #+end_src
 
 #+NAME: MySQL-update-tables
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   patient.to_sql('patient', mysql_engine, if_exists='replace', index=False)
   appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
 #+end_src
 
 #+NAME: MySQL-set-restrictions
-#+begin_src python :results silent
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
   sentence = db.text("""SET foreign_key_checks = 1;""")
   with mysql_engine.connect() as con:
