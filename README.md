@@ -32,15 +32,24 @@ Este software extrae los datos de una vista de una base de datos MySQL y los pro
 
 ## Instalación
 
-Para la instalación local solo corre:
+Para la instalación local se debe crear un entorno virtual:
 
-    pip install -r requirements.txt
+```
+python3 -m venv /tmp/babelvenv
+. /tmp/babelvenv/bin/active
+```
 
+Luego instala las dependencias necesarias para el proyecto:
+```
+pip install -r requirements.txt
+```
+
+Este proceso ya se lleva a acabo de forma automática con el archivo de `org-mode`.
 ## Uso
 
 En línea: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/https%3A%2F%2Fgitlab.com%2Fgenomorro%2Ftic-iner/registro-io)
 
-Cada proyecto usa archivos `ipynb` y `py` de forma indistinta, gracias a jupytext se pueden sincronizar. Para saber como hacerlo de momento lo mejor es consultar [jupytext](https://jupytext.readthedocs.io/en/latest/index.html "la documentación de jupytext"), después pondrá aquí los comandos que use más comúnmente. 
+Cada proyecto usa archivos `org`, `ipynb` y `py` de forma indistinta, gracias a jupytext se pueden sincronizar los últimos dos. Para saber como hacerlo de momento lo mejor es consultar [jupytext](https://jupytext.readthedocs.io/en/latest/index.html "la documentación de jupytext"), después pondrá aquí los comandos que use más comúnmente. 
 
 Si inicio con un `ipynb` lo convierto a `py`:
 
@@ -53,10 +62,6 @@ De otra forma:
 Después de eso hacer algo como:
 
     jupytext --update --to notebook test.py
-    
-Generar la imagen desde el archivo `.dot`:
-
-    dot -Tpng -o im/<nombre>.png out/<nombre>.dot
 
 ## Licencia
 This repo is part of TIC-INER
