@@ -9,26 +9,7 @@
 ## Basics
 IPython
 NumPy
-jupyter-book
-jupytext
 mysqlclient
-openpyxl
 pandas
-pyarrow 
 sqlalchemy
-
-## Extra
-# chainlit
-# graphviz
-# langchain_community
-# langchain_groq
-# matplotlib
-# nltk
-# opencv-contrib-python
-# opencv-python
-# pandasai
-# pydotplus
-# scikit-learn
-# seaborn
-# spacy
-# tensorflow
+python-language-server[all]
