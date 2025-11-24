@@ -34,7 +34,6 @@ This line complete the bash script.
   ./main.py
 #+end_src
 
-
 *** Libraries
 #+NAME: libraries
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3

@@ -18,17 +18,18 @@ Este software extrae los datos de una vista de una base de datos MySQL y los pro
 | file       | th5_FYF292FI2JII5 | FYF292FI2JII5_F2FF91IBY                                                    |
 | id         | th5_FYF292FI2JII5 | FYF292FI2JII5_id                                                           |
 | name       | th5_FYF292FI2JII5 | FYF292FI2JII5_FFF1YJ7I + FYF292FI2JII5_FFF1YJ7Ib + FYF292FI2JII5_FFF1YJ7Ic |
-| disability | th5_FF2YI727I1JIY | FF2YI727I1JIY_FYY15FJ5F9Y59                                                |
+| disability | th5_FF2YI727I1JIY | FF2YI727I1JIY_F7227I12FI959 (patient_id=FF2YI727I1JIY_L5112YJ71J9BI)       |
 
 
 ### appointment
-| Propiedad  | Tabla             | Campo                            |
-|------------|-------------------|----------------------------------|
-| patient_id | th5_FB12I2722I1BI | FB12I2722I1BI_F2FF91IBY          |
-| place      | th5_FB12I2722I1BI | FB12I2722I1BI_FFF1YJ7I (FK)      |
-| date_at    | th5_FB12I2722I1BI | FB12I2722I1BI_Y7FY7YF1B          |
-| type       | th5_FB12I2722I1BI | FB12I2722I1BI_YY2191I51F (vacío) |
-
+| Propiedad  | Tabla             | Campo                                                        |
+|------------|-------------------|--------------------------------------------------------------|
+| patient_id | th5_FB12I2722I1BI | FB12I2722I1BI_F2FF91IBY                                      |
+| place      | th5_FB12I2722I1BI | FB12I2722I1BI_FFF1YJ7I (Consultorio=FBBY1J57595Y5_B2129FIJF) |
+| specialty  | th5_FBBY1J57595Y5 | FBBY1J57595Y5_BB9F7I25 (usar FK de place)                    |
+| date_at    | th5_FB12I2722I1BI | FB12I2722I1BI_Y7FY7YF1B                                      |
+| type       | th5_FB17522IBBF59 | FB17522IBBF59_F92Y2I25IY                                     |
+| status     | th5_FB12I2722I1BI | FB12I2722I1BI_L5Y2YBJ2Y5                                     |
 
 ## Instalación
 
