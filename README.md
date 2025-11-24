@@ -34,34 +34,45 @@ Este software extrae los datos de una vista de una base de datos MySQL y los pro
 
 Para la instalación local se debe crear un entorno virtual:
 
-```
+```bash
 python3 -m venv /tmp/babelvenv
 . /tmp/babelvenv/bin/active
 ```
 
 Luego instala las dependencias necesarias para el proyecto:
-```
+```bash
 pip install -r requirements.txt
 ```
 
 Este proceso ya se lleva a acabo de forma automática con el archivo de `org-mode`.
 ## Uso
 
-En línea: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/https%3A%2F%2Fgitlab.com%2Fgenomorro%2Ftic-iner/registro-io)
+Usar JupyterLab en línea: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/https%3A%2F%2Fgitlab.com%2Fgenomorro%2Ftic-iner/registro-io)
 
 Cada proyecto usa archivos `org`, `ipynb` y `py` de forma indistinta, gracias a jupytext se pueden sincronizar los últimos dos. Para saber como hacerlo de momento lo mejor es consultar [jupytext](https://jupytext.readthedocs.io/en/latest/index.html "la documentación de jupytext"), después pondrá aquí los comandos que use más comúnmente. 
 
 Si inicio con un `ipynb` lo convierto a `py`:
-
-    jupytext --to py:percent test.ipynb
+```bash
+jupytext --to py:percent test.ipynb
+```
 
 De otra forma:
+```bash
+jupytext --to notebook test.py
+```
 
-    jupytext --to notebook test.py
-	
 Después de eso hacer algo como:
+```bash
+jupytext --update --to notebook test.py
+```
 
-    jupytext --update --to notebook test.py
+Para manejar el archivo `org`, es necesario tener GNU/Emacs instalado en el sistema. Se toma el archivo `org` como fuente del código, luego para actualizar los archivos `py` y en este caso `sh`, se debe ejecutar:
+```bash
+emacs --batch \
+      --eval "(require 'org)" \
+      --eval "(setq org-confirm-babel-evaluate nil)" \
+      --eval '(org-babel-tangle-file "main.org")'
+```
 
 ## Licencia
 This repo is part of TIC-INER
