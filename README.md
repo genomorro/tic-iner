@@ -67,12 +67,38 @@ Después de eso hacer algo como:
 jupytext --update --to notebook test.py
 ```
 
-Para manejar el archivo `org`, es necesario tener GNU/Emacs instalado en el sistema. Se toma el archivo `org` como fuente del código, luego para actualizar los archivos `py` y en este caso `sh`, se debe ejecutar:
+Para manejar el archivo `org`, es necesario tener GNU/Emacs instalado en el sistema. Se toma el archivo `org` como fuente del código, luego se pueden obtener dos archivos, un `py` y otro `sh`, se debe ejecutar:
 ```bash
 emacs --batch \
       --eval "(require 'org)" \
       --eval "(setq org-confirm-babel-evaluate nil)" \
       --eval '(org-babel-tangle-file "main.org")'
+```
+
+Con el comando anterior, se crean los archivos `main.py` y `main.sh`, los cuales deben estar en el mismo directorio. El archivo principal es el archivo de bash. Estos programas deben funcionar sin modificar sus rutas bajo el siguiente árbol de directorios:
+```
+registro-io/
+├── Databases
+├── data_wrangling
+│   ├── apt.txt
+│   ├── ds
+│   ├── im
+│   ├── main.org
+│   ├── main.py
+│   ├── main.sh
+│   ├── out
+│   ├── README.md
+│   ├── requirements-gentoo.txt
+│   └── requirements.txt
+├── Prompts
+└── public_html
+``` 
+
+Donde `public_html` es el directorio donde radica el sitio web de registro de visitantes y pacientes del INER.
+
+Finalmente, puede crearse una entrada en cron como la siguiente (no olvidar usar la ruta absoluta completa):
+```crontab
+0 */8 * * * /<path>/registro-io/data_wrangling/main.sh
 ```
 
 ## Licencia
