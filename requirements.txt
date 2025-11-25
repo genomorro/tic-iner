@@ -12,4 +12,4 @@ NumPy
 mysqlclient
 pandas
 sqlalchemy
-python-language-server[all]
+#python-language-server[all]

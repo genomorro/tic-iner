@@ -93,7 +93,7 @@ The columns that do not require additional processing are selected.
 The new data frame is created excluding the test patients.
 #+NAME: delete-fake-pacientes
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  patient = df_p.loc[3:, patient_columns]
+  patient = df_p.loc[3:, patient_columns].copy()
   patient.columns = ["id", "file"]
 #+end_src
 
@@ -104,10 +104,14 @@ A new column is created with the full name in a single string.
 #+end_src
 
 We look for typographical errors that could interfere with a new CSV file, starting with the misuse of commas (,). Then we look for single quotes (').
-#+NAME: find-commas-in-names
-#+begin_src python :results output 
+#+NAME: set-chars
+#+begin_src python :results output :tangle main.py :shebang #!/usr/bin/python3
   comma = ','
   quote = '\''
+#+end_src
+
+#+NAME:find-commas-in-names
+#+begin_src python :results output
   print("Existen comas:",(patient['name'].str.contains(comma)).any())
   print("Existen comillas:",(patient['name'].str.contains(quote)).any())
 #+end_src
@@ -221,7 +225,7 @@ The columns that do not require additional processing are selected.
 The new data frame is created.
 #+NAME: create-appointment
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  appointment = df_a[appointment_columns]
+  appointment = df_a[appointment_columns].copy()
   appointment.columns = ["id", "patient_id", "place", "specialty", "date_at"]
 #+end_src
 
