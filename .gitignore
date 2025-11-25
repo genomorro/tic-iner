@@ -1,2 +1,4 @@
 out/*.sql
 out/*.csv
+main.py
+main.sh
