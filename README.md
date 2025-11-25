@@ -78,7 +78,7 @@ emacs --batch \
 ## Licencia
 This repo is part of TIC-INER
 
-Copyright (C) 2025, Edgar Uriel Dom�nguez Espinoza
+Copyright (C) 2025, Edgar Uriel Domínguez Espinoza
 
 TIC-INER is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
