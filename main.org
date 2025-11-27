@@ -219,14 +219,14 @@ The columns of the initial data frame are displayed.
 The columns that do not require additional processing are selected.
 #+NAME: sel-columns-cita
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  appointment_columns = ["idCita", "idPac", "lugRealizacion", "especialidad", "fechaCita"]
+  appointment_columns = ["idCita", "idPac", "lugRealizacion", "especialidad", "ubicacion", "fechaCita"]
 #+end_src
 
 The new data frame is created.
 #+NAME: create-appointment
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   appointment = df_a[appointment_columns].copy()
-  appointment.columns = ["id", "patient_id", "place", "specialty", "date_at"]
+  appointment.columns = ["id", "patient_id", "agenda", "specialty", "location", "date_at"]
 #+end_src
 
 The missing column is created. Convert column to capitalize.
@@ -245,9 +245,10 @@ The missing column is created. Convert column to capitalize.
 
 #+NAME: capitalize-columns
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  appointment["place"] = appointment["place"].str.title()
+  appointment["agenda"] = appointment["agenda"].str.title()
   appointment["specialty"] = appointment["specialty"].str.capitalize()
-#+end_src
+  appointment["location"] = appointment["location"].str.capitalize()
+  #+end_src
 
 #+NAME: show-appointment
 #+begin_src python
@@ -342,25 +343,26 @@ The data sets will be exported to SQL format; the key feature is that these SQL 
               next(reader)  # Skip header
 
               for row in reader:
-                  id_val, patient_id_val, place_val, date_at_val, specialty_val, type_val, status_val = row
+                  id_val, patient_id_val, agenda_val, date_at_val, specialty_val, location_val, type_val, status_val = row
                   
-                  place_val = place_val.replace("'", "''")
+                  agenda_val = agenda_val.replace("'", "''")
                   specialty_val = specialty_val.replace("'", "''")
+                  location_val = location_val.replace("'", "''")
                   type_val = type_val.replace("'", "''")
 
 
-                  mysql_update_clause = f"patient_id = {patient_id_val}, place = '{place_val}', specialty = '{specialty_val}', date_at = '{date_at_val}', type = '{type_val}', status = '{status_val}'"
+                  mysql_update_clause = f"patient_id = {patient_id_val}, agenda = '{agenda_val}', specialty = '{specialty_val}', location = '{location_val}', date_at = '{date_at_val}', type = '{type_val}', status = '{status_val}'"
                   mysql_stmt = (
-                      f"INSERT INTO appointment (id, patient_id, place, specialty, date_at, type, status) "
-                      f"VALUES ({id_val}, {patient_id_val}, '{place_val}', '{specialty_val}', '{date_at_val}', '{type_val}', '{status_val}') "
+                      f"INSERT INTO appointment (id, patient_id, agenda, specialty, location, date_at, type, status) "
+                      f"VALUES ({id_val}, {patient_id_val}, '{agenda_val}', '{specialty_val}', '{location_val}', '{date_at_val}', '{type_val}', '{status_val}') "
                       f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
                   )
                   f_mysql.write(mysql_stmt)
                   
-                  sqlite_update_clause = "patient_id = excluded.patient_id, place = excluded.place, specialty = excluded.specialty, date_at = excluded.date_at, type = excluded.type, status = excluded.status"
+                  sqlite_update_clause = "patient_id = excluded.patient_id, agenda = excluded.agenda, specialty = excluded.specialty, location = excluded.location, date_at = excluded.date_at, type = excluded.type, status = excluded.status"
                   sqlite_stmt = (
-                      f"INSERT INTO appointment (id, patient_id, place, specialty, date_at, type, status) "
-                      f"VALUES ({id_val}, {patient_id_val}, '{place_val}', '{specialty_val}', '{date_at_val}', '{type_val}', '{status_val}') "
+                      f"INSERT INTO appointment (id, patient_id, agenda, specialty, location, date_at, type, status) "
+                      f"VALUES ({id_val}, {patient_id_val}, '{agenda_val}', '{specialty_val}', '{location_val}', '{date_at_val}', '{type_val}', '{status_val}') "
                       f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
                   )
                   f_sqlite.write(sqlite_stmt)
