@@ -105,7 +105,7 @@ A new column is created with the full name in a single string.
 
 We look for typographical errors that could interfere with a new CSV file, starting with the misuse of commas (,). Then we look for single quotes (').
 #+NAME: set-chars
-#+begin_src python :results output :tangle main.py :shebang #!/usr/bin/python3
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   comma = ','
   quote = '\''
 #+end_src
@@ -171,7 +171,7 @@ This function converts the column to boolean.
 #+end_src
 
 #+NAME: disability-to-dummy
-#+begin_src python :tangle main.py :shebang #!/usr/bin/python3
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   patient["disability"] = df_p.loc[3:, "tipoDificultad"].map(disability_to_dummy)
 #+end_src
 
@@ -180,7 +180,7 @@ This function converts the column to boolean.
     patient.head(10)
 #+end_src
 
-#+RESULTS:
+#+RESULTS: show-patient
 #+begin_example
     id       file                               name  disability
 3    1  000028567         BLANDINA HERNANDEZ PAREDES           0
@@ -231,7 +231,7 @@ The new data frame is created.
 
 The missing column is created. Convert column to capitalize.
 #+NAME: create-type-column
-#+begin_src python :tangle main.py :shebang #!/usr/bin/python3
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   appointment["type"] = df_a["tipoConsulta"].str.capitalize()
 #+end_src
 
@@ -240,7 +240,7 @@ The missing column is created. Convert column to capitalize.
   appointment["type"].unique().tolist()
 #+end_src
 
-#+RESULTS: create-type-column
+#+RESULTS: type-values
 | Primera vez | Subsecuente | Preconsulta | Estudios | Apertura/primera vez | Primera vez y subsecuente |
 
 #+NAME: capitalize-columns
@@ -255,19 +255,19 @@ The missing column is created. Convert column to capitalize.
   appointment.head(10)
 #+end_src
 
-#+RESULTS: show-df
+#+RESULTS: show-appointment
 #+begin_example
-        id  patient_id                             place                        specialty             date_at         type
-0  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-05 10:00:00  Primera vez
-1  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-05 10:00:00  Subsecuente
-2  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-05 10:00:00  Primera vez
-3  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
-4  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
-5  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
-6  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
-7  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica 2033-01-13 09:00:00  Subsecuente
-8  1071766      130297       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-12 10:00:00  Primera vez
-9  1071766      130297       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia 2032-01-12 10:00:00  Subsecuente
+        id  patient_id                            agenda                        specialty location              date_at         type
+0  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-05 10:00:00  Primera vez
+1  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-05 10:00:00  Subsecuente
+2  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-05 10:00:00  Primera vez
+3  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
+4  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
+5  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
+6  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
+7  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
+8  1071766      130297       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-12 10:00:00  Primera vez
+9  1071766      130297       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-12 10:00:00  Subsecuente
 #+end_example
 
 #+NAME: Add-status
