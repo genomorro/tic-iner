@@ -44,6 +44,13 @@ This line complete the bash script.
   import sqlalchemy as db
 #+end_src
 
+Get the full path of this script and set the app environtment (dev or prod).
+#+NAME: absolute-path
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
+  dir = os.path.abspath(os.getcwd())
+  environtment = "dev"
+#+end_src
+
 ** Load Data
 *** From DB Connection
 #+NAME: DB-connection
@@ -60,15 +67,15 @@ This line complete the bash script.
 
 #+NAME: save-ds
 #+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
-  df_a.to_csv("./ds/citasmedicas-db.csv", index=False)
-  df_p.to_csv("./ds/pacientes-db.csv", index=False)
+  df_a.to_csv(dir + "/ds/citasmedicas-db.csv", index=False)
+  df_p.to_csv(dir + "/ds/pacientes-db.csv", index=False)
 #+end_src
 
 *** From files
 #+NAME: load-data
 #+begin_src python :results silent :eval no
-  df_a = pd.read_csv("./ds/citasmedicas-db.csv")
-  df_p = pd.read_csv("./ds/pacientes-db.csv")
+  df_a = pd.read_csv(dir + "/ds/citasmedicas-db.csv")
+  df_p = pd.read_csv(dir + "/ds/pacientes-db.csv")
 #+end_src
 
 ** Patient table
@@ -199,7 +206,7 @@ The resulting data frame is saved in a new data set.
 #+NAME: save-file-patient
 #+begin_src python :results file silent :tangle main.py :shebang #!/usr/bin/python3
   cur_time=datetime.now().strftime("%Y%m%d")
-  filename="out/patient-" + cur_time + ".csv"
+  filename=dir + "/out/patient-" + cur_time + ".csv"
   patient.to_csv(filename, index=False)
 #+end_src
 
@@ -241,7 +248,7 @@ The missing column is created. Convert column to capitalize.
 #+end_src
 
 #+RESULTS: type-values
-| Primera vez | Subsecuente | Preconsulta | Estudios | Apertura/primera vez | Primera vez y subsecuente |
+| Subsecuente | Primera vez | Estudios | Primera vez y subsecuente | Preconsulta | Apertura/primera vez |
 
 #+NAME: capitalize-columns
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
@@ -257,17 +264,19 @@ The missing column is created. Convert column to capitalize.
 
 #+RESULTS: show-appointment
 #+begin_example
-        id  patient_id                            agenda                        specialty location              date_at         type
-0  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-05 10:00:00  Primera vez
-1  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-05 10:00:00  Subsecuente
-2  1068560      117096       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-05 10:00:00  Primera vez
-3  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
-4  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
-5  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
-6  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
-7  1069399      150583  Geriatría Seguimiento Sars-Cov-2  Subdirección de atención médica      NaN  2033-01-13 09:00:00  Subsecuente
-8  1071766      130297       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-12 10:00:00  Primera vez
-9  1071766      130297       Alergologia C1 - Dr. Gandhi         Inmunogenética y alergia      NaN  2032-01-12 10:00:00  Subsecuente
+        id  patient_id                                     agenda  ... location             date_at         type
+0  1068560      117096                           Inmunoalergia C1  ...     None 2032-01-05 10:00:00  Subsecuente
+1  1069399      150583           Geriatría Seguimiento Sars-Cov-2  ...     None 2033-01-13 09:00:00  Subsecuente
+2  1071766      130297                           Inmunoalergia C1  ...     None 2032-01-12 10:00:00  Subsecuente
+3  1071865      117973             Inmunoalergia E Inmunologia C1  ...     None 2032-01-28 10:00:00  Subsecuente
+4  1213097      518444             Dr. Gustavo Ivan Centeno Saenz  ...     None 2034-01-26 10:30:00  Subsecuente
+5  1320803      124439  Tb - Dra. Norma Angélica Téllez Navarrete  ...     None 2028-06-07 10:00:00  Primera vez
+6  1329585      122214                      Audiologia 3 Dr. Lara  ...     None 2026-01-05 11:00:00  Primera vez
+7  1341227      675735     Laboratorio Clinica Del Sueño Nocturno  ...     None 2025-12-15 20:00:00     Estudios
+8  1344802      311779       Consultorio De Sueño No Respiratorio  ...     None 2025-12-19 10:30:00  Subsecuente
+9  1348406      632910                      Consultorio Del Sueño  ...     None 2025-12-17 10:20:00  Primera vez
+
+[10 rows x 7 columns]
 #+end_example
 
 #+NAME: Add-status
@@ -279,7 +288,7 @@ The resulting data frame is saved in a new data set.
 #+NAME: save-file-appointment
 #+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
   cur_time=datetime.now().strftime("%Y%m%d")
-  filename="out/appointment-" + cur_time + ".csv"
+  filename=dir + "/out/appointment-" + cur_time + ".csv"
   appointment.to_csv(filename, index=False)
 #+end_src
 
@@ -288,15 +297,15 @@ The resulting data frame is saved in a new data set.
 The data sets will be exported to SQL format; the key feature is that these SQL files must update the database, not just insert records.
 #+NAME: generate-sql
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  def generate_sql():
+  def generate_sql(dir):
       """
       Generates SQL scripts from CSV files for MySQL and SQLite.
       """
       cur_time=datetime.now().strftime("%Y%m%d")
-      patient_csv = "out/patient-" + cur_time + ".csv"
-      appointment_csv = "out/appointment-" + cur_time + ".csv"
-      mysql_output = 'out/update-mysql.sql'
-      sqlite_output = 'out/update-sqlite.sql'
+      patient_csv = dir + "/out/patient-" + cur_time + ".csv"
+      appointment_csv = dir + "/out/appointment-" + cur_time + ".csv"
+      mysql_output = dir + "/out/update-mysql.sql"
+      sqlite_output = dir + "/out/update-sqlite.sql"
       
       if not os.path.exists(patient_csv) or not os.path.exists(appointment_csv):
           print("Error: Input CSV files not found.")
@@ -371,14 +380,15 @@ The data sets will be exported to SQL format; the key feature is that these SQL 
 Run the code above.
 #+NAME: create-sql
 #+begin_src python :results file silent :tangle main.py :shebang #!/usr/bin/python3
-  generate_sql()
+  generate_sql(dir)
 #+end_src
 
 *** Save in DB
 **** SQLite3
 #+NAME: SQLite-update-tables
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  sqlite_engine = db.create_engine('sqlite:///../public_html/var/data_dev.db')
+  database = os.path.dirname(dir) + "/public_html/var/data_" + environtment + ".db"
+  sqlite_engine = db.create_engine('sqlite:///' + database)
   patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
   appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
 #+end_src
