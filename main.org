@@ -63,12 +63,14 @@ Get the full path of this script and set the app environtment (dev or prod).
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   df_a = pd.read_sql('SELECT * FROM citasmedicas', conn)
   df_p = pd.read_sql('SELECT * FROM pacientes', conn)
+  df_h = pd.read_sql('SELECT * FROM pacienteshospitalizados', conn)
 #+end_src
 
 #+NAME: save-ds
 #+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
   df_a.to_csv(dir + "/ds/citasmedicas-db.csv", index=False)
   df_p.to_csv(dir + "/ds/pacientes-db.csv", index=False)
+  df_h.to_csv(dir + "/ds/pacienteshospitalizados-db.csv", index=False)
 #+end_src
 
 *** From files
@@ -76,6 +78,7 @@ Get the full path of this script and set the app environtment (dev or prod).
 #+begin_src python :results silent :eval no
   df_a = pd.read_csv(dir + "/ds/citasmedicas-db.csv")
   df_p = pd.read_csv(dir + "/ds/pacientes-db.csv")
+  df_h = pd.read_csv(dir + "/ds/pacienteshospitalizados-db.csv")
 #+end_src
 
 ** Patient table
@@ -264,19 +267,19 @@ The missing column is created. Convert column to capitalize.
 
 #+RESULTS: show-appointment
 #+begin_example
-        id  patient_id                                     agenda  ... location             date_at         type
-0  1068560      117096                           Inmunoalergia C1  ...     None 2032-01-05 10:00:00  Subsecuente
-1  1069399      150583           Geriatría Seguimiento Sars-Cov-2  ...     None 2033-01-13 09:00:00  Subsecuente
-2  1071766      130297                           Inmunoalergia C1  ...     None 2032-01-12 10:00:00  Subsecuente
-3  1071865      117973             Inmunoalergia E Inmunologia C1  ...     None 2032-01-28 10:00:00  Subsecuente
-4  1213097      518444             Dr. Gustavo Ivan Centeno Saenz  ...     None 2034-01-26 10:30:00  Subsecuente
-5  1320803      124439  Tb - Dra. Norma Angélica Téllez Navarrete  ...     None 2028-06-07 10:00:00  Primera vez
-6  1329585      122214                      Audiologia 3 Dr. Lara  ...     None 2026-01-05 11:00:00  Primera vez
-7  1341227      675735     Laboratorio Clinica Del Sueño Nocturno  ...     None 2025-12-15 20:00:00     Estudios
-8  1344802      311779       Consultorio De Sueño No Respiratorio  ...     None 2025-12-19 10:30:00  Subsecuente
-9  1348406      632910                      Consultorio Del Sueño  ...     None 2025-12-17 10:20:00  Primera vez
+        id  patient_id  ...         type     status
+0  1068560      117096  ...  Subsecuente   Agendada
+1  1069399      150583  ...  Subsecuente  Cancelada
+2  1071766      130297  ...  Subsecuente   Agendada
+3  1071865      117973  ...  Subsecuente   Agendada
+4  1213097      518444  ...  Subsecuente  Cancelada
+5  1320803      124439  ...  Primera vez  Cancelada
+6  1329585      122214  ...  Primera vez  Cancelada
+7  1341227      675735  ...     Estudios  Cancelada
+8  1344802      311779  ...  Subsecuente  Cancelada
+9  1348406      632910  ...  Primera vez   Agendada
 
-[10 rows x 7 columns]
+[10 rows x 8 columns]
 #+end_example
 
 #+NAME: Add-status
@@ -292,6 +295,58 @@ The resulting data frame is saved in a new data set.
   appointment.to_csv(filename, index=False)
 #+end_src
 
+** Hospitalized table
+The columns of the initial data frame are displayed.
+#+NAME: desc-data-hospitalizados
+#+begin_src python
+  df_h.columns.values
+#+end_src
+
+#+RESULTS: desc-data-hospitalizados
+: array(['idHospital', 'idPaciente', 'fechaIngreso', 'camaHosp',
+:        'servicioHosp', 'tipoEstancia'], dtype=object)
+
+The columns that do not require additional processing are selected.
+#+NAME: sel-columns-hospitalizados
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
+  hospitalized_columns = ["idHospital", "idPaciente", "servicioHosp", "camaHosp"]
+#+end_src
+
+The new data frame is created.
+#+NAME: create-hospitalized
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
+  hospitalized = df_h[hospitalized_columns].copy()
+  hospitalized.columns = ["id", "patient_id", "service", "bed"]
+#+end_src
+
+#+NAME: show-hospitalized
+#+begin_src python
+  hospitalized.tail(10)
+#+end_src
+
+#+RESULTS: show-hospitalized
+#+begin_example
+        id  patient_id                  service          bed
+150  81518      227495  Urgencias Respiratorias  Consultorio
+151  81892      725619  Urgencias Respiratorias  Consultorio
+152  81781      661314  Urgencias Respiratorias          u03
+153  81818      725574  Urgencias Respiratorias          u07
+154  81855      517354  Urgencias Respiratorias          u08
+155  81869      141501  Urgencias Respiratorias          u09
+156  81876      725612  Urgencias Respiratorias          u10
+157  81893      725620  Urgencias Respiratorias          u11
+158  81848      723635  Urgencias Respiratorias          u12
+159  81867      725609  Urgencias Respiratorias          u13
+#+end_example
+
+The resulting data frame is saved in a new data set.
+#+NAME: save-file-hospitalized
+#+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
+  cur_time=datetime.now().strftime("%Y%m%d")
+  filename=dir + "/out/hospitalized-" + cur_time + ".csv"
+  hospitalized.to_csv(filename, index=False)
+#+end_src
+
 ** Export to SQL
 *** Save in files
 The data sets will be exported to SQL format; the key feature is that these SQL files must update the database, not just insert records.
@@ -304,10 +359,11 @@ The data sets will be exported to SQL format; the key feature is that these SQL 
       cur_time=datetime.now().strftime("%Y%m%d")
       patient_csv = dir + "/out/patient-" + cur_time + ".csv"
       appointment_csv = dir + "/out/appointment-" + cur_time + ".csv"
+      hospitalized_csv = dir + "/out/hospitalized-" + cur_time + ".csv"
       mysql_output = dir + "/out/update-mysql.sql"
       sqlite_output = dir + "/out/update-sqlite.sql"
       
-      if not os.path.exists(patient_csv) or not os.path.exists(appointment_csv):
+      if not os.path.exists(patient_csv) or not os.path.exists(appointment_csv) or not os.path.exists(hospitalized_csv):
           print("Error: Input CSV files not found.")
           return
 
@@ -338,6 +394,37 @@ The data sets will be exported to SQL format; the key feature is that these SQL 
                   sqlite_stmt = (
                       f"INSERT INTO patient (id, file, name, disability) "
                       f"VALUES ({id_val}, '{file_val}', '{name_val}', {disability_val}) "
+                      f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
+                  )
+                  f_sqlite.write(sqlite_stmt)
+
+          f_mysql.write("\n")
+          f_sqlite.write("\n")
+
+          f_mysql.write("-- hospitalized\n")
+          f_sqlite.write("-- hospitalized\n")
+          with open(hospitalized_csv, 'r', encoding='utf-8') as infile:
+              reader = csv.reader(infile)
+              next(reader)  # Skip header
+
+              for row in reader:
+                  id_val, patient_id_val, service_val, bed_val = row
+
+                  service_val = service_val.replace("'", "''")
+                  bed_val = bed_val.replace("'", "''")
+
+                  mysql_update_clause = f"patient_id = {patient_id_val}, service = '{service_val}', bed = '{bed_val}'"
+                  mysql_stmt = (
+                      f"INSERT INTO hospitalized (id, patient_id, service, bed) "
+                      f"VALUES ({id_val}, {patient_id_val}, '{service_val}', '{bed_val}') "
+                      f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
+                  )
+                  f_mysql.write(mysql_stmt)
+
+                  sqlite_update_clause = "patient_id = excluded.patient_id, service = excluded.service, bed = excluded.bed"
+                  sqlite_stmt = (
+                      f"INSERT INTO hospitalized (id, patient_id, service, bed) "
+                      f"VALUES ({id_val}, {patient_id_val}, '{service_val}', '{bed_val}') "
                       f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
                   )
                   f_sqlite.write(sqlite_stmt)
@@ -390,6 +477,7 @@ Run the code above.
   database = os.path.dirname(dir) + "/public_html/var/data_" + environtment + ".db"
   sqlite_engine = db.create_engine('sqlite:///' + database)
   patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
+  hospitalized.to_sql('hospitalized', sqlite_engine, if_exists='replace', index=False)
   appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
 #+end_src
 
@@ -406,6 +494,7 @@ Run the code above.
 #+NAME: MySQL-update-tables
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
   patient.to_sql('patient', mysql_engine, if_exists='replace', index=False)
+  hospitalized.to_sql('hospitalized', mysql_engine, if_exists='replace', index=False)
   appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
 #+end_src
 
