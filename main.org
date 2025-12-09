@@ -484,7 +484,7 @@ Run the code above.
 **** MySQL
 
 #+NAME: MySQL-nil-restrictions
-#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
+#+begin_src python :results silent
   mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
   sentence = db.text("""SET foreign_key_checks = 0;""")
   with mysql_engine.connect() as con:
@@ -492,14 +492,14 @@ Run the code above.
 #+end_src
 
 #+NAME: MySQL-update-tables
-#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
+#+begin_src python :results silent
   patient.to_sql('patient', mysql_engine, if_exists='replace', index=False)
   hospitalized.to_sql('hospitalized', mysql_engine, if_exists='replace', index=False)
   appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
 #+end_src
 
 #+NAME: MySQL-set-restrictions
-#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
+#+begin_src python :results silent
   mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
   sentence = db.text("""SET foreign_key_checks = 1;""")
   with mysql_engine.connect() as con:
