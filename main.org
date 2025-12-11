@@ -12,7 +12,7 @@ The follow Debian packages are required:
 
 In other SO, or as an alternative, is posible create a virtual environment and install all packages in ~requirements.txt~.
 #+NAME: create-venv
-#+begin_src bash :results silent :async t :tangle main.sh :shebang #!/bin/bash
+#+begin_src bash :results silent :async yes :tangle main.sh :shebang #!/bin/bash
   python3 -m venv /tmp/babelvenv
   . /tmp/babelvenv/bin/activate
   pip install --upgrade pip
