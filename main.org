@@ -55,15 +55,15 @@ Get the full path of this script and set the app environtment (dev or prod).
 *** From DB Connection
 #+NAME: DB-connection
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  engine = db.create_engine("mysql://pbaconnectmsql:Tduc$aupydl$5t@192.168.27.30/r3sp1ra770ri4x8025")
+  engine = db.create_engine("mysql://conectmdbsqlrepl:Sa4)j%40khPrry!s1s@192.168.10.55/r3sp1ra770ri4x8025")
   conn = engine.connect()
 #+end_src
 
 #+NAME: load-data-db
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  df_a = pd.read_sql('SELECT * FROM citasmedicas', conn)
-  df_p = pd.read_sql('SELECT * FROM pacientes', conn)
-  df_h = pd.read_sql('SELECT * FROM pacienteshospitalizados', conn)
+  df_a = pd.read_sql('SELECT * FROM citasMedicas', conn)
+  df_p = pd.read_sql('SELECT * FROM Pacientes', conn)
+  df_h = pd.read_sql('SELECT * FROM pacientesHospitalizados', conn)
 #+end_src
 
 #+NAME: save-ds
@@ -251,7 +251,7 @@ The missing column is created. Convert column to capitalize.
 #+end_src
 
 #+RESULTS: type-values
-| Subsecuente | Primera vez | Estudios | Primera vez y subsecuente | Preconsulta | Apertura/primera vez |
+| Subsecuente | Primera vez | Estudios | Preconsulta | Primera vez y subsecuente | hline | Apertura/primera vez | Terapia de infusión |
 
 #+NAME: capitalize-columns
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
@@ -267,19 +267,19 @@ The missing column is created. Convert column to capitalize.
 
 #+RESULTS: show-appointment
 #+begin_example
-        id  patient_id  ...         type     status
-0  1068560      117096  ...  Subsecuente   Agendada
-1  1069399      150583  ...  Subsecuente  Cancelada
-2  1071766      130297  ...  Subsecuente   Agendada
-3  1071865      117973  ...  Subsecuente   Agendada
-4  1213097      518444  ...  Subsecuente  Cancelada
-5  1320803      124439  ...  Primera vez  Cancelada
-6  1329585      122214  ...  Primera vez  Cancelada
-7  1341227      675735  ...     Estudios  Cancelada
-8  1344802      311779  ...  Subsecuente  Cancelada
-9  1348406      632910  ...  Primera vez   Agendada
+        id  patient_id                                     agenda  ... location             date_at         type
+0  1068560      117096                           Inmunoalergia C1  ...     None 2032-01-05 10:00:00  Subsecuente
+1  1069399      150583           Geriatría Seguimiento Sars-Cov-2  ...     None 2033-01-13 09:00:00  Subsecuente
+2  1071766      130297                           Inmunoalergia C1  ...     None 2032-01-12 10:00:00  Subsecuente
+3  1071865      117973               Alergologia E Inmunologia C1  ...     None 2032-01-28 10:00:00  Subsecuente
+4  1213097      518444             Dr. Gustavo Ivan Centeno Saenz  ...     None 2034-01-26 10:30:00  Subsecuente
+5  1320803      124439  Tb - Dra. Norma Angélica Téllez Navarrete  ...     None 2028-06-07 10:00:00  Primera vez
+6  1356477      657386               Alergologia E Inmunologia C1  ...     None 2026-04-08 09:30:00  Primera vez
+7  1364695       78016                               Orl Gonzalez  ...     None 2026-02-20 09:00:00  Subsecuente
+8  1383402      668422                  Cardiología Fin De Semana  ...     None 2026-01-18 11:20:00  Primera vez
+9  1390412       96026             2024 - Neumología Residentes 2  ...     None 2026-04-15 16:30:00  Subsecuente
 
-[10 rows x 8 columns]
+[10 rows x 7 columns]
 #+end_example
 
 #+NAME: Add-status
@@ -326,17 +326,17 @@ The new data frame is created.
 
 #+RESULTS: show-hospitalized
 #+begin_example
-        id  patient_id                  service          bed
-150  81518      227495  Urgencias Respiratorias  Consultorio
-151  81892      725619  Urgencias Respiratorias  Consultorio
-152  81781      661314  Urgencias Respiratorias          u03
-153  81818      725574  Urgencias Respiratorias          u07
-154  81855      517354  Urgencias Respiratorias          u08
-155  81869      141501  Urgencias Respiratorias          u09
-156  81876      725612  Urgencias Respiratorias          u10
-157  81893      725620  Urgencias Respiratorias          u11
-158  81848      723635  Urgencias Respiratorias          u12
-159  81867      725609  Urgencias Respiratorias          u13
+        id  patient_id                  service   bed
+297  75525      721312  Urgencias Respiratorias   u09
+298  75515      663047  Urgencias Respiratorias   u10
+299  85412      499489  Urgencias Respiratorias   u10
+300  73916      142711  Urgencias Respiratorias   u10
+301  85465      724037  Urgencias Respiratorias   u11
+302  75560      617608  Urgencias Respiratorias   u11
+303  85476      725492  Urgencias Respiratorias   u12
+304  73882      719976  Urgencias Respiratorias   u12
+305  85461      613694  Urgencias Respiratorias  up03
+306  73933      614711  Urgencias Respiratorias  up03
 #+end_example
 
 The resulting data frame is saved in a new data set.
