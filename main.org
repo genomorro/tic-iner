@@ -55,7 +55,7 @@ Get the full path of this script and set the app environtment (dev or prod).
 *** From DB Connection
 #+NAME: DB-connection
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  engine = db.create_engine("mysql://conectmdbsqlrepl:Sa4)j%40khPrry!s1s@192.168.10.55/r3sp1ra770ri4x8025")
+  engine = db.create_engine("mysql://conectmdbsqlrepl:Sa4)j%40khPrry!s1s@192.168.10.55/r3sp1ra770ri4x8025?charset=utf8mb4")
   conn = engine.connect()
 #+end_src
 
@@ -251,7 +251,7 @@ The missing column is created. Convert column to capitalize.
 #+end_src
 
 #+RESULTS: type-values
-| Subsecuente | Primera vez | Estudios | Preconsulta | Primera vez y subsecuente | hline | Apertura/primera vez | Terapia de infusión |
+| Subsecuente | Primera vez | Estudios | Preconsulta | Primera vez y subsecuente | hline | Apertura/primera vez |
 
 #+NAME: capitalize-columns
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
@@ -267,19 +267,17 @@ The missing column is created. Convert column to capitalize.
 
 #+RESULTS: show-appointment
 #+begin_example
-        id  patient_id                                     agenda  ... location             date_at         type
-0  1068560      117096                           Inmunoalergia C1  ...     None 2032-01-05 10:00:00  Subsecuente
-1  1069399      150583           Geriatría Seguimiento Sars-Cov-2  ...     None 2033-01-13 09:00:00  Subsecuente
-2  1071766      130297                           Inmunoalergia C1  ...     None 2032-01-12 10:00:00  Subsecuente
-3  1071865      117973               Alergologia E Inmunologia C1  ...     None 2032-01-28 10:00:00  Subsecuente
-4  1213097      518444             Dr. Gustavo Ivan Centeno Saenz  ...     None 2034-01-26 10:30:00  Subsecuente
-5  1320803      124439  Tb - Dra. Norma Angélica Téllez Navarrete  ...     None 2028-06-07 10:00:00  Primera vez
-6  1356477      657386               Alergologia E Inmunologia C1  ...     None 2026-04-08 09:30:00  Primera vez
-7  1364695       78016                               Orl Gonzalez  ...     None 2026-02-20 09:00:00  Subsecuente
-8  1383402      668422                  Cardiología Fin De Semana  ...     None 2026-01-18 11:20:00  Primera vez
-9  1390412       96026             2024 - Neumología Residentes 2  ...     None 2026-04-15 16:30:00  Subsecuente
-
-[10 rows x 7 columns]
+        id  patient_id                                     agenda                                          specialty location             date_at         type
+0  1068560      117096                           Inmunoalergia C1                           Inmunogenética y alergia     None 2032-01-05 10:00:00  Subsecuente
+1  1069399      150583           Geriatría Seguimiento Sars-Cov-2                    Subdirección de atención médica     None 2033-01-13 09:00:00  Subsecuente
+2  1071766      130297                           Inmunoalergia C1                           Inmunogenética y alergia     None 2032-01-12 10:00:00  Subsecuente
+3  1071865      117973               Alergologia E Inmunologia C1                           Inmunogenética y alergia     None 2032-01-28 10:00:00  Subsecuente
+4  1213097      518444             Dr. Gustavo Ivan Centeno Saenz                 Investigación en tabaquismo y epoc     None 2034-01-26 10:30:00  Subsecuente
+5  1320803      124439  Tb - Dra. Norma Angélica Téllez Navarrete                            Clínica de tuberculosis     None 2028-06-07 10:00:00  Primera vez
+6  1356477      657386               Alergologia E Inmunologia C1                           Inmunogenética y alergia     None 2026-04-08 09:30:00  Primera vez
+7  1364695       78016                               Orl Gonzalez  Otorrinolaringología y cirugía de cabeza y cuello     None 2026-02-20 09:00:00  Subsecuente
+8  1383402      668422                  Cardiología Fin De Semana                                Cardiología adultos     None 2026-01-18 11:20:00  Primera vez
+9  1390412       96026             2024 - Neumología Residentes 2                                         Neumología     None 2026-04-15 16:30:00  Subsecuente
 #+end_example
 
 #+NAME: Add-status
@@ -319,24 +317,31 @@ The new data frame is created.
   hospitalized.columns = ["id", "patient_id", "service", "bed"]
 #+end_src
 
+Clean test patients
+#+NAME: clean-test-patient
+#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
+  test_patients = hospitalized[hospitalized['patient_id'] < 1].index
+  hospitalized.drop(test_patients, inplace=True)
+#+end_src
+
 #+NAME: show-hospitalized
 #+begin_src python
-  hospitalized.tail(10)
+  hospitalized.head(10)
 #+end_src
 
 #+RESULTS: show-hospitalized
 #+begin_example
-        id  patient_id                  service   bed
-297  75525      721312  Urgencias Respiratorias   u09
-298  75515      663047  Urgencias Respiratorias   u10
-299  85412      499489  Urgencias Respiratorias   u10
-300  73916      142711  Urgencias Respiratorias   u10
-301  85465      724037  Urgencias Respiratorias   u11
-302  75560      617608  Urgencias Respiratorias   u11
-303  85476      725492  Urgencias Respiratorias   u12
-304  73882      719976  Urgencias Respiratorias   u12
-305  85461      613694  Urgencias Respiratorias  up03
-306  73933      614711  Urgencias Respiratorias  up03
+        id  patient_id          service    bed
+0   135001      672469  Hospital de Día   hd02
+1   134999      720131  Hospital de Día   hd07
+2   135003      726844  Hospital de Día   hd10
+3   134997      708495       Nefrología   nf01
+4   134995      679901       Nefrología   nf02
+5   134996      662084       Nefrología   nf03
+6   134998      134663       Nefrología   nf04
+8   135007      723605        Oncología  onc01
+9   135008      628179        Oncología  onc02
+10  128591      661630        Oncología  onc02
 #+end_example
 
 The resulting data frame is saved in a new data set.
