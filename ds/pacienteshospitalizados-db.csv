@@ -1,4 +1,25 @@
 idHospital,idPaciente,fechaIngreso,camaHosp,servicioHosp,tipoEstancia
+135128,607131,2026-01-13 09:34:31,ab01,Hospital de Día,Ambulatorio
+135130,101304,2026-01-13 09:49:10,ab02,Hospital de Día,Ambulatorio
+135131,117559,2026-01-13 09:50:42,ab03,Hospital de Día,Ambulatorio
+135114,723962,2026-01-13 06:40:54,hd01,Hospital de Día,Ambulatorio
+135115,462006,2026-01-13 06:44:00,hd03,Hospital de Día,Ambulatorio
+135125,617395,2026-01-13 07:32:17,hd04,Hospital de Día,Ambulatorio
+135119,721685,2026-01-13 07:01:16,hd05,Hospital de Día,Ambulatorio
+135129,526459,2026-01-13 09:44:58,hd07,Hospital de Día,Ambulatorio
+135112,708495,2026-01-13 06:27:27,nf01,Nefrología,Ambulatorio
+135109,721555,2026-01-13 06:08:22,nf02,Nefrología,Ambulatorio
+135111,662084,2026-01-13 06:26:18,nf03,Nefrología,Ambulatorio
+135110,120854,2026-01-13 06:10:03,nf04,Nefrología,Ambulatorio
+135113,679280,2026-01-13 06:30:02,onc01,Oncología,Ambulatorio
+135118,722088,2026-01-13 06:57:29,onc02,Oncología,Ambulatorio
+135123,724997,2026-01-13 07:26:12,onc03,Oncología,Ambulatorio
+135120,718479,2026-01-13 07:12:42,onc04,Oncología,Ambulatorio
+135122,613425,2026-01-13 07:18:02,onc05,Oncología,Ambulatorio
+135124,677462,2026-01-13 07:27:18,onc06,Oncología,Ambulatorio
+135116,655411,2026-01-13 06:49:17,onc07,Oncología,Ambulatorio
+135117,689866,2026-01-13 06:56:29,onc09,Oncología,Ambulatorio
+135081,139087,2026-01-12 10:14:56,onc10,Oncología,Ambulatorio
 134946,130884,2026-01-08 00:58:06,102,Servicio Clínico 1,Hospitalización
 134691,727226,2025-12-30 12:51:41,103,Servicio Clínico 1,Hospitalización
 134985,727674,2026-01-08 18:48:26,104,Servicio Clínico 1,Hospitalización
@@ -22,19 +43,17 @@ idHospital,idPaciente,fechaIngreso,camaHosp,servicioHosp,tipoEstancia
 135016,727719,2026-01-09 13:25:42,123,Servicio Clínico 1,Hospitalización
 135036,649031,2026-01-10 16:36:45,124,Servicio Clínico 1,Hospitalización
 134890,727548,2026-01-06 18:11:50,125,Servicio Clínico 1,Hospitalización
-134978,724698,2026-01-08 16:11:45,126,Servicio Clínico 1,Hospitalización
+135099,727870,2026-01-12 18:00:13,126,Servicio Clínico 1,Hospitalización
 134847,727483,2026-01-05 13:19:01,127,Servicio Clínico 1,Hospitalización
-134943,724903,2026-01-07 19:34:48,1001,Servicio Clínico 10 Postquirúrgicos,Hospitalización
 134991,727668,2026-01-09 02:24:46,1002,Servicio Clínico 10 Postquirúrgicos,Hospitalización
 134606,726911,2025-12-26 15:14:00,1003,Servicio Clínico 10 Postquirúrgicos,Hospitalización
-134693,128561,2025-12-30 12:17:27,1005,Servicio Clínico 10 Postquirúrgicos,Hospitalización
+135064,725793,2026-01-12 07:11:04,1004,Servicio Clínico 10 Postquirúrgicos,Hospitalización
 134855,132031,2026-01-05 18:56:34,1006,Servicio Clínico 10 Postquirúrgicos,Hospitalización
+135047,724236,2026-01-11 15:13:44,1007,Servicio Clínico 10 Postquirúrgicos,Hospitalización
 134702,727211,2025-12-30 17:51:39,1008,Servicio Clínico 10 Postquirúrgicos,Hospitalización
-134994,727717,2026-01-09 01:07:13,1009,Servicio Clínico 10 Postquirúrgicos,Hospitalización
-134973,722551,2026-01-08 10:38:04,1010,Servicio Clínico 10 Postquirúrgicos,Hospitalización
 134712,133303,2025-12-31 11:34:30,1011,Servicio Clínico 10 Postquirúrgicos,Hospitalización
 134708,727249,2025-12-31 00:01:24,1012,Servicio Clínico 10 Postquirúrgicos,Hospitalización
-135042,95511,2026-01-10 19:18:29,1014,Servicio Clínico 10 Postquirúrgicos,Hospitalización
+134862,712675,2026-01-06 02:56:10,202,Servicio Clínico 2,Hospitalización
 134282,725607,2025-12-16 02:36:24,203,Servicio Clínico 2,Hospitalización
 135032,727367,2026-01-09 18:12:34,204,Servicio Clínico 2,Hospitalización
 134859,727312,2026-01-05 18:55:57,205,Servicio Clínico 2,Hospitalización
@@ -44,15 +63,15 @@ idHospital,idPaciente,fechaIngreso,camaHosp,servicioHosp,tipoEstancia
 134729,721018,2025-12-31 13:59:53,209,Servicio Clínico 2,Hospitalización
 133170,110328,2025-11-13 00:08:02,210,Servicio Clínico 2,Hospitalización
 135031,710609,2026-01-09 18:55:07,211,Servicio Clínico 2,Hospitalización
+135044,727808,2026-01-11 14:59:42,212,Servicio Clínico 2,Hospitalización
 134465,726765,2025-12-21 19:06:28,213,Servicio Clínico 2,Hospitalización
-134857,727494,2026-01-05 18:56:18,214,Servicio Clínico 2,Hospitalización
 134270,726454,2025-12-15 15:02:39,216,Servicio Clínico 2,Hospitalización
+135100,727864,2026-01-12 17:40:53,217,Servicio Clínico 2,Hospitalización
 134214,676674,2025-12-12 18:26:32,218,Servicio Clínico 2,Hospitalización
 134941,727565,2026-01-07 19:37:15,219,Servicio Clínico 2,Hospitalización
 134728,727245,2025-12-31 14:00:00,220,Servicio Clínico 2,Hospitalización
 134989,719860,2026-01-08 19:15:07,221,Servicio Clínico 2,Hospitalización
 134169,726287,2025-12-11 18:40:53,225,Servicio Clínico 2,Hospitalización
-134813,718954,2026-01-04 15:24:20,226,Servicio Clínico 2,Hospitalización
 135024,725090,2026-01-09 17:53:53,227,Servicio Clínico 2,Hospitalización
 134673,727092,2025-12-29 20:08:43,301,Servicio Clínico 3,Hospitalización
 134751,727307,2026-01-01 19:05:08,302,Servicio Clínico 3,Hospitalización
@@ -62,29 +81,31 @@ idHospital,idPaciente,fechaIngreso,camaHosp,servicioHosp,tipoEstancia
 133971,618717,2025-12-07 16:31:26,306,Servicio Clínico 3,Hospitalización
 134894,727538,2026-01-06 18:11:58,307,Servicio Clínico 3,Hospitalización
 134495,726733,2025-12-22 15:05:07,308,Servicio Clínico 3,Hospitalización
+134994,727717,2026-01-09 01:07:13,309,Servicio Clínico 3,Hospitalización
 134452,703986,2025-12-20 17:46:06,310,Servicio Clínico 3,Hospitalización
 134579,726960,2025-12-25 23:58:41,311,Servicio Clínico 3,Hospitalización
 133585,621804,2025-11-26 09:35:20,312,Servicio Clínico 3,Hospitalización
 134936,727605,2026-01-07 18:30:13,313,Servicio Clínico 3,Hospitalización
-134891,620021,2026-01-06 13:40:10,314,Servicio Clínico 3,Hospitalización
+135045,727779,2026-01-11 15:42:02,314,Servicio Clínico 3,Hospitalización
 133735,725736,2025-11-30 18:11:05,315,Servicio Clínico 3,Hospitalización
 135038,727776,2026-01-10 16:51:37,316,Servicio Clínico 3,Hospitalización
 135029,727725,2026-01-09 17:53:18,317,Servicio Clínico 3,Hospitalización
 134612,714822,2025-12-26 19:56:46,318,Servicio Clínico 3,Hospitalización
 134802,727416,2026-01-03 17:00:33,319,Servicio Clínico 3,Hospitalización
-134577,629664,2025-12-25 15:31:52,320,Servicio Clínico 3,Hospitalización
+135048,727818,2026-01-11 18:38:57,320,Servicio Clínico 3,Hospitalización
+134943,724903,2026-01-07 19:34:48,321,Servicio Clínico 3,Hospitalización
 134620,727019,2025-12-27 18:09:42,322,Servicio Clínico 3,Hospitalización
 134795,101226,2026-01-02 19:17:06,324,Servicio Clínico 3,Hospitalización
-134858,726991,2026-01-05 17:10:44,325,Servicio Clínico 3,Hospitalización
+135042,95511,2026-01-10 19:18:29,325,Servicio Clínico 3,Hospitalización
 134278,726446,2025-12-16 00:35:13,326,Servicio Clínico 3,Hospitalización
 134898,675388,2026-01-06 19:04:46,327,Servicio Clínico 3,Hospitalización
 134984,726034,2026-01-09 00:05:56,328,Servicio Clínico 3,Hospitalización
-134993,674838,2026-01-09 01:07:05,329,Servicio Clínico 3,Hospitalización
+135050,665583,2026-01-11 22:09:41,329,Servicio Clínico 3,Hospitalización
 135040,725709,2026-01-10 23:06:32,401,Servicio Clínico 4,Hospitalización
-134454,726714,2025-12-20 16:28:34,402,Servicio Clínico 4,Hospitalización
+135046,722448,2026-01-11 15:09:01,402,Servicio Clínico 4,Hospitalización
 127333,716327,2025-05-22 19:09:24,403,Servicio Clínico 4,Hospitalización
 134442,726507,2025-12-19 20:30:28,404,Servicio Clínico 4,Hospitalización
-134977,725492,2026-01-08 17:36:45,405,Servicio Clínico 4,Hospitalización
+134693,128561,2025-12-30 12:17:27,405,Servicio Clínico 4,Hospitalización
 134932,727602,2026-01-07 14:44:25,406,Servicio Clínico 4,Hospitalización
 134854,451812,2026-01-05 18:18:18,407,Servicio Clínico 4,Hospitalización
 134357,726524,2025-12-17 17:49:59,408,Servicio Clínico 4,Hospitalización
@@ -94,7 +115,7 @@ idHospital,idPaciente,fechaIngreso,camaHosp,servicioHosp,tipoEstancia
 135041,151063,2026-01-10 18:22:54,412,Servicio Clínico 4,Hospitalización
 132533,720112,2025-10-26 15:37:31,413,Servicio Clínico 4,Hospitalización
 134619,84494,2025-12-27 16:24:05,414,Servicio Clínico 4,Hospitalización
-134889,61834,2026-01-06 15:58:46,415,Servicio Clínico 4,Hospitalización
+135104,664888,2026-01-12 19:21:55,415,Servicio Clínico 4,Hospitalización
 134897,713623,2026-01-06 23:10:11,416,Servicio Clínico 4,Hospitalización
 134899,727388,2026-01-06 20:08:59,417,Servicio Clínico 4,Hospitalización
 133085,724921,2025-11-10 20:43:55,418,Servicio Clínico 4,Hospitalización
@@ -103,92 +124,117 @@ idHospital,idPaciente,fechaIngreso,camaHosp,servicioHosp,tipoEstancia
 135021,726026,2026-01-09 17:53:36,421,Servicio Clínico 4,Hospitalización
 134888,727547,2026-01-06 17:59:09,422,Servicio Clínico 4,Hospitalización
 134895,727558,2026-01-06 19:04:55,423,Servicio Clínico 4,Hospitalización
-134853,692477,2026-01-05 16:24:24,424,Servicio Clínico 4,Hospitalización
 135037,727773,2026-01-10 13:47:23,425,Servicio Clínico 4,Hospitalización
-134914,709209,2026-01-07 06:56:44,426,Servicio Clínico 4,Hospitalización
+134889,61834,2026-01-06 15:58:46,426,Servicio Clínico 4,Hospitalización
 134271,389617,2025-12-15 17:50:41,427,Servicio Clínico 4,Hospitalización
 134699,727133,2025-12-30 14:20:53,428,Servicio Clínico 4,Hospitalización
 135034,724928,2026-01-09 23:59:38,701,Servicio Clínico 7,Hospitalización
-134798,727409,2026-01-03 23:48:25,704,Servicio Clínico 7,Hospitalización
+135075,599264,2026-01-12 14:02:28,703,Servicio Clínico 7,Hospitalización
+135043,727826,2026-01-11 16:46:47,704,Servicio Clínico 7,Hospitalización
 134675,727205,2025-12-30 03:27:42,705,Servicio Clínico 7,Hospitalización
-134804,660160,2026-01-03 20:41:24,706,Servicio Clínico 7,Hospitalización
+135108,716168,2026-01-13 02:00:33,706,Servicio Clínico 7,Hospitalización
 134945,643315,2026-01-08 01:15:55,707,Servicio Clínico 7,Hospitalización
 134992,725344,2026-01-08 22:15:36,708,Servicio Clínico 7,Hospitalización
-134881,727561,2026-01-06 13:36:14,709,Servicio Clínico 7,Hospitalización
-134818,723309,2026-01-04 19:12:36,710,Servicio Clínico 7,Hospitalización
+135106,727907,2026-01-13 00:21:27,709,Servicio Clínico 7,Hospitalización
+134900,727076,2026-01-06 23:10:20,710,Servicio Clínico 7,Hospitalización
 134970,613694,2026-01-08 12:50:56,711,Servicio Clínico 7,Hospitalización
 134849,727501,2026-01-05 13:18:50,712,Servicio Clínico 7,Hospitalización
 134940,727540,2026-01-07 22:39:44,713,Servicio Clínico 7,Hospitalización
 134990,651017,2026-01-08 19:56:21,714,Servicio Clínico 7,Hospitalización
-134819,727470,2026-01-04 23:35:23,715,Servicio Clínico 7,Hospitalización
+135107,727859,2026-01-13 00:25:02,715,Servicio Clínico 7,Hospitalización
 134749,727329,2026-01-01 19:11:50,716,Servicio Clínico 7,Hospitalización
 134655,727157,2025-12-29 12:54:17,717,Servicio Clínico 7,Hospitalización
 134796,727398,2026-01-03 00:46:42,718,Servicio Clínico 7,Hospitalización
 134741,712242,2026-01-01 17:14:43,719,Servicio Clínico 7,Hospitalización
 134808,727439,2026-01-04 17:41:51,720,Servicio Clínico 7,Hospitalización
-134900,727076,2026-01-06 23:10:20,721,Servicio Clínico 7,Hospitalización
-134815,719745,2026-01-04 15:32:06,805,Servicio Clínico 8,Hospitalización
+135105,605377,2026-01-12 18:57:04,801,Servicio Clínico 8,Hospitalización
+135126,75395,2026-01-13 07:42:54,802,Servicio Clínico 8,Hospitalización
+135101,101512,2026-01-12 15:31:13,806,Servicio Clínico 8,Hospitalización
+135102,630316,2026-01-12 15:32:53,807,Servicio Clínico 8,Hospitalización
+135070,461050,2026-01-12 08:02:50,808,Servicio Clínico 8,Hospitalización
+135051,727850,2026-01-12 01:54:49,809,Servicio Clínico 8,Hospitalización
+135091,724257,2026-01-12 11:08:47,810,Servicio Clínico 8,Hospitalización
+135049,139805,2026-01-11 16:48:47,811,Servicio Clínico 8,Hospitalización
 134903,727529,2026-01-06 23:07:03,901,Servicio Clínico 9,Ambulatorio
 134809,727250,2026-01-04 16:59:53,902,Servicio Clínico 9,Ambulatorio
 134805,122095,2026-01-03 17:01:03,903,Servicio Clínico 9,Ambulatorio
-133976,726053,2025-12-07 14:01:39,904,Servicio Clínico 9,Ambulatorio
+135094,720767,2026-01-12 13:52:33,904,Servicio Clínico 9,Ambulatorio
 134792,672925,2026-01-02 19:19:02,905,Servicio Clínico 9,Ambulatorio
 134628,727110,2025-12-28 19:26:38,906,Servicio Clínico 9,Ambulatorio
+135030,727672,2026-01-09 17:53:09,907,Servicio Clínico 9,Ambulatorio
 134748,727223,2026-01-01 19:00:56,908,Servicio Clínico 9,Ambulatorio
 134496,726746,2025-12-22 14:09:26,909,Servicio Clínico 9,Ambulatorio
-134862,712675,2026-01-06 02:56:10,910,Servicio Clínico 9,Ambulatorio
+135093,98277,2026-01-12 13:55:54,910,Servicio Clínico 9,Ambulatorio
 134543,726760,2025-12-24 02:21:02,911,Servicio Clínico 9,Ambulatorio
 134634,271625,2025-12-28 22:02:24,912,Servicio Clínico 9,Ambulatorio
 134734,727089,2025-12-31 18:29:54,913,Servicio Clínico 9,Ambulatorio
 134944,375739,2026-01-08 02:10:27,914,Servicio Clínico 9,Ambulatorio
 135033,727764,2026-01-09 22:54:32,utip1,Unidad de Terapia Intensiva Pediátrica,Ambulatorio
+135052,674896,2026-01-12 01:56:49,utip3,Unidad de Terapia Intensiva Pediátrica,Ambulatorio
 134666,727153,2025-12-29 23:13:29,utim01,Unidad de Terapia Intermedia,Hospitalización
-134794,727318,2026-01-02 20:02:24,utim02,Unidad de Terapia Intermedia,Hospitalización
 134631,727068,2025-12-28 18:24:21,utim03,Unidad de Terapia Intermedia,Hospitalización
 134811,726173,2026-01-04 16:09:53,utim04,Unidad de Terapia Intermedia,Hospitalización
 134986,608891,2026-01-08 17:36:21,utim06,Unidad de Terapia Intermedia,Hospitalización
 135039,727768,2026-01-10 18:21:52,utim07,Unidad de Terapia Intermedia,Hospitalización
-135030,727672,2026-01-09 17:53:09,utim08,Unidad de Terapia Intermedia,Hospitalización
 134632,727060,2025-12-28 19:26:30,utim10,Unidad de Terapia Intermedia,Hospitalización
 135022,727736,2026-01-09 15:04:24,utim11,Unidad de Terapia Intermedia,Hospitalización
+135096,727855,2026-01-12 16:05:24,utim12,Unidad de Terapia Intermedia,Hospitalización
 133739,725737,2025-11-30 19:33:56,utim13,Unidad de Terapia Intermedia,Hospitalización
 134938,727496,2026-01-07 17:59:10,utim14,Unidad de Terapia Intermedia,Hospitalización
 134975,727678,2026-01-08 12:40:11,utim15,Unidad de Terapia Intermedia,Hospitalización
-84760,727300,2025-12-31 14:15:09,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85624,139118,2026-01-09 16:28:35,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-84799,136344,2026-01-01 01:45:24,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85631,62496,2026-01-09 18:41:09,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85729,196206,2026-01-10 23:49:18,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-84959,110853,2026-01-02 17:53:45,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85632,727767,2026-01-09 18:44:23,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85182,727509,2026-01-05 10:08:45,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85637,715596,2026-01-09 19:45:36,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85736,98277,2026-01-11 03:38:45,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85225,727541,2026-01-05 15:16:35,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85644,150831,2026-01-09 22:31:59,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85867,646594,2026-01-12 14:30:37,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85932,725512,2026-01-13 09:38:56,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85934,727936,2026-01-13 09:48:30,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85250,727554,2026-01-05 23:17:14,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85260,727559,2026-01-06 01:59:56,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85666,171804,2026-01-10 10:13:54,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85373,722910,2026-01-07 09:28:21,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85676,421119,2026-01-10 12:20:25,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85397,727642,2026-01-07 13:04:35,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85881,727906,2026-01-12 17:59:11,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85260,727559,2026-01-06 01:59:56,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85684,727792,2026-01-10 13:29:29,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85410,727653,2026-01-07 14:36:20,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85373,722910,2026-01-07 09:28:21,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85685,727793,2026-01-10 13:31:08,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85891,714598,2026-01-12 19:25:49,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85397,727642,2026-01-07 13:04:35,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85410,727653,2026-01-07 14:36:20,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85720,727814,2026-01-10 21:47:45,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85491,150734,2026-01-08 10:59:10,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85514,727702,2026-01-08 12:59:13,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85701,727803,2026-01-10 17:46:24,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85560,724601,2026-01-08 19:02:33,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85739,64458,2026-01-11 07:16:04,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85918,715462,2026-01-13 04:23:48,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85565,727728,2026-01-08 20:27:49,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85814,726229,2026-01-12 00:08:39,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85919,32825,2026-01-13 05:38:13,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 83444,726553,2025-12-16 16:03:01,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85573,727732,2026-01-08 22:52:04,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85720,727814,2026-01-10 21:47:45,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85819,727861,2026-01-12 04:22:24,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85920,727927,2026-01-13 06:03:05,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 84662,727179,2025-12-30 14:10:17,Consultorio,Urgencias Respiratorias,Consulta Urgencias
 85602,712900,2026-01-09 11:45:30,Consultorio,Urgencias Respiratorias,Consulta Urgencias
-85708,727808,2026-01-10 19:06:19,u02,Urgencias Respiratorias,Observacion Urgencias
+85822,126227,2026-01-12 05:43:55,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85925,727930,2026-01-13 08:45:10,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+84760,727300,2025-12-31 14:15:09,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85624,139118,2026-01-09 16:28:35,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85928,727932,2026-01-13 09:17:17,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+84799,136344,2026-01-01 01:45:24,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85631,62496,2026-01-09 18:41:09,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85929,727933,2026-01-13 09:21:11,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+84959,110853,2026-01-02 17:53:45,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85632,727767,2026-01-09 18:44:23,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85930,723727,2026-01-13 09:28:12,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85182,727509,2026-01-05 10:08:45,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85637,715596,2026-01-09 19:45:36,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85931,727934,2026-01-13 09:37:48,Consultorio,Urgencias Respiratorias,Consulta Urgencias
+85913,144460,2026-01-13 01:59:40,u01,Urgencias Respiratorias,Observacion Urgencias
+85910,727922,2026-01-13 00:43:46,u02,Urgencias Respiratorias,Observacion Urgencias
 85688,643556,2026-01-10 14:07:18,u03,Urgencias Respiratorias,Observacion Urgencias
-85726,727818,2026-01-10 23:18:14,u05,Urgencias Respiratorias,Observacion Urgencias
-85655,727779,2026-01-10 06:11:08,u07,Urgencias Respiratorias,Observacion Urgencias
+85905,110732,2026-01-12 22:55:27,u04,Urgencias Respiratorias,Observacion Urgencias
+85835,727703,2026-01-12 09:51:10,u05,Urgencias Respiratorias,Observacion Urgencias
+85856,727890,2026-01-12 13:02:16,u07,Urgencias Respiratorias,Observacion Urgencias
+85885,727909,2026-01-12 18:14:37,u08,Urgencias Respiratorias,Observacion Urgencias
 85725,727817,2026-01-10 23:15:17,u09,Urgencias Respiratorias,Observacion Urgencias
-85711,720767,2026-01-10 19:36:47,u10,Urgencias Respiratorias,Observacion Urgencias
+85848,670427,2026-01-12 12:08:55,u10,Urgencias Respiratorias,Observacion Urgencias
+85844,656365,2026-01-12 11:45:40,u11,Urgencias Respiratorias,Observacion Urgencias
 85731,667176,2026-01-11 00:16:06,u12,Urgencias Respiratorias,Observacion Urgencias
+85914,727924,2026-01-13 02:38:44,utr01,Urgencias Respiratorias,Observacion Urgencias
