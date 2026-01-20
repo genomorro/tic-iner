@@ -37,55 +37,55 @@ This line complete the bash script.
 *** Libraries
 #+NAME: libraries
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  from datetime import datetime
-  import csv
-  import os
-  import pandas as pd
-  import sqlalchemy as db
+from datetime import datetime
+import csv
+import os
+import pandas as pd
+import sqlalchemy as db
 #+end_src
 
 Get the full path of this script and set the app environtment (dev or prod).
 #+NAME: absolute-path
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  dir = os.path.abspath(os.getcwd())
-  environtment = "dev"
+dir = os.path.abspath(os.getcwd())
+environtment = "dev"
 #+end_src
 
 ** Load Data
 *** From DB Connection
 #+NAME: DB-connection
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  engine = db.create_engine("mysql://conectmdbsqlrepl:Sa4)j%40khPrry!s1s@192.168.10.55/r3sp1ra770ri4x8025?charset=utf8mb4")
-  conn = engine.connect()
+engine = db.create_engine("mysql://conectmdbsqlrepl:Sa4)j%40khPrry!s1s@192.168.10.55/r3sp1ra770ri4x8025?charset=utf8mb4")
+conn = engine.connect()
 #+end_src
 
 #+NAME: load-data-db
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  df_a = pd.read_sql('SELECT * FROM citasMedicas', conn)
-  df_p = pd.read_sql('SELECT * FROM Pacientes', conn)
-  df_h = pd.read_sql('SELECT * FROM pacientesHospitalizados', conn)
+df_a = pd.read_sql('SELECT * FROM citasMedicas', conn)
+df_p = pd.read_sql('SELECT * FROM Pacientes', conn)
+df_h = pd.read_sql('SELECT * FROM pacientesHospitalizados', conn)
 #+end_src
 
 #+NAME: save-ds
 #+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
-  df_a.to_csv(dir + "/ds/citasmedicas-db.csv", index=False)
-  df_p.to_csv(dir + "/ds/pacientes-db.csv", index=False)
-  df_h.to_csv(dir + "/ds/pacienteshospitalizados-db.csv", index=False)
+df_a.to_csv(dir + "/ds/citasmedicas-db.csv", index=False)
+df_p.to_csv(dir + "/ds/pacientes-db.csv", index=False)
+df_h.to_csv(dir + "/ds/pacienteshospitalizados-db.csv", index=False)
 #+end_src
 
 *** From files
 #+NAME: load-data
 #+begin_src python :results silent :eval no
-  df_a = pd.read_csv(dir + "/ds/citasmedicas-db.csv")
-  df_p = pd.read_csv(dir + "/ds/pacientes-db.csv")
-  df_h = pd.read_csv(dir + "/ds/pacienteshospitalizados-db.csv")
+df_a = pd.read_csv(dir + "/ds/citasmedicas-db.csv")
+df_p = pd.read_csv(dir + "/ds/pacientes-db.csv")
+df_h = pd.read_csv(dir + "/ds/pacienteshospitalizados-db.csv")
 #+end_src
 
 ** Patient table
 The columns of the initial data frame are displayed.
 #+NAME: desc-data-paciente
 #+begin_src python
-  df_p.columns
+df_p.columns
 #+end_src
 
 #+RESULTS: desc-data-paciente
@@ -97,33 +97,33 @@ The columns of the initial data frame are displayed.
 The columns that do not require additional processing are selected.
 #+NAME: sel-columns-paciente
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  patient_columns = ["idPac", "numExpediente"]
+patient_columns = ["idPac", "numExpediente"]
 #+end_src
 
 The new data frame is created excluding the test patients.
 #+NAME: delete-fake-pacientes
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  patient = df_p.loc[3:, patient_columns].copy()
-  patient.columns = ["id", "file"]
+patient = df_p.loc[3:, patient_columns].copy()
+patient.columns = ["id", "file"]
 #+end_src
 
 A new column is created with the full name in a single string.
 #+NAME: concatenate-name
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  patient["name"] = df_p.loc[3:, "nomPaciente"].fillna('') + " " + df_p.loc[3:, "primerApellido"].fillna('') + " " + df_p.loc[3:, "segundoApellido"].fillna('')
+patient["name"] = df_p.loc[3:, "nomPaciente"].fillna('') + " " + df_p.loc[3:, "primerApellido"].fillna('') + " " + df_p.loc[3:, "segundoApellido"].fillna('')
 #+end_src
 
 We look for typographical errors that could interfere with a new CSV file, starting with the misuse of commas (,). Then we look for single quotes (').
 #+NAME: set-chars
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  comma = ','
-  quote = '\''
+comma = ','
+quote = '\''
 #+end_src
 
 #+NAME:find-commas-in-names
 #+begin_src python :results output
-  print("Existen comas:",(patient['name'].str.contains(comma)).any())
-  print("Existen comillas:",(patient['name'].str.contains(quote)).any())
+print("Existen comas:",(patient['name'].str.contains(comma)).any())
+print("Existen comillas:",(patient['name'].str.contains(quote)).any())
 #+end_src
 
 #+RESULTS: find-commas-in-names
@@ -133,16 +133,16 @@ We look for typographical errors that could interfere with a new CSV file, start
 The commas are removed, since a name should not contain them. The quotation marks are replaced with double single quotes (''), which is a way to exclude them in SQL, although it is simpler to handle them later when generating the SQL files, so the data in the data frame is not modified.
 #+NAME: delete-commas-in-names
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  patient['name'] = patient['name'].replace({comma:''}, regex=True)
-  # patient['name'] = patient['name'].replace({quote:"''"}, regex=True)
+patient['name'] = patient['name'].replace({comma:''}, regex=True)
+# patient['name'] = patient['name'].replace({quote:"''"}, regex=True)
 #+end_src
 
 It is verified that there are no longer any commas. The second test is still ~True~ because the character was duplicated, not deleted; there is the option to replace it with ~CHAR(39)~ which is valid in SQL.
 #+NAME: find-commas-in-names-2
 #+begin_src python :results output
-  print("Existen comas:",(patient['name'].str.contains(comma)).any())
-  print("Existen comillas:",(patient['name'].str.contains(quote)).any())
-  #+end_src
+print("Existen comas:",(patient['name'].str.contains(comma)).any())
+print("Existen comillas:",(patient['name'].str.contains(quote)).any())
+#+end_src
 
 #+RESULTS: find-commas-in-names-2
 : Existen comas: False
@@ -151,7 +151,7 @@ It is verified that there are no longer any commas. The second test is still ~Tr
 The possible values ​​of ~tipoDificultad~ are listed.
 #+NAME: tipoDificultad-values
 #+begin_src python 
-  df_p["tipoDificultad"].unique().tolist()
+df_p["tipoDificultad"].unique().tolist()
 #+end_src
 
 #+RESULTS: tipoDificultad-values
@@ -160,34 +160,34 @@ The possible values ​​of ~tipoDificultad~ are listed.
 This function converts the column to boolean.
 #+NAME: define-disability_to_dummy
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  def disability_to_dummy(x):
-    """
-    Read a column with multiple options of disability.
-    
-    Parameters
-    ----------
-    x: string
-       a disability or not.
-       
-    Returns
-    -------
-    If there is a disability return 1, else return 0.
-    """
-    if (x == "NINGUNA" or
-        x == "SE IGNORA"):
-        return 0
-    else:
-        return 1
+def disability_to_dummy(x):
+  """
+  Read a column with multiple options of disability.
+  
+  Parameters
+  ----------
+  x: string
+     a disability or not.
+     
+  Returns
+  -------
+  If there is a disability return 1, else return 0.
+  """
+  if (x == "NINGUNA" or
+      x == "SE IGNORA"):
+      return 0
+  else:
+      return 1
 #+end_src
 
 #+NAME: disability-to-dummy
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  patient["disability"] = df_p.loc[3:, "tipoDificultad"].map(disability_to_dummy)
+patient["disability"] = df_p.loc[3:, "tipoDificultad"].map(disability_to_dummy)
 #+end_src
 
 #+NAME: show-patient
 #+begin_src python
-    patient.head(10)
+patient.head(10)
 #+end_src
 
 #+RESULTS: show-patient
@@ -208,16 +208,16 @@ This function converts the column to boolean.
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-patient
 #+begin_src python :results file silent :tangle main.py :shebang #!/usr/bin/python3
-  cur_time=datetime.now().strftime("%Y%m%d")
-  filename=dir + "/out/patient-" + cur_time + ".csv"
-  patient.to_csv(filename, index=False)
+cur_time=datetime.now().strftime("%Y%m%d")
+filename=dir + "/out/patient-" + cur_time + ".csv"
+patient.to_csv(filename, index=False)
 #+end_src
 
 ** Appointment table
 The columns of the initial data frame are displayed.
 #+NAME: desc-data-cita
 #+begin_src python
-  df_a.columns.values
+df_a.columns.values
 #+end_src
 
 #+RESULTS: desc-data-cita
@@ -229,75 +229,77 @@ The columns of the initial data frame are displayed.
 The columns that do not require additional processing are selected.
 #+NAME: sel-columns-cita
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  appointment_columns = ["idCita", "idPac", "lugRealizacion", "especialidad", "ubicacion", "fechaCita"]
+appointment_columns = ["idCita", "idPac", "lugRealizacion", "especialidad", "ubicacion", "fechaCita"]
 #+end_src
 
 The new data frame is created.
 #+NAME: create-appointment
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  appointment = df_a[appointment_columns].copy()
-  appointment.columns = ["id", "patient_id", "agenda", "specialty", "location", "date_at"]
+appointment = df_a[appointment_columns].copy()
+appointment.columns = ["id", "patient_id", "agenda", "specialty", "location", "date_at"]
 #+end_src
 
 The missing column is created. Convert column to capitalize.
 #+NAME: create-type-column
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  appointment["type"] = df_a["tipoConsulta"].str.capitalize()
+appointment["type"] = df_a["tipoConsulta"].str.capitalize()
 #+end_src
 
 #+NAME: type-values
 #+begin_src python  
-  appointment["type"].unique().tolist()
+appointment["type"].unique().tolist()
 #+end_src
 
 #+RESULTS: type-values
-| Subsecuente | Primera vez | Estudios | Preconsulta | Primera vez y subsecuente | hline | Apertura/primera vez |
+| Subsecuente | Primera vez | Estudios | Preconsulta | Primera vez y subsecuente | nan | Apertura/primera vez |
 
 #+NAME: capitalize-columns
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  appointment["agenda"] = appointment["agenda"].str.title()
-  appointment["specialty"] = appointment["specialty"].str.capitalize()
-  appointment["location"] = appointment["location"].str.capitalize()
-  #+end_src
+appointment["agenda"] = appointment["agenda"].str.title()
+appointment["specialty"] = appointment["specialty"].str.capitalize()
+appointment["location"] = appointment["location"].str.capitalize()
+#+end_src
 
 #+NAME: show-appointment
 #+begin_src python
-  appointment.head(10)
+appointment.head(10)
 #+end_src
 
 #+RESULTS: show-appointment
 #+begin_example
-        id  patient_id                                     agenda                                          specialty location             date_at         type
-0  1068560      117096                           Inmunoalergia C1                           Inmunogenética y alergia     None 2032-01-05 10:00:00  Subsecuente
-1  1069399      150583           Geriatría Seguimiento Sars-Cov-2                    Subdirección de atención médica     None 2033-01-13 09:00:00  Subsecuente
-2  1071766      130297                           Inmunoalergia C1                           Inmunogenética y alergia     None 2032-01-12 10:00:00  Subsecuente
-3  1071865      117973               Alergologia E Inmunologia C1                           Inmunogenética y alergia     None 2032-01-28 10:00:00  Subsecuente
-4  1213097      518444             Dr. Gustavo Ivan Centeno Saenz                 Investigación en tabaquismo y epoc     None 2034-01-26 10:30:00  Subsecuente
-5  1320803      124439  Tb - Dra. Norma Angélica Téllez Navarrete                            Clínica de tuberculosis     None 2028-06-07 10:00:00  Primera vez
-6  1356477      657386               Alergologia E Inmunologia C1                           Inmunogenética y alergia     None 2026-04-08 09:30:00  Primera vez
-7  1364695       78016                               Orl Gonzalez  Otorrinolaringología y cirugía de cabeza y cuello     None 2026-02-20 09:00:00  Subsecuente
-8  1383402      668422                  Cardiología Fin De Semana                                Cardiología adultos     None 2026-01-18 11:20:00  Primera vez
-9  1390412       96026             2024 - Neumología Residentes 2                                         Neumología     None 2026-04-15 16:30:00  Subsecuente
+        id  patient_id                                     agenda  ... location              date_at         type
+0  1068560      117096                           Inmunoalergia C1  ...      NaN  2032-01-05 10:00:00  Subsecuente
+1  1069399      150583           Geriatría Seguimiento Sars-Cov-2  ...      NaN  2033-01-13 09:00:00  Subsecuente
+2  1071766      130297                           Inmunoalergia C1  ...      NaN  2032-01-12 10:00:00  Subsecuente
+3  1071865      117973               Alergologia E Inmunologia C1  ...      NaN  2032-01-28 10:00:00  Subsecuente
+4  1213097      518444             Dr. Gustavo Ivan Centeno Saenz  ...      NaN  2034-01-26 10:30:00  Subsecuente
+5  1320803      124439  Tb - Dra. Norma Angélica Téllez Navarrete  ...      NaN  2028-06-07 10:00:00  Primera vez
+6  1356477      657386               Alergologia E Inmunologia C1  ...      NaN  2026-04-08 09:30:00  Primera vez
+7  1364695       78016                               Orl Gonzalez  ...      NaN  2026-02-20 09:00:00  Subsecuente
+8  1383402      668422                  Cardiología Fin De Semana  ...      NaN  2026-01-18 11:20:00  Primera vez
+9  1390412       96026             2024 - Neumología Residentes 2  ...      NaN  2026-04-15 16:30:00  Subsecuente
+
+[10 rows x 7 columns]
 #+end_example
 
 #+NAME: Add-status
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  appointment["status"] = df_a["estatusCita"]
+appointment["status"] = df_a["estatusCita"]
 #+end_src  
 
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-appointment
 #+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
-  cur_time=datetime.now().strftime("%Y%m%d")
-  filename=dir + "/out/appointment-" + cur_time + ".csv"
-  appointment.to_csv(filename, index=False)
+cur_time=datetime.now().strftime("%Y%m%d")
+filename=dir + "/out/appointment-" + cur_time + ".csv"
+appointment.to_csv(filename, index=False)
 #+end_src
 
 ** Hospitalized table
 The columns of the initial data frame are displayed.
 #+NAME: desc-data-hospitalizados
 #+begin_src python
-  df_h.columns.values
+df_h.columns.values
 #+end_src
 
 #+RESULTS: desc-data-hospitalizados
@@ -307,26 +309,26 @@ The columns of the initial data frame are displayed.
 The columns that do not require additional processing are selected.
 #+NAME: sel-columns-hospitalizados
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  hospitalized_columns = ["idHospital", "idPaciente", "servicioHosp", "camaHosp"]
+hospitalized_columns = ["idHospital", "idPaciente", "servicioHosp", "camaHosp"]
 #+end_src
 
 The new data frame is created.
 #+NAME: create-hospitalized
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  hospitalized = df_h[hospitalized_columns].copy()
-  hospitalized.columns = ["id", "patient_id", "service", "bed"]
+hospitalized = df_h[hospitalized_columns].copy()
+hospitalized.columns = ["id", "patient_id", "service", "bed"]
 #+end_src
 
 Clean test patients
 #+NAME: clean-test-patient
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  test_patients = hospitalized[hospitalized['patient_id'] < 1].index
-  hospitalized.drop(test_patients, inplace=True)
+test_patients = hospitalized[hospitalized['patient_id'] < 1].index
+hospitalized.drop(test_patients, inplace=True)
 #+end_src
 
 #+NAME: show-hospitalized
 #+begin_src python
-  hospitalized.head(10)
+hospitalized.head(10)
 #+end_src
 
 #+RESULTS: show-hospitalized
@@ -347,9 +349,9 @@ Clean test patients
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-hospitalized
 #+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
-  cur_time=datetime.now().strftime("%Y%m%d")
-  filename=dir + "/out/hospitalized-" + cur_time + ".csv"
-  hospitalized.to_csv(filename, index=False)
+cur_time=datetime.now().strftime("%Y%m%d")
+filename=dir + "/out/hospitalized-" + cur_time + ".csv"
+hospitalized.to_csv(filename, index=False)
 #+end_src
 
 ** Export to SQL
@@ -472,43 +474,43 @@ The data sets will be exported to SQL format; the key feature is that these SQL 
 Run the code above.
 #+NAME: create-sql
 #+begin_src python :results file silent :tangle main.py :shebang #!/usr/bin/python3
-  generate_sql(dir)
+generate_sql(dir)
 #+end_src
 
 *** Save in DB
 **** SQLite3
 #+NAME: SQLite-update-tables
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  database = os.path.dirname(dir) + "/public_html/var/data_" + environtment + ".db"
-  sqlite_engine = db.create_engine('sqlite:///' + database)
-  patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
-  hospitalized.to_sql('hospitalized', sqlite_engine, if_exists='replace', index=False)
-  appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
+database = os.path.dirname(dir) + "/public_html/var/data_" + environtment + ".db"
+sqlite_engine = db.create_engine('sqlite:///' + database)
+patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
+hospitalized.to_sql('hospitalized', sqlite_engine, if_exists='replace', index=False)
+appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
 #+end_src
 
 **** MySQL
 
 #+NAME: MySQL-nil-restrictions
 #+begin_src python :results silent
-  mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
-  sentence = db.text("""SET foreign_key_checks = 0;""")
-  with mysql_engine.connect() as con:
-      con.execute(sentence)
+mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
+sentence = db.text("""SET foreign_key_checks = 0;""")
+with mysql_engine.connect() as con:
+    con.execute(sentence)
 #+end_src
 
 #+NAME: MySQL-update-tables
 #+begin_src python :results silent
-  patient.to_sql('patient', mysql_engine, if_exists='replace', index=False)
-  hospitalized.to_sql('hospitalized', mysql_engine, if_exists='replace', index=False)
-  appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
+patient.to_sql('patient', mysql_engine, if_exists='replace', index=False)
+hospitalized.to_sql('hospitalized', mysql_engine, if_exists='replace', index=False)
+appointment.to_sql('appointment', mysql_engine, if_exists='replace', index=False)
 #+end_src
 
 #+NAME: MySQL-set-restrictions
 #+begin_src python :results silent
-  mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
-  sentence = db.text("""SET foreign_key_checks = 1;""")
-  with mysql_engine.connect() as con:
-      con.execute(sentence)
+mysql_engine = db.create_engine('mysql://registro-io:registro-io.passwd@127.0.0.1:3306/registro-io')
+sentence = db.text("""SET foreign_key_checks = 1;""")
+with mysql_engine.connect() as con:
+    con.execute(sentence)
 #+end_src
 
 ** Testing
