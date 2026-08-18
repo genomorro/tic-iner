@@ -1,0 +1,173 @@
+#+TITLE: Migration
+#+AUTHOR: Edgar Uriel Domínguez Espinoza
+#+PROPERTY: header-args:python :session migration :comments org :shebang #!/usr/bin/python3
+
+** Preamble
+*** Create environment
+The follow Debian packages are required:
+
+- python3-pandas
+- python3-sqlalchemy
+- python3-mysqldb
+
+In other SO, or as an alternative, is posible create a virtual environment and install all packages in ~requirements.txt~.
+#+NAME: create-venv
+#+begin_src bash :results silent :async yes :tangle migration.sh :shebang #!/bin/bash
+  python3 -m venv /tmp/babelvenv
+  . /tmp/babelvenv/bin/activate
+  pip install --upgrade pip
+  pip install -r requirements.txt
+#+end_src
+If a virtual environment is created, is necessary to install libs via the package manager manually.
+
+Now, you must set some Emacs variables.
+#+NAME: set-python-venv
+#+begin_src elisp :results silent
+  (setq python-shell-interpreter "/tmp/babelvenv/bin/ipython")
+  (setq python-shell-interpreter-args "-i --simple-prompt")
+#+end_src
+
+Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
+
+This line complete the bash script.
+#+begin_src bash :results silent :eval no :tangle migration.sh :shebang #!/bin/bash
+  ./migration.py
+#+end_src
+
+*** Libraries
+#+NAME: libraries
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+from datetime import datetime
+import csv
+import os
+import pandas as pd
+#+end_src
+
+Get the full path of this script and set the app environtment (dev or prod).
+#+NAME: absolute-path
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+dir = os.path.abspath(os.getcwd())
+environtment = "prod"
+#+end_src
+
+** Load Data
+
+#+NAME: load-data-db
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+  df_v = pd.read_csv(dir + "/ds/visitor.csv")
+#+end_src
+
+** Visitor table
+#+NAME: destination-values
+#+begin_src python 
+  df_v["destination"].unique().tolist()
+#+end_src
+
+#+RESULTS: destination-values
+| Consulta Externa | Servicio Clínico 1 | CIENI | Clínica de EPOC | Servicio Clínico 10 Postquirúrgicos | Servicio Clínico 5 | Nefrología | Broncoscopia | Servicio Clínico 3 | Unidad de Urgencias Respiratorias | Clínica del Asma | Servicio Clínico 8 | Servicio Clínico 9 | Servicio Clínico 10 Recuperación | Servicio Clínico 2 | Hospital de día | Oncología | Servicio Clínico 10 | Consulta Externa Antigua | Servicio Clínico 4 | Neumología Pediátrica Ambulatoria | Unidad de Terapia Intermedia | Servicio Clínico 7 | Broncoscopia Intervencionista |
+
+
+#+NAME search
+#+begin_src python :results silent
+# Mapping destination to specific ID area
+area_map = {
+    'Consulta Externa': 121,
+    'Servicio Clínico 1': 58,
+    'CIENI': 115,
+    'Clínica de EPOC': 95,
+    'Servicio Clínico 10 Postquirúrgicos': 81,
+    'Servicio Clínico 5': 70,
+    'Nefrología': 68,
+    'Broncoscopia': 75,
+    'Servicio Clínico 3': 61,
+    'Unidad de Urgencias Respiratorias': 125,
+    'Clínica del Asma': 93,
+    'Servicio Clínico 8': 84,
+    'Servicio Clínico 9': 85,
+    'Servicio Clínico 10 Recuperación': 81,
+    'Servicio Clínico 2': 59,
+    'Hospital de día': 67,
+    'Oncología': 69,
+    'Servicio Clínico 10': 81,
+    'Consulta Externa Antigua': 21,
+    'Servicio Clínico 4': 62,
+    'Neumología Pediátrica Ambulatoria': 117 ,
+    'Unidad de Terapia Intermedia': 72,
+    'Servicio Clínico 7': 83,
+    'Broncoscopia Intervencionista': 75
+}
+
+df_v['destination'] = df_v['destination'].map(area_map)
+#+end_src
+
+#+NAME: show-change
+#+begin_src python
+df_v["destination"].head()
+#+end_src
+
+#+RESULTS: show-change
+: 0    121
+: 1     58
+: 2    121
+: 3    121
+: 4    115
+: Name: destination, dtype: int64
+
+#+NAME: desc-data-visitor
+#+begin_src python
+df_v.columns
+#+end_src
+
+#+RESULTS: desc-data-visitor
+: Index(['id', 'check_in_user_id', 'check_out_user_id', 'name', 'phone', 'dni',
+:        'tag', 'destination', 'check_in_at', 'check_out_at', 'relationship',
+:        'evidence'],
+:       dtype='str')
+
+#+NAME: reorder-rename-columns
+#+begin_src python
+  df_v['host_id'] = None
+  df_v['comment'] = None
+  df_v = df_v[['id', 'check_in_user_id', 'check_out_user_id', 'destination', 'host_id', 'name', 'phone', 'dni', 'tag', 'check_in_at', 'check_out_at', 'relationship', 'evidence', 'comment']]
+  df_v = df_v.rename(columns={'destination': 'destination_id'})
+#+end_src
+
+#+RESULTS: reorder-rename-columns
+
+#+NAME: desc-data-visitor-reorder
+#+begin_src python
+df_v.columns
+#+end_src
+
+#+RESULTS: desc-data-visitor-reorder
+: Index(['id', 'check_in_user_id', 'check_out_user_id', 'destination_id',
+:        'host_id', 'name', 'phone', 'dni', 'tag', 'check_in_at', 'check_out_at',
+:        'relationship', 'evidence', 'comment'],
+:       dtype='str')
+
+#+NAME: head-visitor
+#+begin_src python
+df_v.head()
+#+end_src
+
+#+RESULTS: head-visitor
+:    id  check_in_user_id  check_out_user_id  ...  relationship                                       evidence comment
+: 0   1                 7                5.0  ...      Hijo (a)  /uploads/visitor/2026/06/1-20260629130342.png    NULL
+: 1   2                 7                7.0  ...   Hermano (a)  /uploads/visitor/2026/06/2-20260629132001.png    NULL
+: 2   3                 7                5.0  ...      Hijo (a)  /uploads/visitor/2026/06/3-20260629132438.png    NULL
+: 3   4                 7                5.0  ...         Padre  /uploads/visitor/2026/06/4-20260629132959.png    NULL
+: 4   5                 7                5.0  ...         Madre  /uploads/visitor/2026/06/5-20260629133344.png    NULL
+: 
+: [5 rows x 14 columns]
+
+
+#+NAME: save-file-visitor
+#+begin_src python :results file silent :tangle main.py :shebang #!/usr/bin/python3
+  filename=dir + "/out/visitor.csv"
+  df_v.to_csv(filename, index=False)
+#+end_src
+
+Importar los datos con la línea de comandos de SQLite3 se deben establecer los datos de `host_id` y `comment` a ~NULL~
+
+
+UPDATE visitor set host_id = NULL;
