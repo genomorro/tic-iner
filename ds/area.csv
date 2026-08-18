@@ -1,0 +1,144 @@
+id,building,unit,extension
+1,1,Central de datos,
+2,1,Departamento de adquisiciones,
+3,1,Departamento de apoyo técnico en administración,
+4,1,Departamento de control de bienes,
+5,1,Departamento de relaciones laborales,
+6,1,Dirección de planeación estratégica y desarrollo organizacional,
+7,1,Dirección General,
+8,1,Edificio de Gobierno,
+9,1,Redes,5306
+10,1,Sistemas,5289
+11,1,Soporte técnico,5044
+12,1,Subdirección de administración y desarrollo de personal,
+13,1,Subdirección de recursos materiales y servicios generales,
+14,1,Unidad de administración y finanzas,
+15,1,Unidad de ciencia de datos en salud,
+16,1,Unidad de costos,
+17,1,"Unidad de igualdad, género e inclusión",
+18,2,Caja de cobro (kiosco),
+19,3,Admisión hospitalaria y ambulatoria,5161
+20,3,Alergología (Inmunoalergía),5162
+21,3,Antigua consulta externa,
+22,3,Bioestadística,
+23,3,Clínica de Enfermedades Intersticiales CEPID,
+24,3,Coordinación de Infectología,5522
+25,3,Estomatología (pa),5163
+26,3,Fisiología Respiratoria,5160
+27,3,"Imagenología, Departamento",5190
+28,3,"Medicina Nuclear, Servicio",5167
+29,3,Medicina Ocupacional,5189
+30,3,Programa de Apoyo a Pacientes y Familiares,5338
+31,3,Psiquiaría,5279
+32,3,Rehabilitación Pulmonar,5185
+33,3,"Trabajo Social (General, TB, y CEPID)",5318
+34,4,Audiovisual,
+35,4,Biblioteca,
+36,4,Dirección de enseñanza,
+37,4,Inhaloterapia (Oficina),
+38,4,Residencia de médicos,
+39,5,Coordinación Atención Médica Ambulatoria,5312
+40,5,Coordinación Atención Médica Hospitalaria,5312
+41,5,Coordinación Clínicas,5211
+42,5,Dirección de Tecnologías de la Informacion,5055
+43,5,Dirección Médica,5184
+44,5,"Enfermería, Departamento",5181
+45,5,Jurídico,
+46,5,Órgano interno de control,
+47,5,Recursos financieros,
+48,5,Subdirección de atn. Médica de Neumología,
+49,5,Teleenfermería (pa) oficina,5529
+50,6,Auditorio Dr. M. Jiménez,
+51,6,Centro documental,
+52,7,Tanque de agua,
+53,8,Caja de cobro general,
+54,9,Clínica de Enfermería Cuidados Paliativos (pb),5048
+55,9,Clínica de Enfermería Geriátrica (pb),5053
+56,9,Clínica de Tuberculosis oficina (SC 2) (pa),5130
+57,9,Coord. De Geriatría y Cuidados Paliativos (pb),5048
+58,9,Servicio Clínico 1,5276
+59,9,Servicio Clínico 2,5130
+60,10,Clín. Inmunocompromiso Jefatura (SC 4) (pa),5283
+61,10,Servicio Clínico 3,5284
+62,10,Servicio Clínico 4,5288
+63,11,Clín. De Terapía Infusional (Quimioterapias) (pa),5292
+64,11,Clínica de Pleura (SC 5),5506
+65,11,Coordinación Medicina Interna / Reumatología,5076
+66,11,"Hemodiafiltración / Hemodiálisis, Unidad (pa)",5502
+67,11,Hospital de Día (SC 5),5504
+68,11,Nefrología (pa),5502
+69,11,Oncología Torácica (pa),5350
+70,11,Servicio Clínico 5,
+71,11,Servicio Clínico 6,
+72,11,Terapia Intermedia (SC 5),5124
+73,11,Trabajo Social Oncología (pa),
+74,12,Anestesiología,
+75,12,Broncoscopía y Endoscopía,5251
+76,12,Central de equipos,
+77,12,Coordinación Transplante Pulmonar,5054
+78,12,Hemodinamia,5260
+79,12,Medicina de Sueño (p1),5242
+80,12,"Otorrinolaringología, Hospitalización",5121
+81,12,Servicio Clínico 10,
+82,12,Servicio Clínico 11,
+83,12,Servicio Clínico 7,5290
+84,12,Servicio Clínico 8,5195
+85,12,Servicio Clínico 9,
+86,12,Servicio de Cuidados Intensivos Respiratorios,5213
+87,12,Servicio de Terapía Postquirúrgica,5128
+88,12,Subdirección de Cirugía,5210
+89,12,Terapia Respiratoria (Sótano),5165
+90,13,Comedor,
+91,13,Departamento de nutrición,
+92,13,Vestidores,
+93,14,Clínica de Asma,4060
+94,14,Clínica de Ayuda para dejar de fumar,
+95,14,Clínica de EPOC y bronquiectasias,5166
+96,14,Investigación Tabaquismo y EPOC,5331
+97,15,"Anatomía Patológica, Servicio",5169
+98,15,Banco de Sangre,5195
+99,16,Almacén de desechos biológico-infecciosos,
+100,17,Almacen,
+101,17,Biomédica,
+102,17,Cuarto de máquinas,
+103,17,Intendencia,
+104,17,Mantenimiento operativo,
+105,18,Coordinación de obras,
+106,18,Departamento de mantenimiento,
+107,19,Bioterio,
+108,19,Clínica de síndrome metabólico,
+109,20,"Clínica de Heridas, Estomas y Ulceras",5064
+110,20,Clínica de Líneas Intravasculares,5301
+111,20,U. Investigación,
+112,21,Antigua unidad de investigación,
+113,21,Clínica de Vasculitis Sistémicas Primarias,5224
+114,22,Unidad de investigación en enfermidades infecciosas y crónico degenerativas,
+115,23,CIENI,
+116,24,Auditorio principal Dr. Rébora,
+117,25,Pediatría / Neumología Hospitalización,5290
+118,26,Audiología,
+119,26,Clínica de Implante Coclear,5298
+120,26,"Clínica de Intolerancia a la Aspirina, Poliposis",5298
+121,26,Consulta Externa,5157
+122,26,Medicina Preventiva Cons. 17,5051
+123,26,"Otorrinolaringología, Departamento",5159
+124,26,Sala de Cirugía Robótica y Broncoscopía (pb),5358
+125,26,Unidad de urgencias respiratorias,5226
+126,27,Comunicación social,
+127,27,Convenios,
+128,27,Sala de espera,
+129,28,Laboratorio Clínico,5170
+130,28,Microbiología Clínica,5258
+131,29,Aulas ENEO,
+132,30,Auditorio Donato G. Alarcón,
+133,30,Aulas UNAM,
+134,31,Almacén de farmacia,
+135,32,Aula de enseñanza,
+136,33,Cafetería,
+137,34,Subestación de la Unidad de neumología pediátrica,
+138,37,Cardiología Servicio,5605
+139,37,Consulta Externa Neumología Pediátrica,5077
+140,38,Andadores a cubierto,
+141,39,Plazoletas,
+142,40,Estacionamiento y arroyos vehiculares,
+143,41,Áreas verdes,
