@@ -151,7 +151,7 @@ sqlite_sequence.loc[len(sqlite_sequence)] = ["area", len(area)]
 ** Save
 
 #+NAME: save-tables
-#+begin_src python :results file silent :tangle migration.py :shebang #!/usr/bin/python3
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
   database = dir + "/../public_html/var/data_" + environtment + ".db"
   conn = sqlite3.connect(database)
   area.to_sql('area', conn, if_exists='replace', index=False)
@@ -163,5 +163,9 @@ sqlite_sequence.loc[len(sqlite_sequence)] = ["area", len(area)]
   conn.close()
 #+end_src
 
+* Copy images
 
-
+#+NAME: copy-images
+#+begin_src bash :results silent :eval no :tangle migration.sh :shebang #!/bin/bash
+  cp -R ../../registro-io.old/public_html/public/uploads ../public_html/public/
+#+end_src
