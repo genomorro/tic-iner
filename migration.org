@@ -41,6 +41,7 @@ This line complete the bash script.
   import csv
   import os
   import pandas as pd
+  import numpy as np
   import sqlite3
 #+end_src
 
@@ -52,16 +53,20 @@ environtment = "prod"
 #+end_src
 
 ** Load Data
-
 #+NAME: load-data-db
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
   database = dir + "/../../registro-io.old/public_html/var/data_" + environtment + ".db"
   conn = sqlite3.connect(database)
-  attendance = pd.read_sql('SELECT * FROM attendance', conn)
+  ## Working tables
   sqlite_sequence = pd.read_sql('SELECT * FROM sqlite_sequence', conn)
   # stakeholder = pd.read_sql('SELECT * FROM stakeholder', conn)
   user = pd.read_sql('SELECT * FROM user', conn)
   visitor = pd.read_sql('SELECT * FROM visitor', conn)
+  ## Backup tables
+  appointment = pd.read_sql('SELECT * FROM appointment', conn)
+  attendance = pd.read_sql('SELECT * FROM attendance', conn)
+  hospitalized = pd.read_sql('SELECT * FROM hospitalized', conn)
+  patient = pd.read_sql('SELECT * FROM patient', conn)
   visitor_patient = pd.read_sql('SELECT * FROM visitor_patient', conn)
   conn.close()
   area = pd.read_csv('ds/area.csv')
@@ -111,20 +116,9 @@ environtment = "prod"
   visitor['destination'] = visitor['destination'].map(area_map)
 #+end_src
 
-#+NAME: desc-data-visitor
-#+begin_src python
-visitor.columns
-#+end_src
-
-#+RESULTS: desc-data-visitor
-: Index(['id', 'check_in_user_id', 'check_out_user_id', 'name', 'phone', 'dni',
-:        'tag', 'destination', 'check_in_at', 'check_out_at', 'relationship',
-:        'evidence'],
-:       dtype='str')
-
 #+NAME: reorder-rename-columns
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  visitor['host_id'] = None
+  visitor['host_id'] = np.nan
   visitor['comment'] = None
   visitor = visitor[['id', 'check_in_user_id', 'check_out_user_id', 'destination', 'host_id', 'name', 'phone', 'dni', 'tag', 'check_in_at', 'check_out_at', 'relationship', 'evidence', 'comment']]
   visitor = visitor.rename(columns={'destination': 'destination_id'})
@@ -141,25 +135,47 @@ visitor.columns
 :        'relationship', 'evidence', 'comment'],
 :       dtype='str')
 
+** User table
+#+NAME: add-columns
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+user['active'] = True
+#+end_src
 ** Autoincrement
 
 #+NAME: update-autoincrement
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 sqlite_sequence.loc[len(sqlite_sequence)] = ["area", len(area)]
 #+end_src
+** Fix types
 
+#+NAME: area-types
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+  area['extension'] = area['extension'].astype('Int64')
+#+end_src
+#+NAME: attendance-types
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+  attendance['check_out_user_id'] = attendance['check_out_user_id'].astype('Int64')
+#+end_src
+#+NAME: visitor-types
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+  visitor[['check_out_user_id', 'host_id']] = visitor[['check_out_user_id', 'host_id']].astype('Int64')
+#+end_src
 ** Save
 
 #+NAME: save-tables
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
   database = dir + "/../public_html/var/data_" + environtment + ".db"
   conn = sqlite3.connect(database)
-  area.to_sql('area', conn, if_exists='replace', index=False)
-  attendance.to_sql('attendance', conn, if_exists='replace', index=False)
-  # stakeholder.to_sql('stakeholder', conn, if_exists='replace', index=False)
-  user.to_sql('user', conn, if_exists='replace', index=False)
-  visitor.to_sql('visitor', conn, if_exists='replace', index=False)
-  visitor_patient.to_sql('visitor_patient', conn, if_exists='replace', index=False)
+  appointment.to_sql('appointment', conn, if_exists='delete_rows', index=False)
+  area.to_sql('area', conn, if_exists='delete_rows', index=False)
+  attendance.to_sql('attendance', conn, if_exists='delete_rows', index=False)
+  hospitalized.to_sql('hospitalized', conn, if_exists='delete_rows', index=False)
+  patient.to_sql('patient', conn, if_exists='delete_rows', index=False)
+  sqlite_sequence.to_sql('sqlite_sequence', conn, if_exists='delete_rows', index=False)
+  # stakeholder.to_sql('stakeholder', conn, if_exists='delete_rows', index=False)
+  user.to_sql('user', conn, if_exists='delete_rows', index=False)
+  visitor.to_sql('visitor', conn, if_exists='delete_rows', index=False)
+  visitor_patient.to_sql('visitor_patient', conn, if_exists='delete_rows', index=False)
   conn.close()
 #+end_src
 
