@@ -98,7 +98,7 @@ id,building,unit,extension
 97,15,"Anatomía Patológica, Servicio",5169
 98,15,Banco de Sangre,5195
 99,16,Almacén de desechos biológico-infecciosos,
-100,17,Almacen,
+100,17,Almacén,
 101,17,Biomédica,
 102,17,Cuarto de máquinas,
 103,17,Intendencia,
@@ -136,9 +136,11 @@ id,building,unit,extension
 135,32,Aula de enseñanza,
 136,33,Cafetería,
 137,34,Subestación de la Unidad de neumología pediátrica,
-138,37,Cardiología Servicio,5605
-139,37,Consulta Externa Neumología Pediátrica,5077
-140,38,Andadores a cubierto,
-141,39,Plazoletas,
-142,40,Estacionamiento y arroyos vehiculares,
-143,41,Áreas verdes,
+138,35,Subestación DIENI,
+139,36,Transformador Imagenología,
+140,37,Cardiología Servicio,5605
+141,37,Consulta Externa Neumología Pediátrica,5077
+142,38,Andadores a cubierto,
+143,39,Plazoletas,
+144,40,Estacionamiento y arroyos vehiculares,
+145,41,Áreas verdes,
