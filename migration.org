@@ -13,36 +13,36 @@ The follow Debian packages are required:
 In other SO, or as an alternative, is posible create a virtual environment and install all packages in ~requirements.txt~.
 #+NAME: create-venv
 #+begin_src bash :results silent :async yes :tangle migration.sh :shebang #!/bin/bash
-  python3 -m venv /tmp/babelvenv
-  . /tmp/babelvenv/bin/activate
-  pip install --upgrade pip
-  pip install -r requirements.txt
+python3 -m venv /tmp/babelvenv
+. /tmp/babelvenv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
 #+end_src
 If a virtual environment is created, is necessary to install libs via the package manager manually.
 
 Now, you must set some Emacs variables.
 #+NAME: set-python-venv
 #+begin_src elisp :results silent
-  (setq python-shell-interpreter "/tmp/babelvenv/bin/ipython")
-  (setq python-shell-interpreter-args "-i --simple-prompt")
+(setq python-shell-interpreter "/tmp/babelvenv/bin/ipython")
+(setq python-shell-interpreter-args "-i --simple-prompt")
 #+end_src
 
 Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 
 This line complete the bash script.
 #+begin_src bash :results silent :eval no :tangle migration.sh :shebang #!/bin/bash
-  ./migration.py
+./migration.py
 #+end_src
 
 *** Libraries
 #+NAME: libraries
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  from datetime import datetime
-  import csv
-  import os
-  import pandas as pd
-  import numpy as np
-  import sqlite3
+from datetime import datetime
+import csv
+import os
+import pandas as pd
+import numpy as np
+import sqlite3
 #+end_src
 
 Get the full path of this script and set the app environtment (dev or prod).
@@ -55,27 +55,43 @@ environtment = "prod"
 ** Load Data
 #+NAME: load-data-db
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  database = dir + "/../../registro-io.old/public_html/var/data_" + environtment + ".db"
-  conn = sqlite3.connect(database)
-  ## Working tables
-  sqlite_sequence = pd.read_sql('SELECT * FROM sqlite_sequence', conn)
-  # stakeholder = pd.read_sql('SELECT * FROM stakeholder', conn)
-  user = pd.read_sql('SELECT * FROM user', conn)
-  visitor = pd.read_sql('SELECT * FROM visitor', conn)
-  ## Backup tables
-  appointment = pd.read_sql('SELECT * FROM appointment', conn)
-  attendance = pd.read_sql('SELECT * FROM attendance', conn)
-  hospitalized = pd.read_sql('SELECT * FROM hospitalized', conn)
-  patient = pd.read_sql('SELECT * FROM patient', conn)
-  visitor_patient = pd.read_sql('SELECT * FROM visitor_patient', conn)
-  conn.close()
-  area = pd.read_csv('ds/area.csv')
+database = dir + "/../../registro-io.old/public_html/var/data_" + environtment + ".db"
+conn = sqlite3.connect(database)
+## Working tables
+sqlite_sequence = pd.read_sql('SELECT * FROM sqlite_sequence', conn)
+# stakeholder = pd.read_sql('SELECT * FROM stakeholder', conn)
+user = pd.read_sql('SELECT * FROM user', conn)
+visitor = pd.read_sql('SELECT * FROM visitor', conn)
+## Backup tables
+appointment = pd.read_sql('SELECT * FROM appointment', conn)
+attendance = pd.read_sql('SELECT * FROM attendance', conn)
+hospitalized = pd.read_sql('SELECT * FROM hospitalized', conn)
+patient = pd.read_sql('SELECT * FROM patient', conn)
+visitor_patient = pd.read_sql('SELECT * FROM visitor_patient', conn)
+conn.close()
+area = pd.read_csv('ds/area.csv')
+employee = pd.read_csv('ds/employee.csv')
+#+end_src
+
+** Employee
+#+NAME: drop-columns
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+employee = employee.drop(['PUESTO_ID', 'PUESTO', 'code', 'aname'], axis=1)
+#+end_src
+
+#+NAME: add-columns
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+employee['id'] = np.arange(1, employee.shape[0] + 1)
+employee['area_id'] = np.nan
+employee['active'] = True
+employee = employee.rename(columns={'enumber': 'number', 'ename': 'name'})
+employee = employee[['id', 'area_id', 'number', 'name', 'active']]
 #+end_src
 
 ** Visitor table
 #+NAME: destination-values
 #+begin_src python 
-  visitor["destination"].unique().tolist()
+visitor["destination"].unique().tolist()
 #+end_src
 
 #+RESULTS: destination-values
@@ -84,44 +100,43 @@ environtment = "prod"
 
 #+NAME search
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  # Mapping destination to specific ID area
-  area_map = {
-      'Consulta Externa': 121,
-      'Servicio Clínico 1': 58,
-      'CIENI': 115,
-      'Clínica de EPOC': 95,
-      'Servicio Clínico 10 Postquirúrgicos': 81,
-      'Servicio Clínico 5': 70,
-      'Nefrología': 68,
-      'Broncoscopia': 75,
-      'Servicio Clínico 3': 61,
-      'Unidad de Urgencias Respiratorias': 125,
-      'Clínica del Asma': 93,
-      'Servicio Clínico 8': 84,
-      'Servicio Clínico 9': 85,
-      'Servicio Clínico 10 Recuperación': 81,
-      'Servicio Clínico 2': 59,
-      'Hospital de día': 67,
-      'Oncología': 69,
-      'Servicio Clínico 10': 81,
-      'Consulta Externa Antigua': 21,
-      'Servicio Clínico 4': 62,
-      'Neumología Pediátrica Ambulatoria': 117 ,
-      'Unidad de Terapia Intermedia': 72,
-      'Servicio Clínico 7': 83,
-      'Broncoscopia Intervencionista': 75,
-      'Unidad de Terapia Intensiva Pediátrica': 25
-  }
-
-  visitor['destination'] = visitor['destination'].map(area_map)
+# Mapping destination to specific ID area
+area_map = {
+    'Consulta Externa': 121,
+    'Servicio Clínico 1': 58,
+    'CIENI': 115,
+    'Clínica de EPOC': 95,
+    'Servicio Clínico 10 Postquirúrgicos': 81,
+    'Servicio Clínico 5': 70,
+    'Nefrología': 68,
+    'Broncoscopia': 75,
+    'Servicio Clínico 3': 61,
+    'Unidad de Urgencias Respiratorias': 125,
+    'Clínica del Asma': 93,
+    'Servicio Clínico 8': 84,
+    'Servicio Clínico 9': 85,
+    'Servicio Clínico 10 Recuperación': 81,
+    'Servicio Clínico 2': 59,
+    'Hospital de día': 67,
+    'Oncología': 69,
+    'Servicio Clínico 10': 81,
+    'Consulta Externa Antigua': 21,
+    'Servicio Clínico 4': 62,
+    'Neumología Pediátrica Ambulatoria': 117 ,
+    'Unidad de Terapia Intermedia': 72,
+    'Servicio Clínico 7': 83,
+    'Broncoscopia Intervencionista': 75,
+    'Unidad de Terapia Intensiva Pediátrica': 25
+}
+visitor['destination'] = visitor['destination'].map(area_map)
 #+end_src
 
 #+NAME: reorder-rename-columns
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  visitor['host_id'] = np.nan
-  visitor['comment'] = None
-  visitor = visitor[['id', 'check_in_user_id', 'check_out_user_id', 'destination', 'host_id', 'name', 'phone', 'dni', 'tag', 'check_in_at', 'check_out_at', 'relationship', 'evidence', 'comment']]
-  visitor = visitor.rename(columns={'destination': 'destination_id'})
+visitor['host_id'] = np.nan
+visitor['comment'] = None
+visitor = visitor[['id', 'check_in_user_id', 'check_out_user_id', 'destination', 'host_id', 'name', 'phone', 'dni', 'tag', 'check_in_at', 'check_out_at', 'relationship', 'evidence', 'comment']]
+visitor = visitor.rename(columns={'destination': 'destination_id'})
 #+end_src
 
 #+NAME: desc-data-visitor-reorder
@@ -145,43 +160,49 @@ user['active'] = True
 #+NAME: update-autoincrement
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 sqlite_sequence.loc[len(sqlite_sequence)] = ["area", len(area)]
+sqlite_sequence.loc[len(sqlite_sequence)] = ["employee", len(employee)]
 #+end_src
 ** Fix types
 
 #+NAME: area-types
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  area['extension'] = area['extension'].astype('Int64')
+area['extension'] = area['extension'].astype('Int64')
+#+end_src
+#+NAME: employee-types
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+employee['area_id'] = employee['area_id'].astype('Int64')
 #+end_src
 #+NAME: attendance-types
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  attendance['check_out_user_id'] = attendance['check_out_user_id'].astype('Int64')
+attendance['check_out_user_id'] = attendance['check_out_user_id'].astype('Int64')
 #+end_src
 #+NAME: visitor-types
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  visitor[['check_out_user_id', 'host_id']] = visitor[['check_out_user_id', 'host_id']].astype('Int64')
+visitor[['check_out_user_id', 'host_id']] = visitor[['check_out_user_id', 'host_id']].astype('Int64')
 #+end_src
 ** Save
 
 #+NAME: save-tables
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
-  database = dir + "/../public_html/var/data_" + environtment + ".db"
-  conn = sqlite3.connect(database)
-  appointment.to_sql('appointment', conn, if_exists='delete_rows', index=False)
-  area.to_sql('area', conn, if_exists='delete_rows', index=False)
-  attendance.to_sql('attendance', conn, if_exists='delete_rows', index=False)
-  hospitalized.to_sql('hospitalized', conn, if_exists='delete_rows', index=False)
-  patient.to_sql('patient', conn, if_exists='delete_rows', index=False)
-  sqlite_sequence.to_sql('sqlite_sequence', conn, if_exists='delete_rows', index=False)
-  # stakeholder.to_sql('stakeholder', conn, if_exists='delete_rows', index=False)
-  user.to_sql('user', conn, if_exists='delete_rows', index=False)
-  visitor.to_sql('visitor', conn, if_exists='delete_rows', index=False)
-  visitor_patient.to_sql('visitor_patient', conn, if_exists='delete_rows', index=False)
-  conn.close()
+database = dir + "/../public_html/var/data_" + environtment + ".db"
+conn = sqlite3.connect(database)
+appointment.to_sql('appointment', conn, if_exists='delete_rows', index=False)
+area.to_sql('area', conn, if_exists='delete_rows', index=False)
+attendance.to_sql('attendance', conn, if_exists='delete_rows', index=False)
+employee.to_sql('employee', conn, if_exists='delete_rows', index=False)
+hospitalized.to_sql('hospitalized', conn, if_exists='delete_rows', index=False)
+patient.to_sql('patient', conn, if_exists='delete_rows', index=False)
+sqlite_sequence.to_sql('sqlite_sequence', conn, if_exists='delete_rows', index=False)
+# stakeholder.to_sql('stakeholder', conn, if_exists='delete_rows', index=False)
+user.to_sql('user', conn, if_exists='delete_rows', index=False)
+visitor.to_sql('visitor', conn, if_exists='delete_rows', index=False)
+visitor_patient.to_sql('visitor_patient', conn, if_exists='delete_rows', index=False)
+conn.close()
 #+end_src
 
 * Copy images
 
 #+NAME: copy-images
-#+begin_src bash :results silent :eval no :tangle migration.sh :shebang #!/bin/bash
-  cp -R ../../registro-io.old/public_html/public/uploads ../public_html/public/
+#+begin_src bash :results silent :tangle migration.sh :shebang #!/bin/bash
+cp -R ../../registro-io.old/public_html/public/uploads ../public_html/public/
 #+end_src
