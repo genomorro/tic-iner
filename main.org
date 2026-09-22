@@ -3,6 +3,15 @@
 #+PROPERTY: header-args:python :session main :comments org :shebang #!/usr/bin/python3
 
 ** Preamble
+*** Prepare GNU/Emacs
+#+NAME: org-babel
+#+begin_src elisp :results silent
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((python . t)
+     (shell . t)))
+#+end_src
+
 *** Create environment
 The follow Debian packages are required:
 
