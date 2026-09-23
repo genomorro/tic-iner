@@ -164,6 +164,13 @@ visitor.columns
 #+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 user['active'] = True
 #+end_src
+
+#+NAME: add-new-role
+#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
+user['roles'] = user['roles'].str.replace('["ROLE_USER","ROLE_ADMIN","ROLE_SUPER_ADMIN"]', '["ROLE_USER","ROLE_IMPORT_USER","ROLE_ADMIN","ROLE_SUPER_ADMIN"]')
+user['roles'] = user['roles'].str.replace('["ROLE_USER","ROLE_ADMIN"]', '["ROLE_USER","ROLE_IMPORT_USER","ROLE_ADMIN"]')
+#+end_src
+
 ** Autoincrement
 
 #+NAME: update-autoincrement
