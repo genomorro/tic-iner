@@ -9,7 +9,7 @@
 ## Basics
 IPython
 NumPy
-mysqlclient
+PyMySQL
 pandas
 sqlalchemy
 #python-language-server[all]
