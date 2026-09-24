@@ -40,7 +40,7 @@ Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 
 This line complete the bash script.
 #+begin_src bash :results silent :eval no :tangle main.sh :shebang #!/bin/bash
-  ./main.py
+  python3 main.py
 #+end_src
 
 *** Libraries
