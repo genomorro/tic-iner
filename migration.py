@@ -1,69 +1,11 @@
-#+TITLE: Migration
-#+AUTHOR: Edgar Uriel Domínguez Espinoza
-#+PROPERTY: header-args:python :session migration :comments org :shebang #!/usr/bin/python3
-
-** Preamble
-*** Prepare GNU/Emacs
-#+NAME: org-babel
-#+begin_src elisp :results silent
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((python . t)
-     (shell . t)))
-#+end_src
-
-*** Create environment
-The follow Debian packages are required:
-
-- python3-pandas
-- python3-sqlalchemy
-- python3-mysqldb
-
-In other SO, or as an alternative, is posible create a virtual environment and install all packages in ~requirements.txt~.
-#+NAME: create-venv
-#+begin_src bash :results silent :async yes :tangle migration.sh :shebang #!/bin/bash
-python3 -m venv /tmp/babelvenv
-. /tmp/babelvenv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-#+end_src
-If a virtual environment is created, is necessary to install libs via the package manager manually.
-
-Now, you must set some Emacs variables.
-#+NAME: set-python-venv
-#+begin_src elisp :results silent
-(setq python-shell-interpreter "/tmp/babelvenv/bin/ipython")
-(setq python-shell-interpreter-args "-i --simple-prompt")
-#+end_src
-
-Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
-
-This line complete the bash script.
-#+begin_src bash :results silent :eval no :tangle migration.sh :shebang #!/bin/bash
-python3 migration.py
-#+end_src
-
-*** Libraries
-#+NAME: libraries
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 from datetime import datetime
 import csv
 import os
 import pandas as pd
 import numpy as np
 import sqlite3
-#+end_src
-
-Get the full path of this script and set the app environtment (dev or prod).
-#+NAME: absolute-path
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 dir = os.path.abspath(os.getcwd())
 environtment = "prod"
-#+end_src
-
-** Load Data
-#+NAME: load-data-db
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 database = dir + "/../../registro-io.old/public_html/var/data_" + environtment + ".db"
 if os.path.exists(database):
     conn = sqlite3.connect(database)
@@ -92,37 +34,14 @@ else:
 
 area = pd.read_csv('ds/area.csv') if os.path.exists('ds/area.csv') else pd.DataFrame()
 employee = pd.read_csv('ds/employee.csv') if os.path.exists('ds/employee.csv') else pd.DataFrame()
-#+end_src
-
-** Employee
-#+NAME: drop-columns
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not employee.empty and 'PUESTO_ID' in employee.columns:
     employee = employee.drop(['PUESTO_ID', 'PUESTO', 'code', 'aname'], axis=1)
-#+end_src
-
-#+NAME: add-columns
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not employee.empty:
     employee['id'] = np.arange(1, employee.shape[0] + 1)
     employee['area_id'] = np.nan
     employee['active'] = True
     employee = employee.rename(columns={'enumber': 'number', 'ename': 'name'})
     employee = employee[['id', 'area_id', 'number', 'name', 'active']]
-#+end_src
-
-** Visitor table
-#+NAME: destination-values
-#+begin_src python 
-visitor["destination"].unique().tolist()
-#+end_src
-
-#+RESULTS: destination-values
-| Consulta Externa | Servicio Clínico 1 | CIENI | Clínica de EPOC | Servicio Clínico 10 Postquirúrgicos | Servicio Clínico 5 | Nefrología | Broncoscopia | Servicio Clínico 3 | Unidad de Urgencias Respiratorias | Clínica del Asma | Servicio Clínico 8 | Servicio Clínico 9 | Servicio Clínico 10 Recuperación | Servicio Clínico 2 | Hospital de día | Oncología | Servicio Clínico 10 | Consulta Externa Antigua | Servicio Clínico 4 | Neumología Pediátrica Ambulatoria | Unidad de Terapia Intermedia | Servicio Clínico 7 | Broncoscopia Intervencionista | Unidad de Terapia Intensiva Pediátrica |
-
-
-#+NAME search
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 # Mapping destination to specific ID area
 area_map = {
     'Consulta Externa': 121,
@@ -153,76 +72,27 @@ area_map = {
 }
 if not visitor.empty and 'destination' in visitor.columns:
     visitor['destination'] = visitor['destination'].map(area_map)
-#+end_src
-
-#+NAME: reorder-rename-columns
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not visitor.empty:
     visitor['host_id'] = np.nan
     visitor['comment'] = None
     visitor = visitor[['id', 'check_in_user_id', 'check_out_user_id', 'destination', 'host_id', 'name', 'phone', 'dni', 'tag', 'check_in_at', 'check_out_at', 'relationship', 'evidence', 'comment']]
     visitor = visitor.rename(columns={'destination': 'destination_id'})
-#+end_src
-
-#+NAME: desc-data-visitor-reorder
-#+begin_src python
-visitor.columns
-#+end_src
-
-#+RESULTS: desc-data-visitor-reorder
-: Index(['id', 'check_in_user_id', 'check_out_user_id', 'destination_id',
-:        'host_id', 'name', 'phone', 'dni', 'tag', 'check_in_at', 'check_out_at',
-:        'relationship', 'evidence', 'comment'],
-:       dtype='str')
-
-** User table
-#+NAME: add-columns
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not user.empty:
     user['active'] = True
-#+end_src
-
-#+NAME: add-new-role
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not user.empty and 'roles' in user.columns:
     user['roles'] = user['roles'].str.replace('["ROLE_USER","ROLE_ADMIN","ROLE_SUPER_ADMIN"]', '["ROLE_USER","ROLE_IMPORT_USER","ROLE_ADMIN","ROLE_SUPER_ADMIN"]')
     user['roles'] = user['roles'].str.replace('["ROLE_USER","ROLE_ADMIN"]', '["ROLE_USER","ROLE_IMPORT_USER","ROLE_ADMIN"]')
-#+end_src
-
-** Autoincrement
-
-#+NAME: update-autoincrement
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not sqlite_sequence.empty:
     sqlite_sequence.loc[len(sqlite_sequence)] = ["area", len(area)]
     sqlite_sequence.loc[len(sqlite_sequence)] = ["employee", len(employee)]
-#+end_src
-** Fix types
-
-#+NAME: area-types
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not area.empty and 'extension' in area.columns:
     area['extension'] = area['extension'].astype('Int64')
-#+end_src
-#+NAME: employee-types
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not employee.empty and 'area_id' in employee.columns:
     employee['area_id'] = employee['area_id'].astype('Int64')
-#+end_src
-#+NAME: attendance-types
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not attendance.empty and 'check_out_user_id' in attendance.columns:
     attendance['check_out_user_id'] = attendance['check_out_user_id'].astype('Int64')
-#+end_src
-#+NAME: visitor-types
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 if not visitor.empty and 'check_out_user_id' in visitor.columns and 'host_id' in visitor.columns:
     visitor[['check_out_user_id', 'host_id']] = visitor[['check_out_user_id', 'host_id']].astype('Int64')
-#+end_src
-** Save
-
-#+NAME: save-tables
-#+begin_src python :results silent :tangle migration.py :shebang #!/usr/bin/python3
 try:
     database = dir + "/../public_html/var/data_" + environtment + ".db"
     os.makedirs(os.path.dirname(database), exist_ok=True)
@@ -241,14 +111,3 @@ try:
     conn.close()
 except Exception as e:
     print(f"Warning: Could not save migration tables to SQLite database ({e}).")
-#+end_src
-
-* Copy images
-
-#+NAME: copy-images
-#+begin_src bash :results silent :tangle migration.sh :shebang #!/bin/bash
-if [ -d "../../registro-io.old/public_html/public/uploads" ]; then
-    mkdir -p ../public_html/public/
-    cp -R ../../registro-io.old/public_html/public/uploads ../public_html/public/
-fi
-#+end_src

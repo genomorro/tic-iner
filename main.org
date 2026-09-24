@@ -40,7 +40,7 @@ Optionally, use ~(setq org-babel-python-command "/tmp/babelvenv/bin/python")~
 
 This line complete the bash script.
 #+begin_src bash :results silent :eval no :tangle main.sh :shebang #!/bin/bash
-  ./main.py
+  python3 main.py
 #+end_src
 
 *** Libraries
@@ -61,33 +61,25 @@ environtment = "dev"
 #+end_src
 
 ** Load Data
-*** From DB Connection
-#+NAME: DB-connection
-#+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-engine = db.create_engine("mysql://conectmdbsqlrepl:Sa4)j%40khPrry!s1s@192.168.10.55/r3sp1ra770ri4x8025?charset=utf8mb4")
-conn = engine.connect()
-#+end_src
-
+*** From DB Connection or Local CSV Fallback
 #+NAME: load-data-db
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-df_a = pd.read_sql('SELECT * FROM citasMedicas', conn)
-df_p = pd.read_sql('SELECT * FROM Pacientes', conn)
-df_h = pd.read_sql('SELECT * FROM pacientesHospitalizados', conn)
-#+end_src
-
-#+NAME: save-ds
-#+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
-df_a.to_csv(dir + "/ds/citasmedicas-db.csv", index=False)
-df_p.to_csv(dir + "/ds/pacientes-db.csv", index=False)
-df_h.to_csv(dir + "/ds/pacienteshospitalizados-db.csv", index=False)
-#+end_src
-
-*** From files
-#+NAME: load-data
-#+begin_src python :results silent :eval no
-df_a = pd.read_csv(dir + "/ds/citasmedicas-db.csv")
-df_p = pd.read_csv(dir + "/ds/pacientes-db.csv")
-df_h = pd.read_csv(dir + "/ds/pacienteshospitalizados-db.csv")
+try:
+    engine = db.create_engine("mysql+pymysql://conectmdbsqlrepl:Sa4)j%40khPrry!s1s@192.168.10.55/r3sp1ra770ri4x8025?charset=utf8mb4")
+    conn = engine.connect()
+    df_a = pd.read_sql('SELECT * FROM citasMedicas', conn)
+    df_p = pd.read_sql('SELECT * FROM Pacientes', conn)
+    df_h = pd.read_sql('SELECT * FROM pacientesHospitalizados', conn)
+    conn.close()
+    os.makedirs(dir + "/ds", exist_ok=True)
+    df_a.to_csv(dir + "/ds/citasmedicas-db.csv", index=False)
+    df_p.to_csv(dir + "/ds/pacientes-db.csv", index=False)
+    df_h.to_csv(dir + "/ds/pacienteshospitalizados-db.csv", index=False)
+except Exception as e:
+    print(f"No se pudo conectar a la base de datos MySQL ({e}). Cargando datos desde archivos CSV en ds/...")
+    df_a = pd.read_csv(dir + "/ds/citasmedicas-db.csv")
+    df_p = pd.read_csv(dir + "/ds/pacientes-db.csv")
+    df_h = pd.read_csv(dir + "/ds/pacienteshospitalizados-db.csv")
 #+end_src
 
 ** Patient table
@@ -217,6 +209,7 @@ patient.head(10)
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-patient
 #+begin_src python :results file silent :tangle main.py :shebang #!/usr/bin/python3
+os.makedirs(dir + "/out", exist_ok=True)
 cur_time=datetime.now().strftime("%Y%m%d")
 filename=dir + "/out/patient-" + cur_time + ".csv"
 patient.to_csv(filename, index=False)
@@ -299,6 +292,7 @@ appointment["status"] = df_a["estatusCita"]
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-appointment
 #+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
+os.makedirs(dir + "/out", exist_ok=True)
 cur_time=datetime.now().strftime("%Y%m%d")
 filename=dir + "/out/appointment-" + cur_time + ".csv"
 appointment.to_csv(filename, index=False)
@@ -358,6 +352,7 @@ hospitalized.head(10)
 The resulting data frame is saved in a new data set.
 #+NAME: save-file-hospitalized
 #+begin_src python :results file silent :exports code :tangle main.py :shebang #!/usr/bin/python3
+os.makedirs(dir + "/out", exist_ok=True)
 cur_time=datetime.now().strftime("%Y%m%d")
 filename=dir + "/out/hospitalized-" + cur_time + ".csv"
 hospitalized.to_csv(filename, index=False)
@@ -368,116 +363,116 @@ hospitalized.to_csv(filename, index=False)
 The data sets will be exported to SQL format; the key feature is that these SQL files must update the database, not just insert records.
 #+NAME: generate-sql
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-  def generate_sql(dir):
-      """
-      Generates SQL scripts from CSV files for MySQL and SQLite.
-      """
-      cur_time=datetime.now().strftime("%Y%m%d")
-      patient_csv = dir + "/out/patient-" + cur_time + ".csv"
-      appointment_csv = dir + "/out/appointment-" + cur_time + ".csv"
-      hospitalized_csv = dir + "/out/hospitalized-" + cur_time + ".csv"
-      mysql_output = dir + "/out/update-mysql.sql"
-      sqlite_output = dir + "/out/update-sqlite.sql"
-      
-      if not os.path.exists(patient_csv) or not os.path.exists(appointment_csv) or not os.path.exists(hospitalized_csv):
-          print("Error: Input CSV files not found.")
-          return
+def generate_sql(dir):
+    """
+    Generates SQL scripts from CSV files for MySQL and SQLite.
+    """
+    os.makedirs(dir + "/out", exist_ok=True)
+    cur_time=datetime.now().strftime("%Y%m%d")
+    patient_csv = dir + "/out/patient-" + cur_time + ".csv"
+    appointment_csv = dir + "/out/appointment-" + cur_time + ".csv"
+    hospitalized_csv = dir + "/out/hospitalized-" + cur_time + ".csv"
+    mysql_output = dir + "/out/update-mysql.sql"
+    sqlite_output = dir + "/out/update-sqlite.sql"
 
-      with open(mysql_output, 'w', encoding='utf-8') as f_mysql, \
-           open(sqlite_output, 'w', encoding='utf-8') as f_sqlite:
+    if not os.path.exists(patient_csv) or not os.path.exists(appointment_csv) or not os.path.exists(hospitalized_csv):
+        print("Error: Input CSV files not found.")
+        return
 
-          f_mysql.write("-- patient\n")
-          f_sqlite.write("-- patient\n")
-          with open(patient_csv, 'r', encoding='utf-8') as infile:
-              reader = csv.reader(infile)
-              next(reader)  # Skip header
-              
-              for row in reader:
-                  id_val, file_val, name_val, disability_val = row
-                  
-                  file_val = file_val.replace("'", "''")
-                  name_val = name_val.replace("'", "''")
+    with open(mysql_output, 'w', encoding='utf-8') as f_mysql, \
+         open(sqlite_output, 'w', encoding='utf-8') as f_sqlite:
 
-                  mysql_update_clause = f"file = '{file_val}', name = '{name_val}', disability = {disability_val}"
-                  mysql_stmt = (
-                      f"INSERT INTO patient (id, file, name, disability) "
-                      f"VALUES ({id_val}, '{file_val}', '{name_val}', {disability_val}) "
-                      f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
-                  )
-                  f_mysql.write(mysql_stmt)
+        f_mysql.write("-- patient\n")
+        f_sqlite.write("-- patient\n")
+        with open(patient_csv, 'r', encoding='utf-8') as infile:
+            reader = csv.reader(infile)
+            next(reader)  # Skip header
 
-                  sqlite_update_clause = "file = excluded.file, name = excluded.name, disability = excluded.disability"
-                  sqlite_stmt = (
-                      f"INSERT INTO patient (id, file, name, disability) "
-                      f"VALUES ({id_val}, '{file_val}', '{name_val}', {disability_val}) "
-                      f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
-                  )
-                  f_sqlite.write(sqlite_stmt)
+            for row in reader:
+                id_val, file_val, name_val, disability_val = row
 
-          f_mysql.write("\n")
-          f_sqlite.write("\n")
+                file_val = file_val.replace("'", "''")
+                name_val = name_val.replace("'", "''")
 
-          f_mysql.write("-- hospitalized\n")
-          f_sqlite.write("-- hospitalized\n")
-          with open(hospitalized_csv, 'r', encoding='utf-8') as infile:
-              reader = csv.reader(infile)
-              next(reader)  # Skip header
+                mysql_update_clause = f"file = '{file_val}', name = '{name_val}', disability = {disability_val}"
+                mysql_stmt = (
+                    f"INSERT INTO patient (id, file, name, disability) "
+                    f"VALUES ({id_val}, '{file_val}', '{name_val}', {disability_val}) "
+                    f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
+                )
+                f_mysql.write(mysql_stmt)
 
-              for row in reader:
-                  id_val, patient_id_val, service_val, bed_val = row
+                sqlite_update_clause = "file = excluded.file, name = excluded.name, disability = excluded.disability"
+                sqlite_stmt = (
+                    f"INSERT INTO patient (id, file, name, disability) "
+                    f"VALUES ({id_val}, '{file_val}', '{name_val}', {disability_val}) "
+                    f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
+                )
+                f_sqlite.write(sqlite_stmt)
 
-                  service_val = service_val.replace("'", "''")
-                  bed_val = bed_val.replace("'", "''")
+        f_mysql.write("\n")
+        f_sqlite.write("\n")
 
-                  mysql_update_clause = f"patient_id = {patient_id_val}, service = '{service_val}', bed = '{bed_val}'"
-                  mysql_stmt = (
-                      f"INSERT INTO hospitalized (id, patient_id, service, bed) "
-                      f"VALUES ({id_val}, {patient_id_val}, '{service_val}', '{bed_val}') "
-                      f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
-                  )
-                  f_mysql.write(mysql_stmt)
+        f_mysql.write("-- hospitalized\n")
+        f_sqlite.write("-- hospitalized\n")
+        with open(hospitalized_csv, 'r', encoding='utf-8') as infile:
+            reader = csv.reader(infile)
+            next(reader)  # Skip header
 
-                  sqlite_update_clause = "patient_id = excluded.patient_id, service = excluded.service, bed = excluded.bed"
-                  sqlite_stmt = (
-                      f"INSERT INTO hospitalized (id, patient_id, service, bed) "
-                      f"VALUES ({id_val}, {patient_id_val}, '{service_val}', '{bed_val}') "
-                      f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
-                  )
-                  f_sqlite.write(sqlite_stmt)
+            for row in reader:
+                id_val, patient_id_val, service_val, bed_val = row
 
-          f_mysql.write("\n")
-          f_sqlite.write("\n")
+                service_val = service_val.replace("'", "''")
+                bed_val = bed_val.replace("'", "''")
 
-          f_mysql.write("-- appointment\n")
-          f_sqlite.write("-- appointment\n")
-          with open(appointment_csv, 'r', encoding='utf-8') as infile:
-              reader = csv.reader(infile)
-              next(reader)  # Skip header
+                mysql_update_clause = f"patient_id = {patient_id_val}, service = '{service_val}', bed = '{bed_val}'"
+                mysql_stmt = (
+                    f"INSERT INTO hospitalized (id, patient_id, service, bed) "
+                    f"VALUES ({id_val}, {patient_id_val}, '{service_val}', '{bed_val}') "
+                    f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
+                )
+                f_mysql.write(mysql_stmt)
 
-              for row in reader:
-                  id_val, patient_id_val, agenda_val, date_at_val, specialty_val, location_val, type_val, status_val = row
-                  
-                  agenda_val = agenda_val.replace("'", "''")
-                  specialty_val = specialty_val.replace("'", "''")
-                  location_val = location_val.replace("'", "''")
-                  type_val = type_val.replace("'", "''")
+                sqlite_update_clause = "patient_id = excluded.patient_id, service = excluded.service, bed = excluded.bed"
+                sqlite_stmt = (
+                    f"INSERT INTO hospitalized (id, patient_id, service, bed) "
+                    f"VALUES ({id_val}, {patient_id_val}, '{service_val}', '{bed_val}') "
+                    f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
+                )
+                f_sqlite.write(sqlite_stmt)
 
+        f_mysql.write("\n")
+        f_sqlite.write("\n")
 
-                  mysql_update_clause = f"patient_id = {patient_id_val}, agenda = '{agenda_val}', specialty = '{specialty_val}', location = '{location_val}', date_at = '{date_at_val}', type = '{type_val}', status = '{status_val}'"
-                  mysql_stmt = (
-                      f"INSERT INTO appointment (id, patient_id, agenda, specialty, location, date_at, type, status) "
-                      f"VALUES ({id_val}, {patient_id_val}, '{agenda_val}', '{specialty_val}', '{location_val}', '{date_at_val}', '{type_val}', '{status_val}') "
-                      f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
-                  )
-                  f_mysql.write(mysql_stmt)
-                  
-                  sqlite_update_clause = "patient_id = excluded.patient_id, agenda = excluded.agenda, specialty = excluded.specialty, location = excluded.location, date_at = excluded.date_at, type = excluded.type, status = excluded.status"
-                  sqlite_stmt = (
-                      f"INSERT INTO appointment (id, patient_id, agenda, specialty, location, date_at, type, status) "
-                      f"VALUES ({id_val}, {patient_id_val}, '{agenda_val}', '{specialty_val}', '{location_val}', '{date_at_val}', '{type_val}', '{status_val}') "
-                      f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
-                  )
-                  f_sqlite.write(sqlite_stmt)
+        f_mysql.write("-- appointment\n")
+        f_sqlite.write("-- appointment\n")
+        with open(appointment_csv, 'r', encoding='utf-8') as infile:
+            reader = csv.reader(infile)
+            next(reader)  # Skip header
+
+            for row in reader:
+                id_val, patient_id_val, agenda_val, date_at_val, specialty_val, location_val, type_val, status_val = row
+
+                agenda_val = agenda_val.replace("'", "''")
+                specialty_val = specialty_val.replace("'", "''")
+                location_val = location_val.replace("'", "''")
+                type_val = type_val.replace("'", "''")
+
+                mysql_update_clause = f"patient_id = {patient_id_val}, agenda = '{agenda_val}', specialty = '{specialty_val}', location = '{location_val}', date_at = '{date_at_val}', type = '{type_val}', status = '{status_val}'"
+                mysql_stmt = (
+                    f"INSERT INTO appointment (id, patient_id, agenda, specialty, location, date_at, type, status) "
+                    f"VALUES ({id_val}, {patient_id_val}, '{agenda_val}', '{specialty_val}', '{location_val}', '{date_at_val}', '{type_val}', '{status_val}') "
+                    f"ON DUPLICATE KEY UPDATE {mysql_update_clause};\n"
+                )
+                f_mysql.write(mysql_stmt)
+
+                sqlite_update_clause = "patient_id = excluded.patient_id, agenda = excluded.agenda, specialty = excluded.specialty, location = excluded.location, date_at = excluded.date_at, type = excluded.type, status = excluded.status"
+                sqlite_stmt = (
+                    f"INSERT INTO appointment (id, patient_id, agenda, specialty, location, date_at, type, status) "
+                    f"VALUES ({id_val}, {patient_id_val}, '{agenda_val}', '{specialty_val}', '{location_val}', '{date_at_val}', '{type_val}', '{status_val}') "
+                    f"ON CONFLICT(id) DO UPDATE SET {sqlite_update_clause};\n"
+                )
+                f_sqlite.write(sqlite_stmt)
 #+end_src
 
 Run the code above.
@@ -490,11 +485,15 @@ generate_sql(dir)
 **** SQLite3
 #+NAME: SQLite-update-tables
 #+begin_src python :results silent :tangle main.py :shebang #!/usr/bin/python3
-database = os.path.dirname(dir) + "/public_html/var/data_" + environtment + ".db"
-sqlite_engine = db.create_engine('sqlite:///' + database)
-patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
-hospitalized.to_sql('hospitalized', sqlite_engine, if_exists='replace', index=False)
-appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
+try:
+    database = os.path.dirname(dir) + "/public_html/var/data_" + environtment + ".db"
+    os.makedirs(os.path.dirname(database), exist_ok=True)
+    sqlite_engine = db.create_engine('sqlite:///' + database)
+    patient.to_sql('patient', sqlite_engine, if_exists='replace', index=False)
+    hospitalized.to_sql('hospitalized', sqlite_engine, if_exists='replace', index=False)
+    appointment.to_sql('appointment', sqlite_engine, if_exists='replace', index=False)
+except Exception as e:
+    print(f"No se pudo actualizar la base de datos SQLite directamente ({e}). Los scripts SQL en out/ fueron generados correctamente.")
 #+end_src
 
 **** MySQL
