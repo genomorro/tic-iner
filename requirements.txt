@@ -10,6 +10,6 @@
 IPython
 NumPy
 mysqlclient
-pandas
+pandas >= 3.0.0
 sqlalchemy
 #python-language-server[all]
