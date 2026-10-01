@@ -24,8 +24,8 @@ In other SO, or as an alternative, is posible create a virtual environment and i
 #+begin_src bash :results silent :async yes :tangle migration.sh :shebang #!/bin/bash
 python3 -m venv /tmp/babelvenv
 . /tmp/babelvenv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
 #+end_src
 If a virtual environment is created, is necessary to install libs via the package manager manually.
 
